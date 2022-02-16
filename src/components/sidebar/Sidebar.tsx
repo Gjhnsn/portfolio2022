@@ -8,6 +8,7 @@ import {
 } from "./styles";
 
 const Sidebar = () => {
+  
   return (
     <Container>
       <LongLine />
