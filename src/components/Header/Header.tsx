@@ -1,18 +1,16 @@
 import React from "react";
-import {ReactComponent as DarkMode } from '../../assets/darkModeLogo.svg'
-import { Link, LinkList, Nav } from "./styles";
+import { Link, LinkList, Nav, StyledLogo } from "./styles";
 
 const Header = () => {
   return (
     <Nav>
-      <div ><DarkMode /></div>
-      
+      <StyledLogo />
       <div>
         <LinkList>
-          <Link>Home</Link>
-          <Link>About</Link>
-          <Link>Projects</Link>
-          <Link>Contact</Link>
+          <Link style={{ animationDelay: "1s" }}>Home</Link>
+          <Link style={{ animationDelay: "1.2s" }}>About</Link>
+          <Link style={{ animationDelay: "1.4s" }}>Projects</Link>
+          <Link style={{ animationDelay: "1.6s" }}>Contact</Link>
         </LinkList>
       </div>
     </Nav>
