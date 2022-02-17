@@ -1,7 +1,8 @@
 import styled, { keyframes } from "styled-components";
 
 // ----------------------------- sidebar float up animation
-const onStart = keyframes`{
+const onStart = keyframes`
+{
   0% {
       opacity: 0;
       transform: scale(0.5);
