@@ -1,4 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
+import { IThemeProps } from "../../utils/models";
 import {
   LongLine,
   Container,
@@ -7,14 +9,16 @@ import {
   Email,
 } from "./styles";
 
-const Sidebar = () => {
-  
+const Sidebar: FC<IThemeProps> = ({theme, toggleTheme}) => {
+
   return (
     <Container>
       <LongLine />
       <IconPlaceHolder />
       <IconPlaceHolder />
-      <IconPlaceHolder />
+      <IconPlaceHolder>
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      </IconPlaceHolder>
       <ShortLine />
       <Email>garrett.bjnsn@gmail.com</Email>
       <ShortLine />

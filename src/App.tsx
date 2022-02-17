@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./components/sidebar/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import "./App.css";
 import { GlobalStyles, darkTheme, lightTheme } from "./styles/globalStyles";
 import { useDarkMode } from "./utils/useDarkMode";
@@ -13,7 +13,7 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <div>
         <GlobalStyles />
-        <Sidebar />
+        <Sidebar theme={theme} toggleTheme={toggleTheme} />
       </div>
     </ThemeProvider>
   );
