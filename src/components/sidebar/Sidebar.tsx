@@ -9,16 +9,13 @@ import {
   Email,
 } from "./styles";
 
-const Sidebar: FC<IThemeProps> = ({theme, toggleTheme}) => {
-
+const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
   return (
     <Container>
       <LongLine />
       <IconPlaceHolder />
       <IconPlaceHolder />
-      <IconPlaceHolder>
-        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-      </IconPlaceHolder>
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       <ShortLine />
       <Email>garrett.bjnsn@gmail.com</Email>
       <ShortLine />

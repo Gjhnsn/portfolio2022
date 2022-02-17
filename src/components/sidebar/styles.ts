@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
+// ----------------------------- sidebar float up animation
 const onStart = keyframes`{
   0% {
       opacity: 0;
@@ -25,13 +26,13 @@ export const Container = styled.div`
 export const LongLine = styled.div`
   width: 1px;
   height: 80px;
-  background-color: black;
+  background-color: ${(props) => props.theme.tertiaryColor};
 `;
 
 export const IconPlaceHolder = styled.div`
   width: 25px;
   height: 25px;
-  background-color: grey;
+  background-color: ${(props) => props.theme.tertiaryColor};
   margin-bottom: 20px;
 `;
 
@@ -39,11 +40,12 @@ export const Email = styled.p`
   transform: rotate(180deg);
   text-orientation: sideways;
   writing-mode: vertical-lr;
+  color: ${(props) => props.theme.tertiaryColor};
 `;
 
 export const ShortLine = styled.div`
   width: 1px;
   height: 20px;
-  background-color: black;
+  background-color: ${(props) => props.theme.tertiaryColor};
   margin: 20px 0;
 `;

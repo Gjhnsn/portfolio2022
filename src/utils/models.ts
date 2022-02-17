@@ -1,6 +1,5 @@
-
-// used at SideBar, ThemeToggle
+// ------------------------------ used at SideBar, ThemeToggle
 export interface IThemeProps {
-    theme: string,
-    toggleTheme: (() => void),
-  }
+  theme: string;
+  toggleTheme: () => void;
+}

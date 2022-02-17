@@ -1,17 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 
 interface ITheme {
-    body: string,
-    headerText: string,
-    accentColor: string,
-    contentText: string,
-    secondartText: string,
-    tertiaryColor: string,
+  body: string;
+  headerText: string;
+  accentColor: string;
+  contentText: string;
+  secondartText: string;
+  tertiaryColor: string;
 }
 
 type GlobalThemeProps = {
-    theme: ITheme
-}
+  theme: ITheme;
+};
 
 export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     body {
@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     }
 `;
 
-// need to hook up toggle
+// -------------------------- theme modes
 
 export const darkTheme = {
   body: "#181E1B",
