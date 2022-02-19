@@ -12,9 +12,13 @@ const onStart = keyframes`
 }`;
 
 export const Nav = styled.nav`
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  margin: 30px 40px;
+  width: 100%;
+  margin: 30px 0px;
+  padding: 0 50px;
+  border: 1px solid red;
 `;
 
 // ---------------------- logo svg imported here as react component

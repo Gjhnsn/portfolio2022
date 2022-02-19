@@ -17,6 +17,12 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     body {
         background-color: ${(props) => props.theme.body}
     }
+
+    h1 {
+      color: ${(props) => props.theme.headerText};
+      letter-spacing: 3px;
+    }
+
     p {
         color: ${(props) => props.theme.contentText}
     }
