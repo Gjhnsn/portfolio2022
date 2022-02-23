@@ -13,12 +13,12 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <div>
+      <>
         <GlobalStyles />
         {/* <Header /> */}
         <Main />
         <Sidebar theme={theme} toggleTheme={toggleTheme} />
-      </div>
+      </>
     </ThemeProvider>
   );
 }

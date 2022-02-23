@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
-import { Wrapper, ImageBackground } from "./styles";
+import { Wrapper } from "./styles";
 
 const Main = () => {
   return (
     <>
       <Header />
       <Wrapper>
-        <ImageBackground />
+        {/* <ImageBackground /> */}
         <Hero />
       </Wrapper>
     </>
