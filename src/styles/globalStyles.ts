@@ -17,6 +17,25 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     body {
         background-color: ${(props) => props.theme.body}
     }
+
+    h1 {
+      color: ${(props) => props.theme.headerText};
+      font-weight: 600;
+      font-size: 75px;
+      letter-spacing: 6px;
+      // ------------------- temp font
+      font-family: Arial;
+    }
+
+    h3 {
+      color: ${(props) => props.theme.accentColor};
+      font-size: 35px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      // ------------------- temp font
+      font-family: Arial;
+    }
+
     p {
         color: ${(props) => props.theme.contentText}
     }
@@ -31,6 +50,7 @@ export const darkTheme = {
   contentText: "#FFFFFF",
   secondaryText: "#5C5C5C",
   tertiaryColor: "#5F6A59",
+  gradientColor: '(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))'
 };
 
 export const lightTheme = {
@@ -40,4 +60,5 @@ export const lightTheme = {
   contentText: "#000000",
   secondaryText: "#5C5C5C",
   tertiaryColor: "#5D4733",
+  gradientColor: '(rgba(207, 207, 197, 0.8), rgba(207, 207, 197, 0.8))'
 };
