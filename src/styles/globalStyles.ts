@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
         background-color: ${(props) => props.theme.body};
     }
 
+    // ---------- Hero page needs to be full screen
     .landing {
       min-height: 100vh;
       margin-bottom: 100px;
