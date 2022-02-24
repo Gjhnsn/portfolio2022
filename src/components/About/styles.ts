@@ -5,7 +5,6 @@ export const FlexWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border: 1px solid green;
 `;
 
 export const LeftContent = styled.div`
@@ -26,6 +25,12 @@ export const TextWrapper = styled.div`
   padding-left: 135px;
   margin-bottom: 20px;
 `;
+
+export const TechTool = styled.p`
+  color: ${(props) => props.theme.secondaryText};
+`;
+
+// -------------------------------------- right box content
 
 export const RightContent = styled.div`
   max-width: 50%;
@@ -50,6 +55,6 @@ export const SquarePlaceHolder = styled.div`
   transition: 1s;
 
   &:hover {
-      transform: scale(1);
+    transform: scale(1);
   }
 `;

@@ -14,19 +14,18 @@ export const TextContainer = styled.div`
   top: 100px;
   width: 100%;
   z-index: 10;
-  border: 1px solid green
 `;
 
 export const FlexWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const NameHeader = styled.div`
 
-`
+`;
 export const SubTitle = styled.div`
-`
+`;
 
 export const ImageBackground = styled.div`
   /* may dynamically change bg color with mode */

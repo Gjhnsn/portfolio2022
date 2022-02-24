@@ -8,9 +8,30 @@ import {
   TextWrapper,
   SquarePlaceHolder,
   ImageWrapper,
+  TechTool,
 } from "./styles";
+// possible icon choice imports
+import { FiTriangle, FiZap, FiChevronRight } from "react-icons/fi";
+import { TiMinus, TiSpanner } from "react-icons/ti";
 
 const About = () => {
+
+  // function that will map through tech stack and return list of tools
+  const toolKit = () => {
+    return (
+      <>
+        <li>
+          <TiMinus style={{ marginRight: `10px` }} />
+          <TechTool>React</TechTool>
+        </li>
+        <li>
+          <TiSpanner style={{ marginRight: `10px` }} />
+          <TechTool>JasvaScript</TechTool>
+        </li>
+      </>
+    );
+  };
+
   return (
     <Layout>
       <FlexWrapper>
@@ -29,12 +50,7 @@ const About = () => {
             <h3>my toolbox</h3>
             <Underline />
             <TextWrapper>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-                aperiam earum ducimus quisquam ipsum distinctio error architecto
-                voluptates ratione iure enim repellendus pariatur aut nisi
-                temporibus ad, animi nam praesentium.
-              </p>
+              <ul>{toolKit()}</ul>
             </TextWrapper>
           </div>
         </LeftContent>

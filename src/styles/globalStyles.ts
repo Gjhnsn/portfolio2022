@@ -52,7 +52,12 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     }
 
     p {
-        color: ${(props) => props.theme.contentText}
+        color: ${(props) => props.theme.contentText};
+    }
+
+    li {
+      color: ${(props) => props.theme.accentColor};
+      display: flex;
     }
 `;
 
