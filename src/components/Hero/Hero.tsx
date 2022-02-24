@@ -14,7 +14,7 @@ import { LayoutContainer } from "../../common/Layout/styles";
 const Hero = () => {
   return (
     <>
-      <LayoutContainer>
+      <LayoutContainer className="landing">
         <TextContainer>
           <FlexWrapper>
             <NameHeader>

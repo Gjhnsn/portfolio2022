@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import background from "../../assets/treeBg.jpg";
 
+export const HeroPage = styled.div`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+`
+
 export const TextContainer = styled.div`
   display: flex;
   align-items: flex-start;
@@ -8,6 +14,7 @@ export const TextContainer = styled.div`
   top: 100px;
   width: 100%;
   z-index: 10;
+  border: 1px solid green
 `;
 
 export const FlexWrapper = styled.div`

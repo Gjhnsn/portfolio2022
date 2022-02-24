@@ -14,14 +14,29 @@ type GlobalThemeProps = {
 };
 
 export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
+
     body {
-        background-color: ${(props) => props.theme.body}
+        background-color: ${(props) => props.theme.body};
+    }
+
+    .landing {
+      min-height: 100vh;
+      margin-bottom: 100px;
     }
 
     h1 {
       color: ${(props) => props.theme.headerText};
       font-weight: 600;
       font-size: 75px;
+      letter-spacing: 6px;
+      // ------------------- temp font
+      font-family: Arial;
+    }
+
+    h2 {
+      color: ${(props) => props.theme.headerText};
+      font-weight: 600;
+      font-size: 64px;
       letter-spacing: 6px;
       // ------------------- temp font
       font-family: Arial;
