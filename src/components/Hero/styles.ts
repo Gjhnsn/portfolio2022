@@ -13,13 +13,13 @@ export const TextContainer = styled.div`
 export const FlexWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const NameHeader = styled.div`
 
-`
+`;
 export const SubTitle = styled.div`
-`
+`;
 
 export const ImageBackground = styled.div`
   /* may dynamically change bg color with mode */
