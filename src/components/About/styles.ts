@@ -22,13 +22,31 @@ export const Underline = styled.div`
 
 export const TextWrapper = styled.div`
   align-self: flex-end;
-  padding-left: 135px;
+  padding-left: 100px;
   margin-bottom: 20px;
+`;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 0px 10px;
+`;
+
+export const ToolList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  width: 100%;
+`;
+
+export const ToolListItem = styled.li`
+  margin: 5px;
+  width: 45%;
 `;
 
 export const TechTool = styled.p`
   color: ${(props) => props.theme.secondaryText};
-`;
+  `;
 
 // -------------------------------------- right box content
 
@@ -47,6 +65,7 @@ export const ImageWrapper = styled.div`
 export const SquarePlaceHolder = styled.div`
   height: 100%;
   width: 100%;
+  /*  keep no space b/w linear-gradient and props or image wont render */
   background-image: linear-gradient${(props) => props.theme.gradientColor},
     url(${img});
   background-position: center;
