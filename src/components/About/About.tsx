@@ -12,12 +12,10 @@ import {
   TechTool,
   ToolList,
   ToolListItem,
-  Grid
 } from "./styles";
 // possible icon choice imports
 import { FiTriangle, FiZap, FiChevronRight } from "react-icons/fi";
 import { TiMinus, TiSpanner } from "react-icons/ti";
-import { ITechTools } from "../../utils/models";
 
 const About = () => {
   // function that will map through tech stack and return list of tools
@@ -31,17 +29,6 @@ const About = () => {
       );
     });
   };
-
-  //   <>
-  //   <li>
-  //     <TiMinus style={{ marginRight: `10px` }} />
-  //     <TechTool>{item}</TechTool>
-  //   </li>
-  //   <li>
-  //     <TiSpanner style={{ marginRight: `10px` }} />
-  //     <TechTool>JasvaScript</TechTool>
-  //   </li>
-  // </>
 
   return (
     <Layout>
@@ -61,9 +48,7 @@ const About = () => {
             <h3>my toolbox</h3>
             <Underline />
             <TextWrapper>
-              
-                <ToolList>{renderTechTools()}</ToolList>
-                
+              <ToolList>{renderTechTools()}</ToolList>
             </TextWrapper>
           </div>
         </LeftContent>

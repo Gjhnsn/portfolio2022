@@ -4,7 +4,3 @@ export interface IThemeProps {
   toggleTheme: () => void;
 }
 
-
-export interface ITechTools {
-  techTools: string[]
-}

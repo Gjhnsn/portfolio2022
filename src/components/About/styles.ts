@@ -7,6 +7,8 @@ export const FlexWrapper = styled.div`
   width: 100%;
 `;
 
+// ------------------------------------- left side content
+
 export const LeftContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -26,29 +28,22 @@ export const TextWrapper = styled.div`
   margin-bottom: 20px;
 `;
 
-export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 0px 10px;
-`;
-
 export const ToolList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid white;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 200px));
   width: 100%;
 `;
 
 export const ToolListItem = styled.li`
-  margin: 5px;
-  width: 45%;
+  margin-bottom: 10px;
+  align-items: center;
 `;
 
 export const TechTool = styled.p`
   color: ${(props) => props.theme.secondaryText};
-  `;
+`;
 
-// -------------------------------------- right box content
+// ----------------------------------------- right side content
 
 export const RightContent = styled.div`
   max-width: 50%;
