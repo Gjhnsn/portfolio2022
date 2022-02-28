@@ -7,6 +7,8 @@ export const FlexWrapper = styled.div`
   width: 100%;
 `;
 
+// ------------------------------------- left side content
+
 export const LeftContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,15 +24,26 @@ export const Underline = styled.div`
 
 export const TextWrapper = styled.div`
   align-self: flex-end;
-  padding-left: 135px;
+  padding-left: 100px;
   margin-bottom: 20px;
+`;
+
+export const ToolList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 200px));
+  width: 100%;
+`;
+
+export const ToolListItem = styled.li`
+  margin-bottom: 10px;
+  align-items: center;
 `;
 
 export const TechTool = styled.p`
   color: ${(props) => props.theme.secondaryText};
 `;
 
-// -------------------------------------- right box content
+// ----------------------------------------- right side content
 
 export const RightContent = styled.div`
   max-width: 50%;
@@ -47,6 +60,7 @@ export const ImageWrapper = styled.div`
 export const SquarePlaceHolder = styled.div`
   height: 100%;
   width: 100%;
+  /*  keep no space b/w linear-gradient and props or image wont render */
   background-image: linear-gradient${(props) => props.theme.gradientColor},
     url(${img});
   background-position: center;

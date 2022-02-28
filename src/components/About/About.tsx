@@ -1,5 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 import Layout from "../../common/Layout/Layout";
+import { techTools } from "../../utils/techTools";
 import {
   FlexWrapper,
   LeftContent,
@@ -9,27 +10,24 @@ import {
   SquarePlaceHolder,
   ImageWrapper,
   TechTool,
+  ToolList,
+  ToolListItem,
 } from "./styles";
 // possible icon choice imports
 import { FiTriangle, FiZap, FiChevronRight } from "react-icons/fi";
 import { TiMinus, TiSpanner } from "react-icons/ti";
 
 const About = () => {
-
   // function that will map through tech stack and return list of tools
-  const toolKit = () => {
-    return (
-      <>
-        <li>
+  const renderTechTools = () => {
+    return techTools.map((item: string) => {
+      return (
+        <ToolListItem key={item}>
           <TiMinus style={{ marginRight: `10px` }} />
-          <TechTool>React</TechTool>
-        </li>
-        <li>
-          <TiSpanner style={{ marginRight: `10px` }} />
-          <TechTool>JasvaScript</TechTool>
-        </li>
-      </>
-    );
+          <TechTool>{item}</TechTool>
+        </ToolListItem>
+      );
+    });
   };
 
   return (
@@ -50,7 +48,7 @@ const About = () => {
             <h3>my toolbox</h3>
             <Underline />
             <TextWrapper>
-              <ul>{toolKit()}</ul>
+              <ToolList>{renderTechTools()}</ToolList>
             </TextWrapper>
           </div>
         </LeftContent>
