@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 import Layout from "../../common/Layout/Layout";
 import { techTools } from "../../utils/techTools";
 import {
@@ -7,18 +7,45 @@ import {
   RightContent,
   Underline,
   TextWrapper,
-  SquarePlaceHolder,
+  AboutImage,
   ImageWrapper,
   TechTool,
   ToolList,
   ToolListItem,
 } from "./styles";
+import img1 from "../../assets/about/pro1.png";
+import img2 from "../../assets/about/pro2.png";
+import img3 from "../../assets/about/pro3.png";
+import img4 from "../../assets/about/pro4.png";
+import img5 from "../../assets/about/pro5.png";
 // possible icon choice imports
 import { FiTriangle, FiZap, FiChevronRight } from "react-icons/fi";
 import { TiMinus, TiSpanner } from "react-icons/ti";
 
-const About = () => {
-  // function that will map through tech stack and return list of tools
+const About: FC = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const aboutImages: string[] = [img1, img2, img3, img4, img5];
+
+  // ----- cycle through aboutImages array
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentImage((currentImage) =>
+        currentImage < aboutImages.length - 1 ? currentImage + 1 : 0
+      );
+    }, 8000);
+    return () => clearInterval(slideInterval);
+  }, []);
+
+  const renderAboutImage = () => {
+    const bgImage = aboutImages[Math.floor(Math.random() * aboutImages.length)];
+
+    return (
+      <AboutImage style={{ backgroundImage: `url(${bgImage})` }}></AboutImage>
+    );
+  };
+
+  // map through tech stack and return list of tools
   const renderTechTools = () => {
     return techTools.map((item: string) => {
       return (
@@ -53,9 +80,7 @@ const About = () => {
           </div>
         </LeftContent>
         <RightContent>
-          <ImageWrapper>
-            <SquarePlaceHolder />
-          </ImageWrapper>
+          <ImageWrapper>{renderAboutImage()}</ImageWrapper>
         </RightContent>
       </FlexWrapper>
     </Layout>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import img from "../../assets/treeBg.jpg";
 
 export const FlexWrapper = styled.div`
   display: flex;
@@ -47,26 +46,57 @@ export const TechTool = styled.p`
 
 export const RightContent = styled.div`
   max-width: 50%;
+  display: block;
+  position: relative;
 `;
 
 export const ImageWrapper = styled.div`
   height: 425px;
   width: 425px;
-  border: 2px solid ${(props) => props.theme.accentColor};
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
+  box-shadow: ${(props) => props.theme.boxShadow};
+
+/* ------------------------ Gold accent border */
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: -1;
+    height: 425px;
+    width: 425px;
+    border: 2px solid ${(props) => props.theme.accentColor};
+    border-radius: 10px;
+    bottom: 31px;
+    left: 17px;
+    transition: transform .3s;
+  }
+
+  &:hover::after {
+      content: "";
+      transform: translateY(-2%) translateX(-2%);
+    }
 `;
 
-export const SquarePlaceHolder = styled.div`
+export const AboutImage = styled.div`
   height: 100%;
   width: 100%;
-  /*  keep no space b/w linear-gradient and props or image wont render */
-  background-image: linear-gradient${(props) => props.theme.gradientColor},
-    url(${img});
-  background-position: center;
+  background-position: 50% 50%;
   background-size: 100%;
-  transform: scale(1.3);
-  transition: 1s;
+  transform: scale(1.2);
+  transition: .7s ease;
+  
+/* ----------------------------- gradient overlay */
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient${(props) => props.theme.secondaryGradient};
+    z-index: 10;
+  }
 
   &:hover {
     transform: scale(1);
