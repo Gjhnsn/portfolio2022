@@ -11,8 +11,8 @@ const Projects = () => {
         <Underline />
       </HeaderContainer>
       <ProjectContainer>
-          <ProjectCardPlaceholder>project img</ProjectCardPlaceholder> 
-          <ProjectCardPlaceholder2><p>Project</p></ProjectCardPlaceholder2>
+          <ProjectCardPlaceholder id="2">project img</ProjectCardPlaceholder> 
+          <ProjectCardPlaceholder2><p>Project data</p></ProjectCardPlaceholder2>
       </ProjectContainer>
     </Layout>
   );
