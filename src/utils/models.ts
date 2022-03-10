@@ -10,10 +10,10 @@ export interface IAllProjects {
 }
 
 export interface IProjectData {
-    name: string;
-    description: string;
-    techUsed: string[];
-    image: string;
-    repoLink: string;
-    liveLink: string;
+  name: string;
+  description: string;
+  techUsed: string[];
+  image: string;
+  repoLink: string;
+  liveLink: string;
 }
