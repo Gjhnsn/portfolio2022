@@ -33,8 +33,8 @@ export const ProjectContainer = styled.div`
   border: 1px solid purple;
   padding: 0 15px;
   margin-top: 70px;
+  margin-bottom: 30px;
   position: relative;
-  /* border: 4px solid orange; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +43,7 @@ export const ProjectContainer = styled.div`
     width: 100%;
   }
 
+  /* slide top card to left on hover */
   &:hover {
     ${ProjectCardPlaceholder} {
       background-color: purple;
@@ -51,6 +52,7 @@ export const ProjectContainer = styled.div`
     }
   }
 
+  /* slide bottom card right on hover */
   &:hover {
     ${ProjectCardPlaceholder2} {
       background-color: red;
@@ -59,23 +61,3 @@ export const ProjectContainer = styled.div`
     }
   }
 `;
-
-// export const ProjectCardPlaceholder = styled.div`
-//   height: 450px;
-//   width: 500px;
-//   background-color: grey;
-//   border: gold 1px solid;
-//   transform: translateX(-20px);
-//   margin: 0 5px;
-//   z-index: 1;
-//   position: absolute;
-// }
-// `;
-
-// export const ProjectCardPlaceholder2 = styled.div`
-//   height: 500px;
-//   width: 500px;
-//   border: green 3px solid;
-//   transform: translateX(5px);
-//   z-index: -1;
-// `;
