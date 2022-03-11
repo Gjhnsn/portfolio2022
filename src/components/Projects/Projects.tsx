@@ -1,32 +1,27 @@
 import React from "react";
 import Layout from "../../common/Layout/Layout";
 import { Underline } from "../About/styles";
-import {
-  HeaderContainer,
-  ProjectCardPlaceholder,
-  ProjectCardPlaceholder2,
-  ProjectContainer,
-} from "./styles";
+import { HeaderContainer } from "./styles";
+import ProjectCard from "./ProjectCard";
+import { projectData } from "../../utils/projectData";
 
 const Projects = () => {
+  
+  // map through project data to render cards
+  const renderProjects = () => {
+    const cards = projectData.map((project) => {
+      return <ProjectCard key={project.id} project={project} />;
+    });
+    return cards;
+  };
+
   return (
     <Layout>
       <HeaderContainer>
         <h2>Projects</h2>
         <Underline />
       </HeaderContainer>
-      <ProjectContainer>
-        <ProjectCardPlaceholder id="2">project img</ProjectCardPlaceholder>
-        <ProjectCardPlaceholder2>
-          <p>Project data</p>
-        </ProjectCardPlaceholder2>
-      </ProjectContainer>
-      <ProjectContainer>
-        <ProjectCardPlaceholder id="2">project img</ProjectCardPlaceholder>
-        <ProjectCardPlaceholder2>
-          <p>Project data</p>
-        </ProjectCardPlaceholder2>
-      </ProjectContainer>
+      {renderProjects()}
     </Layout>
   );
 };
