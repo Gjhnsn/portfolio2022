@@ -1,18 +1,37 @@
 import React, { FC } from "react";
 import {
-  ProjectCardPlaceholder,
-  ProjectCardPlaceholder2,
+  CardFooter,
+  Description,
+  IconPlaceHolder,
+  LinkWrapper,
+  ProjectCardData,
+  ProjectCardImage,
   ProjectContainer,
+  ProjectName,
+  ProjectTech,
 } from "./styles";
 import { IProjectCardProps } from "../../utils/models";
 
 const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
+  
+    const tech = project.techUsed.map(i => `#${i} `) 
+
   return (
     <ProjectContainer>
-      <ProjectCardPlaceholder>project img</ProjectCardPlaceholder>
-      <ProjectCardPlaceholder2>
-        <p>{project.name}</p>
-      </ProjectCardPlaceholder2>
+      <ProjectCardImage>project img</ProjectCardImage>
+      <ProjectCardData>
+        <LinkWrapper>
+          <IconPlaceHolder />
+          <IconPlaceHolder />
+        </LinkWrapper>
+        <ProjectName>{project.name}</ProjectName>
+        <Description>
+          <p>{project.description}</p>
+        </Description>
+        <CardFooter>
+          <ProjectTech>{tech}</ProjectTech>
+        </CardFooter>
+      </ProjectCardData>
     </ProjectContainer>
   );
 };
