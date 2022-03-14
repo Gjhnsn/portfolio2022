@@ -10,6 +10,7 @@ interface ITheme {
   gradientColor: string;
   secondaryGradient: string;
   boxShadow: string;
+  secondaryBoxShadow: string;
 }
 
 type GlobalThemeProps = {
@@ -77,6 +78,7 @@ export const darkTheme = {
   gradientColor: '(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
   secondaryGradient: '(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))',
   boxShadow: `-6px 6px 15px rgba(0, 0, 0, .95)`,
+  secondaryBoxShadow: `6px -6px 15px rgba(0, 0, 0, .95)`,
 };
 
 export const lightTheme = {
@@ -89,4 +91,5 @@ export const lightTheme = {
   gradientColor: '(rgba(207, 207, 197, 0.8), rgba(207, 207, 197, 0.8))',
   secondaryGradient: '(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))',
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
+  secondaryBoxShadow: `rgba(0, 0, 0, 0.25) 1px -3px 10px`,
 };

@@ -9,18 +9,33 @@ import {
   ProjectContainer,
   ProjectName,
   ProjectTech,
+  TechList,
 } from "./styles";
 import { IProjectCardProps } from "../../utils/models";
+import { TiMinus } from "react-icons/ti";
 
 const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
-  
-    const tech = project.techUsed.map(i => `#${i} `) 
+  // array of tech used for each project from projectData
+  const techList = project.techUsed.map((item) => {
+    return (
+      <ProjectTech>
+        <TiMinus
+          style={{
+            margin: "0 5px 0 10px",
+          }}
+        />
+        <TechList>{item}</TechList>
+      </ProjectTech>
+    );
+  });
 
   return (
     <ProjectContainer>
+      {/* projec image to be placed below */}
       <ProjectCardImage>project img</ProjectCardImage>
       <ProjectCardData>
         <LinkWrapper>
+          {/* icon links to replace placeholders below */}
           <IconPlaceHolder />
           <IconPlaceHolder />
         </LinkWrapper>
@@ -28,9 +43,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
         <Description>
           <p>{project.description}</p>
         </Description>
-        <CardFooter>
-          <ProjectTech>{tech}</ProjectTech>
-        </CardFooter>
+        <CardFooter>{techList}</CardFooter>
       </ProjectCardData>
     </ProjectContainer>
   );
