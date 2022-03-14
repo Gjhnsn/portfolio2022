@@ -35,7 +35,7 @@ const About: FC = () => {
       );
     }, 8000);
     return () => clearInterval(slideInterval);
-  }, []);
+  }, [aboutImages.length]);
 
   const renderAboutImage = () => {
     const bgImage = aboutImages[Math.floor(Math.random() * aboutImages.length)];
