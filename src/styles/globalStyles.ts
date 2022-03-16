@@ -9,6 +9,7 @@ interface ITheme {
   tertiaryColor: string;
   gradientColor: string;
   secondaryGradient: string;
+  projectGradient: string;
   boxShadow: string;
   secondaryBoxShadow: string;
 }
@@ -77,6 +78,8 @@ export const darkTheme = {
   tertiaryColor: "#5F6A59",
   gradientColor: '(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
   secondaryGradient: '(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))',
+  projectGradient: '(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
+
   boxShadow: `-6px 6px 15px rgba(0, 0, 0, .95)`,
   secondaryBoxShadow: `6px -6px 15px rgba(0, 0, 0, .95)`,
 };
@@ -90,6 +93,7 @@ export const lightTheme = {
   tertiaryColor: "#5D4733",
   gradientColor: '(rgba(207, 207, 197, 0.8), rgba(207, 207, 197, 0.8))',
   secondaryGradient: '(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))',
+  projectGradient: '(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))',
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
   secondaryBoxShadow: `rgba(0, 0, 0, 0.25) 1px -3px 10px`,
 };

@@ -9,26 +9,10 @@ export const HeaderContainer = styled.div`
   border: 1px solid white;
 `;
 
-const onHover = keyframes`
-{
-  0% {
-    background: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55));
-  }
-100% {
-  background: linear-gradient(rgba(18, 18, 18, 0), rgba(18, 18, 18, 0));
-}
-}`;
-
 export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   height: 450px;
   width: 500px;
   transform: translateX(-20px);
-
-  /* background-image: linear-gradient(
-      rgba(18, 18, 18, 0.55),
-      rgba(18, 18, 18, 0.55)
-    ),
-    url(${(props) => props.projectImg}); */
 
   background-image: url(${(props) => props.projectImg});
   background-size: cover;
@@ -47,25 +31,12 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   align-items: center;
   transition: all 0.5s ease;
   color: ${(props) => props.theme.accentColor};
-
-  /* &:after {
-    content: "";
-    background: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55));
-    opacity: 1;
-    border-radius: 10px; 
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease;
-  } */
 `;
 
 export const ProjectCardOverlay = styled.div`
-  background: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55));
-  opacity: 1;
+  background: rgba(18, 18, 18, .85);
+;
+  /* opacity: .85; */
   border-radius: 10px;
   position: absolute;
   z-index: 5;
@@ -78,9 +49,11 @@ export const ProjectCardOverlay = styled.div`
 
 export const ProjectTitle = styled.h3`
   transition: all 0.5s ease;
-
+  padding: 8px 30px;
+  text-align: center;
   opacity: 1;
   z-index: 10;
+  border-radius: 5px;
 `;
 
 export const ProjectCardData = styled.div`
@@ -117,8 +90,6 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
   }
 
   /* slide top card to left on hover */
-
-  /* --------------- HERE  */
   &:hover {
     ${ProjectCardImage} {
       transition: all 0.5s ease;
@@ -126,6 +97,7 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
     }
   }
 
+  /* fade out overlay on hover */
   &:hover {
     ${ProjectCardOverlay} {
       transition: all 0.5s ease;
@@ -133,11 +105,13 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
     }
   }
 
+  /* fade out title on hover */
   &:hover {
     ${ProjectTitle} {
       transition: all 0.5s ease;
-      transform: translateX(-100%);
+      transform: translateY(-50%);
       opacity: 0;
+      font-size: 20px;
     }
   }
 
@@ -151,7 +125,6 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
 `;
 
 // project data styles (right card)
-
 export const LinkWrapper = styled.div`
   display: flex;
 `;
