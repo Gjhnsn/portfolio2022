@@ -11,7 +11,9 @@ export const HeaderContainer = styled.div`
 export const ProjectCardImage = styled.div`
   height: 450px;
   width: 500px;
-  background-color: grey;
+  /* background-image: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55)) ; */
+  background-size: cover;
+  background-position: 50% 50%;
   transition: transform 0.5s ease;
   transform: translateX(-20px);
   /* temporary code below for styling */
@@ -22,6 +24,12 @@ export const ProjectCardImage = styled.div`
   position: absolute;
   border-radius: 10px;
   box-shadow: ${(props) => props.theme.boxShadow};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    /* background: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55)); */
+
 `;
 
 export const ProjectCardData = styled.div`
@@ -63,6 +71,7 @@ export const ProjectContainer = styled.div`
     ${ProjectCardImage} {
       transition: transform 0.5s ease;
       transform: translateX(-45%);
+      
     }
   }
 

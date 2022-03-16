@@ -18,4 +18,5 @@ export interface IProjectData {
 // ------------------------------------ used at ProjectCard.tsx
 export interface IProjectCardProps {
   project: IProjectData;
+  
 }
