@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ProjectCardImgProps } from "../../utils/models";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -8,10 +9,12 @@ export const HeaderContainer = styled.div`
   border: 1px solid white;
 `;
 
-export const ProjectCardImage = styled.div`
+export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   height: 450px;
   width: 500px;
-  /* background-image: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55)) ; */
+  /* background-image: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55)), url(${(props) => props.projectImg}) ; */
+    background-image: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55)), url(${(props) => props.projectImg}) ;
+
   background-size: cover;
   background-position: 50% 50%;
   transition: transform 0.5s ease;
@@ -27,9 +30,6 @@ export const ProjectCardImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-    /* background: linear-gradient(rgba(18, 18, 18, 0.55), rgba(18, 18, 18, 0.55)); */
-
 `;
 
 export const ProjectCardData = styled.div`

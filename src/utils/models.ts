@@ -18,5 +18,10 @@ export interface IProjectData {
 // ------------------------------------ used at ProjectCard.tsx
 export interface IProjectCardProps {
   project: IProjectData;
-  
+}
+
+// ------------------------------------ used in styles of ProjectCard.tsx
+// ------------------------------------ used for passing project image path as prop
+export interface ProjectCardImgProps {
+  projectImg: string;
 }
