@@ -20,7 +20,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
   // array of tech used for each project from projectData
   const techList = project.techUsed.map((item) => {
     return (
-      <ProjectTech>
+      <ProjectTech >
         <TiMinus
           style={{
             margin: "0 5px 0 10px",
@@ -31,7 +31,6 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
     );
   });
 
-  console.log(project.image);
   const projectImg = project.image;
 
   return (

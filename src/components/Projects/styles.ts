@@ -18,7 +18,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   background-size: cover;
   background-position: 50% 50%;
 
-  /* temporary code below for styling */
+  /* temporary code below for styling purposes */
   /* transform: translateX(-45%); */
   /* delete above when styling is done */
 
@@ -30,14 +30,12 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
-  color: ${(props) => props.theme.accentColor};
 `;
 
 export const ProjectCardOverlay = styled.div`
-  background: rgba(18, 18, 18, .85);
-;
-  /* opacity: .85; */
-  border-radius: 10px;
+  background: ${(props) => props.theme.projectGradient};
+  opacity: 1;
+  border-radius: 9px;
   position: absolute;
   z-index: 5;
   top: 0;
@@ -49,21 +47,29 @@ export const ProjectCardOverlay = styled.div`
 
 export const ProjectTitle = styled.h3`
   transition: all 0.5s ease;
+  font-size: 40px;
   padding: 8px 30px;
   text-align: center;
   opacity: 1;
   z-index: 10;
   border-radius: 5px;
+  color: ${(props) => props.theme.headerText};
+  letter-spacing: 7px;
+  border: 2px solid ${(props) => props.theme.accentColor};
+  background: linear-gradient${(props) => props.theme.gradientColor};
 `;
+
 
 export const ProjectCardData = styled.div`
   height: 500px;
   width: 500px;
   transition: transform 0.5s ease;
   transform: translateX(5px);
-  /* temporary code below for styling */
+
+  /* temporary code below for styling purposes */
   /* transform: translateX(45%); */
   /* delete above when styling is done */
+
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -108,10 +114,10 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
   /* fade out title on hover */
   &:hover {
     ${ProjectTitle} {
-      transition: all 0.5s ease;
-      transform: translateY(-50%);
+      transition: all 0.4s ease;
       opacity: 0;
-      font-size: 20px;
+      font-size: 28px;
+      padding: 0 30px;
     }
   }
 
@@ -124,7 +130,7 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
   }
 `;
 
-// project data styles (right card)
+// ------------------------------------- project data styles begin (right card)
 export const LinkWrapper = styled.div`
   display: flex;
 `;
