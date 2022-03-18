@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../common/Layout/Layout";
 import { Underline } from "../About/styles";
-import { HeaderContainer, ProjectTitle } from "./styles";
+import { HeaderContainer } from "./styles";
 import ProjectCard from "./ProjectCard";
 import { projectData } from "../../utils/projectData";
 
