@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { ProjectCardImgProps } from "../../utils/models";
 
 export const HeaderContainer = styled.div`
@@ -6,12 +6,11 @@ export const HeaderContainer = styled.div`
   flex-direction: column;
   align-self: flex-start;
   width: 50%;
-  border: 1px solid white;
 `;
 
 export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   height: 450px;
-  width: 500px;
+  width: 490px;
   transform: translateX(-20px);
 
   background-image: url(${(props) => props.projectImg});
@@ -33,7 +32,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
 `;
 
 export const ProjectCardOverlay = styled.div`
-  background: ${(props) => props.theme.projectGradient};
+  background: rgba(40, 40, 40, .5);
   opacity: 1;
   border-radius: 9px;
   position: absolute;
@@ -45,44 +44,72 @@ export const ProjectCardOverlay = styled.div`
   transition: all 0.5s ease;
 `;
 
+// ----------------------------------------- alternate title style, keeping until final decision
+// export const ProjectTitle = styled.h3`
+//   transition: all 0.5s ease;
+//   font-size: 40px;
+//   padding: 8px 30px;
+//   text-align: center;
+//   opacity: 1;
+//   z-index: 10;
+//   border-radius: 5px;
+//   color: ${(props) => props.theme.headerText};
+//   letter-spacing: 7px;
+//   border: 2px solid ${(props) => props.theme.accentColor};
+//   background: linear-gradient${(props) => props.theme.gradientColor};
+//  position: absolute;
+//  bottom: 0;
+//  left: 0;
+// `;
+
+export const TitleContainer = styled.div`
+    transform: rotate(270deg);
+    position: absolute;
+    margin-right: 620px;
+    display: flex;
+    align-items: center;
+`
+
 export const ProjectTitle = styled.h3`
   transition: all 0.5s ease;
-  font-size: 40px;
-  padding: 8px 30px;
+  font-size: 55px;
+  padding: 3px 10px;
   text-align: center;
   opacity: 1;
   z-index: 10;
-  border-radius: 5px;
-  color: ${(props) => props.theme.headerText};
-  letter-spacing: 7px;
-  border: 2px solid ${(props) => props.theme.accentColor};
-  background: linear-gradient${(props) => props.theme.gradientColor};
+  color: ${(props) => props.theme.tertiaryColor};
+  letter-spacing: 10px;  
 `;
 
 
 export const ProjectCardData = styled.div`
   height: 500px;
   width: 500px;
-  transition: transform 0.5s ease;
+  transition: all .5s ease;
   transform: translateX(5px);
 
   /* temporary code below for styling purposes */
   /* transform: translateX(45%); */
   /* delete above when styling is done */
 
-  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 30px 30px 30px 70px;
+  opacity: 0;
+`;
+
+export const CardBorder = styled.div`
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
   border-color: ${(props) => props.theme.accentColor};
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
-`;
+  transition: transform 0.5s ease;
+  z-index: -1;
+`
 
-export const ProjectContainer = styled.div<ProjectCardImgProps>`
+export const ProjectContainer = styled.div`
   padding: 0 15px;
   margin-top: 70px;
   margin-bottom: 30px;
@@ -99,7 +126,7 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
   &:hover {
     ${ProjectCardImage} {
       transition: all 0.5s ease;
-      transform: translateX(-45%);
+      transform: translateX(-47.5%);
     }
   }
 
@@ -116,16 +143,23 @@ export const ProjectContainer = styled.div<ProjectCardImgProps>`
     ${ProjectTitle} {
       transition: all 0.4s ease;
       opacity: 0;
-      font-size: 28px;
+      font-size: 20px;
       padding: 0 30px;
     }
   }
 
   /* slide bottom card right on hover */
   &:hover {
-    ${ProjectCardData} {
+    ${CardBorder} {
       transition: transform 0.5s ease;
       transform: translateX(45%);
+    }
+  }
+
+  &:hover {
+    ${ProjectCardData} {
+      transition: all .8s ease;
+      opacity: 1;
     }
   }
 `;

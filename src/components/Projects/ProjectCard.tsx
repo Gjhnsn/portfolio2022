@@ -12,6 +12,9 @@ import {
   TechList,
   ProjectCardOverlay,
   ProjectTitle,
+  TitleContainer,
+  CardBorder,
+  
 } from "./styles";
 import { IProjectCardProps } from "../../utils/models";
 import { TiMinus } from "react-icons/ti";
@@ -20,7 +23,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
   // array of tech used for each project from projectData
   const techList = project.techUsed.map((item) => {
     return (
-      <ProjectTech >
+      <ProjectTech>
         <TiMinus
           style={{
             margin: "0 5px 0 10px",
@@ -34,25 +37,29 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
   const projectImg = project.image;
 
   return (
-    <ProjectContainer projectImg={projectImg}>
+    <ProjectContainer>
+      <TitleContainer>
+        <ProjectTitle>{project.name}</ProjectTitle>
+      </TitleContainer>
       <ProjectCardImage projectImg={projectImg}>
         <ProjectCardOverlay />
-        <ProjectTitle>{project.name}</ProjectTitle>
       </ProjectCardImage>
 
       {/* --------------------- right side card begins here */}
-      <ProjectCardData>
-        <LinkWrapper>
-          {/* icon links to replace placeholders below */}
-          <IconPlaceHolder />
-          <IconPlaceHolder />
-        </LinkWrapper>
-        <ProjectName>{project.name}</ProjectName>
-        <Description>
-          <p>{project.description}</p>
-        </Description>
-        <CardFooter>{techList}</CardFooter>
-      </ProjectCardData>
+      <CardBorder>
+        <ProjectCardData>
+          <LinkWrapper>
+            {/* icon links to replace placeholders below */}
+            <IconPlaceHolder />
+            <IconPlaceHolder />
+          </LinkWrapper>
+          <ProjectName>{project.name}</ProjectName>
+          <Description>
+            <p>{project.description}</p>
+          </Description>
+          <CardFooter>{techList}</CardFooter>
+        </ProjectCardData>
+      </CardBorder>
     </ProjectContainer>
   );
 };

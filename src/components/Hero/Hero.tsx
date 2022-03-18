@@ -14,14 +14,14 @@ import { LayoutContainer } from "../../common/Layout/styles";
 const Hero = () => {
   return (
     <>
-      <LayoutContainer className="landing">
+      <LayoutContainer style={{marginBottom: '100px'}} className="landing">
         <TextContainer>
           <FlexWrapper>
             <NameHeader>
               <h1>Garrett Johnson</h1>
             </NameHeader>
             <SubTitle>
-              <h3>software developer</h3>
+              <h3>web developer</h3>
             </SubTitle>
           </FlexWrapper>
         </TextContainer>

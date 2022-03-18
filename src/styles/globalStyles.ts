@@ -27,7 +27,6 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     // ---------- Hero page needs to be full screen
     .landing {
       min-height: 100vh;
-      margin-bottom: 100px;
     }
 
     h1 {
@@ -90,7 +89,8 @@ export const lightTheme = {
   contentText: "#000000",
   secondaryText: "#5C5C5C",
   tertiaryColor: "#5D4733",
-  gradientColor: '(rgba(207, 207, 197, 0.85), rgba(207, 207, 197, 0.85))',
+  // gradientColor: '(rgba(207, 207, 197, 0.85), rgba(207, 207, 197, 0.85))',
+  gradientColor: '(rgba(40, 40, 40, .9), rgba(40, 40, 40, .9))',
   secondaryGradient: '(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))',
   projectGradient: 'rgba(255, 255, 255, .65)',
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
