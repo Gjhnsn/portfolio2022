@@ -10,6 +10,11 @@ import {
   ProjectName,
   ProjectTech,
   TechList,
+  ProjectCardOverlay,
+  ProjectTitle,
+  TitleContainer,
+  CardBorder,
+  
 } from "./styles";
 import { IProjectCardProps } from "../../utils/models";
 import { TiMinus } from "react-icons/ti";
@@ -29,22 +34,32 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
     );
   });
 
+  const projectImg = project.image;
+
   return (
     <ProjectContainer>
-      {/* projec image to be placed below */}
-      <ProjectCardImage>project img</ProjectCardImage>
-      <ProjectCardData>
-        <LinkWrapper>
-          {/* icon links to replace placeholders below */}
-          <IconPlaceHolder />
-          <IconPlaceHolder />
-        </LinkWrapper>
-        <ProjectName>{project.name}</ProjectName>
-        <Description>
-          <p>{project.description}</p>
-        </Description>
-        <CardFooter>{techList}</CardFooter>
-      </ProjectCardData>
+      <TitleContainer>
+        <ProjectTitle>{project.name}</ProjectTitle>
+      </TitleContainer>
+      <ProjectCardImage projectImg={projectImg}>
+        <ProjectCardOverlay />
+      </ProjectCardImage>
+
+      {/* --------------------- right side card begins here */}
+      <CardBorder>
+        <ProjectCardData>
+          <LinkWrapper>
+            {/* icon links to replace placeholders below */}
+            <IconPlaceHolder />
+            <IconPlaceHolder />
+          </LinkWrapper>
+          <ProjectName>{project.name}</ProjectName>
+          <Description>
+            <p>{project.description}</p>
+          </Description>
+          <CardFooter>{techList}</CardFooter>
+        </ProjectCardData>
+      </CardBorder>
     </ProjectContainer>
   );
 };

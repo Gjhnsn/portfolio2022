@@ -9,6 +9,7 @@ interface ITheme {
   tertiaryColor: string;
   gradientColor: string;
   secondaryGradient: string;
+  projectGradient: string;
   boxShadow: string;
   secondaryBoxShadow: string;
 }
@@ -26,7 +27,6 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     // ---------- Hero page needs to be full screen
     .landing {
       min-height: 100vh;
-      margin-bottom: 100px;
     }
 
     h1 {
@@ -75,8 +75,9 @@ export const darkTheme = {
   contentText: "#FFFFFF",
   secondaryText: "#5C5C5C",
   tertiaryColor: "#5F6A59",
-  gradientColor: '(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
+  gradientColor: '(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82))',
   secondaryGradient: '(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))',
+  projectGradient: 'rgba(18, 18, 18, .85)',
   boxShadow: `-6px 6px 15px rgba(0, 0, 0, .95)`,
   secondaryBoxShadow: `6px -6px 15px rgba(0, 0, 0, .95)`,
 };
@@ -88,8 +89,9 @@ export const lightTheme = {
   contentText: "#000000",
   secondaryText: "#5C5C5C",
   tertiaryColor: "#5D4733",
-  gradientColor: '(rgba(207, 207, 197, 0.8), rgba(207, 207, 197, 0.8))',
+  gradientColor: '(rgba(40, 40, 40, .9), rgba(40, 40, 40, .9))',
   secondaryGradient: '(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))',
+  projectGradient: 'rgba(255, 255, 255, .65)',
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
   secondaryBoxShadow: `rgba(0, 0, 0, 0.25) 1px -3px 10px`,
 };
