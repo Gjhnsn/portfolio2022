@@ -23,7 +23,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
   // array of tech used for each project from projectData
   const techList = project.techUsed.map((item) => {
     return (
-      <ProjectTech>
+      <ProjectTech key={item}>
         <TiMinus
           style={{
             margin: "0 5px 0 10px",
