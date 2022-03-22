@@ -2,7 +2,15 @@ import React from "react";
 import Layout from "../../common/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
-import { FormWrapper, InputColumn, InputField, InputWrapper, MessageBox, SubmitButton } from "./styles";
+import {
+  FormWrapper,
+  InputColumn,
+  InputField,
+  InputWrapper,
+  MessageBox,
+  SubmitButton,
+  ContactTitle,
+} from "./styles";
 
 const Contact = () => {
   return (
@@ -11,14 +19,16 @@ const Contact = () => {
         <h2>Contact</h2>
         <Underline />
       </HeaderContainer>
-      <h2>Lets Get In Touch</h2>
+      <ContactTitle>Lets Get In Touch</ContactTitle>
       <FormWrapper>
         <InputWrapper>
           <InputColumn>
             <InputField type="text" placeholder="name" />
             <InputField type="email" placeholder="email" />
           </InputColumn>
-          <MessageBox placeholder="message" />
+          <InputColumn>
+            <MessageBox placeholder="message" />
+          </InputColumn>
         </InputWrapper>
         <SubmitButton type="submit">Submit</SubmitButton>
       </FormWrapper>
