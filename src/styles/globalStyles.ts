@@ -64,6 +64,20 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       color: ${(props) => props.theme.accentColor};
       display: flex;
     }
+
+    // -------------------------- keep input styles with autocomplete/focus
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus {
+      border: 1px solid ${(props) => props.theme.tertiaryColor};
+      -webkit-text-fill-color: white;
+      -webkit-box-shadow: 0 0 0px 1000px ${(props) => props.theme.body} inset;
+      box-shadow: 0 0 0px 1000px ${(props) => props.theme.body} inset;
+      transition: background-color 5000s ease-in-out 0s;
+}
 `;
 
 // -------------------------- theme modes
@@ -75,9 +89,9 @@ export const darkTheme = {
   contentText: "#FFFFFF",
   secondaryText: "#5C5C5C",
   tertiaryColor: "#5F6A59",
-  gradientColor: '(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82))',
-  secondaryGradient: '(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))',
-  projectGradient: 'rgba(18, 18, 18, .85)',
+  gradientColor: "(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82))",
+  secondaryGradient: "(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))",
+  projectGradient: "rgba(18, 18, 18, .85)",
   boxShadow: `-6px 6px 15px rgba(0, 0, 0, .95)`,
   secondaryBoxShadow: `6px -6px 15px rgba(0, 0, 0, .95)`,
 };
@@ -89,9 +103,9 @@ export const lightTheme = {
   contentText: "#000000",
   secondaryText: "#5C5C5C",
   tertiaryColor: "#5D4733",
-  gradientColor: '(rgba(40, 40, 40, .9), rgba(40, 40, 40, .9))',
-  secondaryGradient: '(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))',
-  projectGradient: 'rgba(255, 255, 255, .65)',
+  gradientColor: "(rgba(40, 40, 40, .9), rgba(40, 40, 40, .9))",
+  secondaryGradient: "(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))",
+  projectGradient: "rgba(255, 255, 255, .65)",
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
   secondaryBoxShadow: `rgba(0, 0, 0, 0.25) 1px -3px 10px`,
 };
