@@ -1,4 +1,4 @@
-import React, { FormEvent, SyntheticEvent } from "react";
+import React from "react";
 import Layout from "../../common/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
