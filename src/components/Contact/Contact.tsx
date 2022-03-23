@@ -14,12 +14,13 @@ import {
 import emailjs from "@emailjs/browser";
 
 
+
 const Contact = () => {
 
   const handleContactSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_t6smmz3", "template_op1gczb", e.currentTarget, 'user_3HL2H9IUkZuYfmKKeeEFa')
+    emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, e.currentTarget, `${process.env.REACT_APP_USER_ID}`)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
