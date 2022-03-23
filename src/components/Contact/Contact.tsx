@@ -3,16 +3,31 @@ import Layout from "../../common/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
 import {
-  FormWrapper,
   InputColumn,
   InputField,
   InputWrapper,
   MessageBox,
   SubmitButton,
   ContactTitle,
+  ContactForm,
 } from "./styles";
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
+
+  const handleContactSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_t6smmz3", "template_op1gczb", e.currentTarget, 'user_3HL2H9IUkZuYfmKKeeEFa')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.currentTarget.reset()
+  };
+
   return (
     <Layout>
       <HeaderContainer>
@@ -20,18 +35,18 @@ const Contact = () => {
         <Underline />
       </HeaderContainer>
       <ContactTitle>Lets Get In Touch</ContactTitle>
-      <FormWrapper>
+      <ContactForm onSubmit={handleContactSubmit}>
         <InputWrapper>
           <InputColumn>
-            <InputField type="text" placeholder="name" />
-            <InputField type="email" placeholder="email" />
+            <InputField type="text" placeholder="name" name='name' />
+            <InputField type="email" placeholder="email" name='email' />
           </InputColumn>
           <InputColumn>
-            <MessageBox placeholder="message" />
+            <MessageBox placeholder="message" name='message' />
           </InputColumn>
         </InputWrapper>
-        <SubmitButton type="submit">Submit</SubmitButton>
-      </FormWrapper>
+        <SubmitButton type="submit" value='Send Message'></SubmitButton>
+      </ContactForm>
     </Layout>
   );
 };

@@ -6,7 +6,7 @@ export const ContactTitle = styled.h2`
     font-size: 50px;
 `
 
-export const FormWrapper = styled.form`
+export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +51,7 @@ export const InputField = styled.input`
 
 
 
-export const SubmitButton = styled.button`
+export const SubmitButton = styled.input`
   border: 1px solid blue;
   padding: 8px 25px;
   align-self: center;
