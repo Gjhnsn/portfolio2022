@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./App.css";
 import { GlobalStyles, darkTheme, lightTheme } from "./styles/globalStyles";
@@ -9,6 +9,10 @@ import Main from "./components/Main/Main";
 function App() {
   const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
 
   return (
     <ThemeProvider theme={themeMode}>

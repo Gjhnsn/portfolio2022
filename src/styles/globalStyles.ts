@@ -92,6 +92,7 @@ export const darkTheme = {
   gradientColor: "(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82))",
   secondaryGradient: "(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))",
   projectGradient: "rgba(18, 18, 18, .85)",
+  navGradient: "rgba(24, 30, 27, .85)",
   boxShadow: `-6px 6px 15px rgba(0, 0, 0, .95)`,
   secondaryBoxShadow: `6px -6px 15px rgba(0, 0, 0, .95)`,
 };
@@ -106,6 +107,7 @@ export const lightTheme = {
   gradientColor: "(rgba(40, 40, 40, .9), rgba(40, 40, 40, .9))",
   secondaryGradient: "(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))",
   projectGradient: "rgba(255, 255, 255, .65)",
+  navGradient: "rgba(18, 18, 18, .85)",
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
   secondaryBoxShadow: `rgba(0, 0, 0, 0.25) 1px -3px 10px`,
 };
