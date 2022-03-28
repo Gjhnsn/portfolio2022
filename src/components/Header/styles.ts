@@ -25,13 +25,14 @@ export const Nav = styled.nav<IHeaderProps>`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 80px;
   /* margin: 20px 0px; */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(7px);
+  box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   padding: 0px 50px;
   background-color: ${(props) => props.theme.navGradient};
-  transform: ${(props) => props.showNav ? `translateY(0px)` : `translateY(-75px)`};
-  transition: transform .3s ease-in;
+  transform: ${(props) => props.showNav ? `translateY(0px)` : `translateY(-80px)`};
+  transition: transform .2s ease-in;
 `;
 
 // ---------------------- logo svg imported here as react component
