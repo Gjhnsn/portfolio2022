@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, LinkList, Nav, StyledLogo } from "./styles";
 
 const Header = () => {
+  const [showNav, setShowNav] = useState(true);
+
+  const controlNav = () => {
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+      if (lastScrollY < window.scrollY) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+      lastScrollY = window.scrollY;
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNav);
+    return () => {
+      window.removeEventListener("scroll", controlNav);
+    };
+  }, []);
+
   return (
-    <Nav>
+    <Nav showNav={showNav}>
       <StyledLogo />
       <div>
         <LinkList>

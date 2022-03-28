@@ -1,6 +1,10 @@
 import styled, { keyframes } from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
+interface IHeaderProps {
+  showNav: boolean,
+}
+
 const onStart = keyframes`
 {
   0% {
@@ -11,13 +15,24 @@ const onStart = keyframes`
 }
 }`;
 
-export const Nav = styled.nav`
+
+// ---------------------------- TODO --- complete nav scroll styles
+
+export const Nav = styled.nav<IHeaderProps>`
   position: fixed;
+  z-index: 15;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin: 30px 0px;
-  padding: 0 50px;
+  height: 80px;
+  /* margin: 20px 0px; */
+  backdrop-filter: blur(7px);
+  box-shadow: ${(props) => props.theme.secondaryBoxShadow};
+  padding: 0px 50px;
+  background-color: ${(props) => props.theme.navGradient};
+  transform: ${(props) => props.showNav ? `translateY(0px)` : `translateY(-80px)`};
+  transition: transform .2s ease-in;
 `;
 
 // ---------------------- logo svg imported here as react component
