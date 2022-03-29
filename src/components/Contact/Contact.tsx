@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../common/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
@@ -12,10 +12,13 @@ import {
   ContactForm,
 } from "./styles";
 import emailjs from "@emailjs/browser";
+import { setTimeout } from "timers/promises";
 
 
 
 const Contact = () => {
+
+  const [successMessage, setSuccessMessage] = useState<boolean>(false)
 
   const handleContactSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -27,7 +30,17 @@ const Contact = () => {
           console.log(error.text);
       });
       e.currentTarget.reset()
+      setSuccessMessage(true);
+      window.setTimeout(() => {
+        setSuccessMessage(false)
+      }, 3000);
   };
+
+  const renderSuccessMessage = () => (
+    <div>
+      <p>Thanks for getting in touch!</p>
+    </div>
+  )
 
   return (
     <Layout>
@@ -47,6 +60,7 @@ const Contact = () => {
           </InputColumn>
         </InputWrapper>
         <SubmitButton type="submit" value='Send Message'></SubmitButton>
+        {successMessage && renderSuccessMessage()}
       </ContactForm>
     </Layout>
   );
