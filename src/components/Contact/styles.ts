@@ -1,10 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+interface IMessageProps {
+  successMessage: boolean
+}
 
 export const ContactTitle = styled.h2`
-    margin-top: 50px;
-    margin-bottom: 25px;
-    font-size: 50px;
-`
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 50px;
+`;
 
 export const ContactForm = styled.form`
   display: flex;
@@ -23,7 +27,7 @@ export const InputWrapper = styled.div`
 export const InputColumn = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 100%;
   padding: 0 20px;
 `;
@@ -49,8 +53,6 @@ export const InputField = styled.input`
   outline: none;
 `;
 
-
-
 export const SubmitButton = styled.input`
   border: 1px solid blue;
   padding: 8px 25px;
@@ -59,4 +61,53 @@ export const SubmitButton = styled.input`
   border: 1px solid ${(props) => props.theme.accentColor};
   color: ${(props) => props.theme.accentColor};
   border-radius: 5px;
+`;
+
+//-------------- contact result messages
+
+const AnimateMessage = keyframes`
+{
+  0% {
+    width: 0%;
+    opacity: 0;
+    padding: 10px 0;
+  }
+  25% {
+    width: 100%;
+    opacity: 1;
+    padding: 10px;
+  }
+  75% {
+    width: 100%;
+    opacity: 1;
+    padding: 10px;
+  }
+  90% {
+    opacity: .9;
+  }
+100% {
+  width: 0%;
+  opacity: 0;
+  padding: 10px 0;
+}
+}`;
+
+export const MessageWrapper = styled.div`
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid ${(props) => props.theme.accentColor}; */
+  border-radius: 5px;
+`;
+
+export const ResultMessage = styled.p<IMessageProps>`
+  background-color: ${(props) => props.successMessage ? '#66bb6a' : '#e57373'};
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: ${AnimateMessage} 2.8s 1 ease-in-out forwards;
 `;

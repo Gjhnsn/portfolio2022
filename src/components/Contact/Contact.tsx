@@ -10,6 +10,8 @@ import {
   SubmitButton,
   ContactTitle,
   ContactForm,
+  ResultMessage,
+  MessageWrapper,
 } from "./styles";
 import emailjs from "@emailjs/browser";
 import { render } from "@testing-library/react";
@@ -42,20 +44,20 @@ const Contact = () => {
     window.setTimeout(() => {
       setSuccessMessage(false);
       setErrorMessage(false);
-    }, 3000);
+    }, 3500);
   };
 
   //------------ call this under successful submission instead of at end of function
   const renderSuccessMessage = () => (
-    <div>
-      <p>Thanks for getting in touch!</p>
-    </div>
+    <MessageWrapper>
+      <ResultMessage successMessage={successMessage}>Thanks for reaching out!</ResultMessage>
+    </MessageWrapper>
   );
 
   const renderErrorMessage = () => (
-    <div>
-      <p>oops! Something went wrong.</p>
-    </div>
+    <MessageWrapper>
+      <ResultMessage successMessage={successMessage}>Oops! Something went wrong.</ResultMessage>
+    </MessageWrapper>
   );
 
   return (
@@ -76,6 +78,7 @@ const Contact = () => {
           </InputColumn>
         </InputWrapper>
         <SubmitButton type="submit" value="Send Message"></SubmitButton>
+        {/* {renderSuccessMessage()} */}
         {successMessage && renderSuccessMessage()}
         {errorMessage && renderErrorMessage()}
       </ContactForm>
