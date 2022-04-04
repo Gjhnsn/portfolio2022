@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../common/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
@@ -10,24 +10,59 @@ import {
   SubmitButton,
   ContactTitle,
   ContactForm,
+  ResultMessage,
+  MessageWrapper,
 } from "./styles";
 import emailjs from "@emailjs/browser";
-
-
+import { render } from "@testing-library/react";
 
 const Contact = () => {
+  const [successMessage, setSuccessMessage] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<boolean>(false);
 
   const handleContactSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, e.currentTarget, `${process.env.REACT_APP_USER_ID}`)
-      .then((result) => {
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        e.currentTarget,
+        `${process.env.REACT_APP_USER_ID}`
+      )
+      .then(
+        (result) => {
+          setSuccessMessage(true);
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
+          setErrorMessage(true);
           console.log(error.text);
-      });
-      e.currentTarget.reset()
+        }
+      );
+    e.currentTarget.reset();
+    window.setTimeout(() => {
+      setSuccessMessage(false);
+      setErrorMessage(false);
+    }, 4000);
   };
+
+  //------------ call this under successful submission instead of at end of function
+  const renderSuccessMessage = () => (
+    <MessageWrapper>
+      <ResultMessage successMessage={successMessage}>
+        Thanks for reaching out!
+      </ResultMessage>
+    </MessageWrapper>
+  );
+
+  const renderErrorMessage = () => (
+    <MessageWrapper>
+      <ResultMessage successMessage={successMessage}>
+        Oops! Something went wrong.
+      </ResultMessage>
+    </MessageWrapper>
+  );
 
   return (
     <Layout>
@@ -39,14 +74,16 @@ const Contact = () => {
       <ContactForm onSubmit={handleContactSubmit}>
         <InputWrapper>
           <InputColumn>
-            <InputField type="text" placeholder="name" name='name' />
-            <InputField type="email" placeholder="email" name='email' />
+            <InputField type="text" placeholder="name" name="name" />
+            <InputField type="email" placeholder="email" name="email" />
           </InputColumn>
           <InputColumn>
-            <MessageBox placeholder="message" name='message' />
+            <MessageBox placeholder="message" name="message" />
           </InputColumn>
         </InputWrapper>
-        <SubmitButton type="submit" value='Send Message'></SubmitButton>
+        <SubmitButton type="submit" value="Send Message"></SubmitButton>
+        {successMessage && renderSuccessMessage()}
+        {errorMessage && renderErrorMessage()}
       </ContactForm>
     </Layout>
   );
