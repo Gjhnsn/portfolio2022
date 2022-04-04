@@ -1,9 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
-
-interface IHeaderProps {
-  showNav: boolean,
-}
+import { IHeaderProps } from '../../utils/models'
 
 const onStart = keyframes`
 {

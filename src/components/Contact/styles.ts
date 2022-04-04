@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
+import { IMessageProps } from "../../utils/models";
 
-interface IMessageProps {
-  successMessage: boolean
-}
+const success = "#66bb6a";
+const error = "#e57373";
 
 export const ContactTitle = styled.h2`
   margin-top: 50px;
@@ -96,12 +96,11 @@ export const MessageWrapper = styled.div`
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  /* border: 1px solid ${(props) => props.theme.accentColor}; */
   border-radius: 5px;
 `;
 
 export const ResultMessage = styled.p<IMessageProps>`
-  background-color: ${(props) => props.successMessage ? '#66bb6a' : '#e57373'};
+  background-color: ${(props) => (props.successMessage ? success : error)};
   border-radius: 5px;
   font-size: 18px;
   color: white;

@@ -44,19 +44,23 @@ const Contact = () => {
     window.setTimeout(() => {
       setSuccessMessage(false);
       setErrorMessage(false);
-    }, 3500);
+    }, 4000);
   };
 
   //------------ call this under successful submission instead of at end of function
   const renderSuccessMessage = () => (
     <MessageWrapper>
-      <ResultMessage successMessage={successMessage}>Thanks for reaching out!</ResultMessage>
+      <ResultMessage successMessage={successMessage}>
+        Thanks for reaching out!
+      </ResultMessage>
     </MessageWrapper>
   );
 
   const renderErrorMessage = () => (
     <MessageWrapper>
-      <ResultMessage successMessage={successMessage}>Oops! Something went wrong.</ResultMessage>
+      <ResultMessage successMessage={successMessage}>
+        Oops! Something went wrong.
+      </ResultMessage>
     </MessageWrapper>
   );
 
@@ -78,7 +82,6 @@ const Contact = () => {
           </InputColumn>
         </InputWrapper>
         <SubmitButton type="submit" value="Send Message"></SubmitButton>
-        {/* {renderSuccessMessage()} */}
         {successMessage && renderSuccessMessage()}
         {errorMessage && renderErrorMessage()}
       </ContactForm>
