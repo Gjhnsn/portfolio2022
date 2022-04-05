@@ -65,6 +65,7 @@ const Contact = () => {
   );
 
   return (
+    <section id='contact'>
     <Layout>
       <HeaderContainer>
         <h2>Contact</h2>
@@ -86,6 +87,7 @@ const Contact = () => {
         {errorMessage && renderErrorMessage()}
       </ContactForm>
     </Layout>
+    </section>
   );
 };
 

@@ -29,10 +29,10 @@ const Header = () => {
       <StyledLogo />
       <div>
         <LinkList>
-          <Link style={{ animationDelay: "1s" }}>Home</Link>
-          <Link style={{ animationDelay: "1.2s" }}>About</Link>
-          <Link style={{ animationDelay: "1.4s" }}>Projects</Link>
-          <Link style={{ animationDelay: "1.6s" }}>Contact</Link>
+          <Link style={{ animationDelay: "1s" }}><a href='#home'>Home</a></Link>
+          <Link style={{ animationDelay: "1.2s" }}><a href='#about'>About</a></Link>
+          <Link style={{ animationDelay: "1.4s" }}><a href="#projects">Projects</a></Link>
+          <Link style={{ animationDelay: "1.6s" }}><a href="#contact">Contact</a></Link>
         </LinkList>
       </div>
     </Nav>

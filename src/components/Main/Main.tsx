@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC} from "react";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Header from "../Header/Header";
@@ -6,11 +6,18 @@ import Hero from "../Hero/Hero";
 import Projects from "../Projects/Projects";
 import { Wrapper } from "./styles";
 
-const Main = () => {
+type IMainProps = {
+  id?: string;
+}
+
+const Main: FC<IMainProps> = () => {
+
+  const navData = {}
+
   return (
     <>
       <Header />
-      <Wrapper>
+      <Wrapper >
         <Hero />
         <About />
         <Projects />
