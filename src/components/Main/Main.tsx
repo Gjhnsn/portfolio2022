@@ -6,13 +6,7 @@ import Hero from "../Hero/Hero";
 import Projects from "../Projects/Projects";
 import { Wrapper } from "./styles";
 
-type IMainProps = {
-  id?: string;
-}
-
-const Main: FC<IMainProps> = () => {
-
-  const navData = {}
+const Main = () => {
 
   return (
     <>
