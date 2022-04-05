@@ -60,6 +60,7 @@ const About: FC = () => {
   };
 
   return (
+    <section id='about'>
     <Layout>
       <FlexWrapper>
         <LeftContent>
@@ -86,6 +87,7 @@ const About: FC = () => {
         </RightContent>
       </FlexWrapper>
     </Layout>
+    </section>
   );
 };
 

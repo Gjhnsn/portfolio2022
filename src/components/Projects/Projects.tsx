@@ -15,13 +15,15 @@ const Projects = () => {
   };
 
   return (
-    <Layout>
-      <HeaderContainer>
-        <h2>Projects</h2>
-        <Underline />
-      </HeaderContainer>
-      {renderProjects()}
-    </Layout>
+    <section id="projects">
+      <Layout>
+        <HeaderContainer>
+          <h2>Projects</h2>
+          <Underline />
+        </HeaderContainer>
+        {renderProjects()}
+      </Layout>
+    </section>
   );
 };
 

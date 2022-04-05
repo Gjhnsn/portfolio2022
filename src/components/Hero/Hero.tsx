@@ -13,7 +13,7 @@ import { LayoutContainer } from "../../common/Layout/styles";
 
 const Hero = () => {
   return (
-    <>
+    <section id='home'>
       <LayoutContainer style={{marginBottom: '100px'}} className="landing">
         <TextContainer>
           <FlexWrapper>
@@ -31,7 +31,7 @@ const Hero = () => {
         <Square1 />
         <Square2 />
       </SquareWrapper>
-    </>
+    </section>
   );
 };
 

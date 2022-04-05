@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, FC } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./App.css";
 import { GlobalStyles, darkTheme, lightTheme } from "./styles/globalStyles";
 import { useDarkMode } from "./utils/useDarkMode";
 import { ThemeProvider } from "styled-components";
 import Main from "./components/Main/Main";
+
 
 function App() {
   const [theme, toggleTheme] = useDarkMode();

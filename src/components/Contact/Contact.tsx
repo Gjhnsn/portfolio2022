@@ -14,7 +14,6 @@ import {
   MessageWrapper,
 } from "./styles";
 import emailjs from "@emailjs/browser";
-import { render } from "@testing-library/react";
 
 const Contact = () => {
   const [successMessage, setSuccessMessage] = useState<boolean>(false);
@@ -65,6 +64,7 @@ const Contact = () => {
   );
 
   return (
+    <section id='contact'>
     <Layout>
       <HeaderContainer>
         <h2>Contact</h2>
@@ -86,6 +86,7 @@ const Contact = () => {
         {errorMessage && renderErrorMessage()}
       </ContactForm>
     </Layout>
+    </section>
   );
 };
 

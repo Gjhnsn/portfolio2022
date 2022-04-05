@@ -65,6 +65,11 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       display: flex;
     }
 
+    a {
+      text-decoration: none;
+      color: ${(props) => props.theme.headerText}
+    }
+
     // -------------------------- keep input styles with autocomplete/focus
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
