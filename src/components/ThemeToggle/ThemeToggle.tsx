@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import { IThemeProps } from "../../utils/models";
 import { TogglePlaceholder } from "./styles";
-import { BsSun, BsMoon, BsSunFill, BsMoonFill } from "react-icons/bs";
-import { FaRegMoon } from "react-icons/fa";
+import { FaRegMoon, FaSun } from "react-icons/fa";
 import { FiSun } from 'react-icons/fi'
+import { BiMoon } from 'react-icons/bi' 
+import { HiOutlineMoon } from 'react-icons/hi' 
 
 
 
@@ -14,21 +15,22 @@ export const ThemeToggle: FC<IThemeProps> = ({ theme, toggleTheme }) => {
 
   const darkIconTheme = {
     color: `#5F6A59`,
-    height: `25px`,
-    width: `25px`,
+    height: `auto`,
+    width: `28px`,
+
     // border: `1px solid pink`
   }
 
   const lightIconTheme = {
     color: `#5D4733`,
-    height: `20px`,
-    width: `auto`,
+    height: `auto`,
+    width: `28px`,
     // border: `1px solid blue`
   }
 
   return (
     <div onClick={toggleTheme}>
-      {theme === "light" ? <Toggler><FaRegMoon style={lightIconTheme} /></Toggler> : <Toggler><FiSun style={darkIconTheme}/></Toggler>}
+      {theme === "light" ? <Toggler><HiOutlineMoon style={lightIconTheme} /></Toggler> : <Toggler><FiSun style={darkIconTheme}/></Toggler>}
     </div>
   );
 };

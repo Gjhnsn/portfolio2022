@@ -1,4 +1,8 @@
 import styled, { keyframes } from "styled-components";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { VscGithub } from "react-icons/vsc";
+
+
 
 // ----------------------------- sidebar float up animation
 const onStart = keyframes`
@@ -22,19 +26,45 @@ export const Container = styled.div`
   margin-left: 20px;
   animation: ${onStart} 1.3s 1 ease forwards;
   transform-origin: bottom;
+  /* border: 1px solid blue; */
 `;
+
+export const IconWrapper = styled.div`
+  display: flex;
+  border: 1px solid orange;
+  flex-direction: column-reverse;
+  align-items: center;
+`
 
 export const LongLine = styled.div`
   width: 1px;
   height: 80px;
   background-color: ${(props) => props.theme.tertiaryColor};
+  margin-top: 20px;
 `;
 
 export const IconPlaceHolder = styled.div`
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: auto;
   background-color: ${(props) => props.theme.tertiaryColor};
   margin-bottom: 20px;
+`;
+
+export const LinkedInIcon = styled(AiOutlineLinkedin)`
+  width: 30px;
+  height: auto;
+  color: ${(props) => props.theme.tertiaryColor};
+  cursor: pointer;
+
+`;
+
+export const GithubIcon = styled(VscGithub)`
+  width: 30px;
+  height: 30px;
+  color: ${(props) => props.theme.tertiaryColor};
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 2px;
 `;
 
 export const Email = styled.p`
