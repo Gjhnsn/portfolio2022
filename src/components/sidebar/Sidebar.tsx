@@ -8,6 +8,7 @@ import {
   ShortLine,
   Email,
 } from "./styles";
+import { BsSun } from "react-icons/bs";
 
 const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
   return (
