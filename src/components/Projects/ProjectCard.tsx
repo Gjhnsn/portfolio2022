@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import {
   CardFooter,
   Description,
-  IconPlaceHolder,
   LinkWrapper,
   ProjectCardData,
   ProjectCardImage,
@@ -14,7 +13,8 @@ import {
   ProjectTitle,
   TitleContainer,
   CardBorder,
-  
+  OpenIcon,
+  ViewCodeIcon,
 } from "./styles";
 import { IProjectCardProps } from "../../utils/models";
 import { TiMinus } from "react-icons/ti";
@@ -49,9 +49,8 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
       <CardBorder>
         <ProjectCardData>
           <LinkWrapper>
-            {/* icon links to replace placeholders below */}
-            <IconPlaceHolder />
-            <IconPlaceHolder />
+            <ViewCodeIcon />
+            <OpenIcon />
           </LinkWrapper>
           <ProjectName>{project.name}</ProjectName>
           <Description>

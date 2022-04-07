@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { ProjectCardImgProps } from "../../utils/models";
+import { MdOpenInNew } from "react-icons/md";
+import { VscGithub } from "react-icons/vsc";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -29,10 +31,11 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
+  z-index: 2;
 `;
 
 export const ProjectCardOverlay = styled.div`
-  background: rgba(40, 40, 40, .5);
+  background: rgba(40, 40, 40, 0.5);
   opacity: 1;
   border-radius: 9px;
   position: absolute;
@@ -63,12 +66,12 @@ export const ProjectCardOverlay = styled.div`
 // `;
 
 export const TitleContainer = styled.div`
-    transform: rotate(270deg);
-    position: absolute;
-    margin-right: 620px;
-    display: flex;
-    align-items: center;
-`
+  transform: rotate(270deg);
+  position: absolute;
+  margin-right: 620px;
+  display: flex;
+  align-items: center;
+`;
 
 export const ProjectTitle = styled.h3`
   transition: all 0.5s ease;
@@ -78,14 +81,13 @@ export const ProjectTitle = styled.h3`
   opacity: 1;
   z-index: 10;
   color: ${(props) => props.theme.tertiaryColor};
-  letter-spacing: 10px;  
+  letter-spacing: 10px;
 `;
-
 
 export const ProjectCardData = styled.div`
   height: 500px;
   width: 500px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   transform: translateX(5px);
 
   /* temporary code below for styling purposes */
@@ -106,8 +108,8 @@ export const CardBorder = styled.div`
   border-color: ${(props) => props.theme.accentColor};
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   transition: transform 0.5s ease;
-  z-index: -1;
-`
+  z-index: 1;
+`;
 
 export const ProjectContainer = styled.div`
   padding: 0 15px;
@@ -158,7 +160,7 @@ export const ProjectContainer = styled.div`
 
   &:hover {
     ${ProjectCardData} {
-      transition: all .8s ease;
+      transition: all 0.8s ease;
       opacity: 1;
     }
   }
@@ -167,13 +169,24 @@ export const ProjectContainer = styled.div`
 // ------------------------------------- project data styles begin (right card)
 export const LinkWrapper = styled.div`
   display: flex;
+  align-items: center;
 `;
 
-export const IconPlaceHolder = styled.div`
+export const OpenIcon = styled(MdOpenInNew)`
+  width: 34px;
+  height: 34px;
+  color: ${(props) => props.theme.tertiaryColor};
+  margin: 0 0 0 25px;
+  cursor: pointer;
+`;
+
+export const ViewCodeIcon = styled(VscGithub)`
   width: 30px;
   height: 30px;
-  background-color: grey;
+  color: ${(props) => props.theme.tertiaryColor};
   margin: 0 0 0 25px;
+  cursor: pointer;
+  z-index: 15;
 `;
 
 export const ProjectName = styled.h3`
