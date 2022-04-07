@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { ProjectCardImgProps } from "../../utils/models";
+import { MdOpenInNew } from "react-icons/md";
+import { VscGithub } from "react-icons/vsc";
+
+
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -18,7 +22,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   background-position: 50% 50%;
 
   /* temporary code below for styling purposes */
-  /* transform: translateX(-45%); */
+  transform: translateX(-45%);
   /* delete above when styling is done */
 
   margin: 0 5px;
@@ -96,7 +100,7 @@ export const ProjectCardData = styled.div`
   flex-direction: column;
   align-items: flex-end;
   padding: 30px 30px 30px 70px;
-  opacity: 0;
+  /* opacity: 0; */
 `;
 
 export const CardBorder = styled.div`
@@ -167,6 +171,8 @@ export const ProjectContainer = styled.div`
 // ------------------------------------- project data styles begin (right card)
 export const LinkWrapper = styled.div`
   display: flex;
+  /* border: 1px solid blue; */
+  align-items: center;
 `;
 
 export const IconPlaceHolder = styled.div`
@@ -175,6 +181,20 @@ export const IconPlaceHolder = styled.div`
   background-color: grey;
   margin: 0 0 0 25px;
 `;
+
+export const OpenIcon = styled(MdOpenInNew)`
+  width: 35px;
+  height: 35px;
+  color: ${(props) => props.theme.tertiaryColor};
+  margin: 0 0 0 25px;
+`
+
+export const ViewCodeIcon = styled(VscGithub)`
+  width: 30px;
+  height: 30px;
+  color: ${(props) => props.theme.tertiaryColor};
+  margin: 0 0 0 25px;
+`
 
 export const ProjectName = styled.h3`
   color: ${(props) => props.theme.accentColor};
