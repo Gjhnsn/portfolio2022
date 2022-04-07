@@ -22,7 +22,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   background-position: 50% 50%;
 
   /* temporary code below for styling purposes */
-  transform: translateX(-45%);
+  /* transform: translateX(-45%); */
   /* delete above when styling is done */
 
   margin: 0 5px;
@@ -33,6 +33,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
+  z-index: 2;
 `;
 
 export const ProjectCardOverlay = styled.div`
@@ -100,7 +101,7 @@ export const ProjectCardData = styled.div`
   flex-direction: column;
   align-items: flex-end;
   padding: 30px 30px 30px 70px;
-  /* opacity: 0; */
+  opacity: 0;
 `;
 
 export const CardBorder = styled.div`
@@ -110,7 +111,7 @@ export const CardBorder = styled.div`
   border-color: ${(props) => props.theme.accentColor};
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   transition: transform 0.5s ease;
-  z-index: -1;
+  z-index: 1;
 `
 
 export const ProjectContainer = styled.div`
@@ -171,22 +172,22 @@ export const ProjectContainer = styled.div`
 // ------------------------------------- project data styles begin (right card)
 export const LinkWrapper = styled.div`
   display: flex;
-  /* border: 1px solid blue; */
   align-items: center;
 `;
 
-export const IconPlaceHolder = styled.div`
-  width: 30px;
-  height: 30px;
-  background-color: grey;
-  margin: 0 0 0 25px;
-`;
+// export const IconPlaceHolder = styled.div`
+//   width: 30px;
+//   height: 30px;
+//   background-color: grey;
+//   margin: 0 0 0 25px;
+// `;
 
 export const OpenIcon = styled(MdOpenInNew)`
-  width: 35px;
-  height: 35px;
+  width: 34px;
+  height: 34px;
   color: ${(props) => props.theme.tertiaryColor};
   margin: 0 0 0 25px;
+  cursor: pointer;
 `
 
 export const ViewCodeIcon = styled(VscGithub)`
@@ -194,6 +195,8 @@ export const ViewCodeIcon = styled(VscGithub)`
   height: 30px;
   color: ${(props) => props.theme.tertiaryColor};
   margin: 0 0 0 25px;
+  cursor: pointer;
+  z-index: 15;
 `
 
 export const ProjectName = styled.h3`
