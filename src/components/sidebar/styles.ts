@@ -26,28 +26,14 @@ export const Container = styled.div`
   margin-left: 20px;
   animation: ${onStart} 1.3s 1 ease forwards;
   transform-origin: bottom;
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 `;
-
-export const IconWrapper = styled.div`
-  display: flex;
-  border: 1px solid orange;
-  flex-direction: column-reverse;
-  align-items: center;
-`
 
 export const LongLine = styled.div`
   width: 1px;
   height: 80px;
   background-color: ${(props) => props.theme.tertiaryColor};
   margin-top: 20px;
-`;
-
-export const IconPlaceHolder = styled.div`
-  width: 30px;
-  height: auto;
-  background-color: ${(props) => props.theme.tertiaryColor};
-  margin-bottom: 20px;
 `;
 
 export const LinkedInIcon = styled(AiOutlineLinkedin)`
