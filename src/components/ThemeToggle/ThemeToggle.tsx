@@ -17,15 +17,12 @@ export const ThemeToggle: FC<IThemeProps> = ({ theme, toggleTheme }) => {
     color: `#5F6A59`,
     height: `auto`,
     width: `28px`,
-
-    // border: `1px solid pink`
   }
 
   const lightIconTheme = {
     color: `#5D4733`,
     height: `auto`,
     width: `28px`,
-    // border: `1px solid blue`
   }
 
   return (
