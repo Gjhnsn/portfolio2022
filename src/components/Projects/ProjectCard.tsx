@@ -36,7 +36,6 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
 
   const projectImg = project.image;
 
-
   return (
     <ProjectContainer>
       <TitleContainer>
