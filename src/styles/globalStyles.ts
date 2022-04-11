@@ -12,6 +12,7 @@ interface ITheme {
   projectGradient: string;
   boxShadow: string;
   secondaryBoxShadow: string;
+  linkHoverColor: string;
 }
 
 type GlobalThemeProps = {
@@ -100,6 +101,7 @@ export const darkTheme = {
   navGradient: "rgba(24, 30, 27, .85)",
   boxShadow: `-6px 6px 15px rgba(0, 0, 0, .95)`,
   secondaryBoxShadow: `6px -6px 15px rgba(0, 0, 0, .95)`,
+  linkHoverColor: `#7F8F76`,
 };
 
 export const lightTheme = {
@@ -115,4 +117,5 @@ export const lightTheme = {
   navGradient: "rgba(207, 207, 197, .85)",
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
   secondaryBoxShadow: `rgba(0, 0, 0, 0.25) 1px -3px 10px`,
+  linkHoverColor: `#846449`
 };

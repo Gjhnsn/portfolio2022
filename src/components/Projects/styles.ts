@@ -178,6 +178,11 @@ export const OpenIcon = styled(MdOpenInNew)`
   color: ${(props) => props.theme.tertiaryColor};
   margin: 0 0 0 25px;
   cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    color: ${(props) => props.theme.linkHoverColor};
+}
 `;
 
 export const ViewCodeIcon = styled(VscGithub)`
@@ -187,6 +192,11 @@ export const ViewCodeIcon = styled(VscGithub)`
   margin: 0 0 0 25px;
   cursor: pointer;
   z-index: 15;
+  transition: all .3s;
+
+  &:hover {
+    color: ${(props) => props.theme.linkHoverColor};
+}
 `;
 
 export const ProjectName = styled.h3`
