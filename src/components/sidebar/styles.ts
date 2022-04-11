@@ -26,7 +26,6 @@ export const Container = styled.div`
   margin-left: 20px;
   animation: ${onStart} 1.3s 1 ease forwards;
   transform-origin: bottom;
-  border: 1px solid blue;
 `;
 
 export const LongLine = styled.div`
@@ -41,7 +40,12 @@ export const LinkedInIcon = styled(AiOutlineLinkedin)`
   height: auto;
   color: ${(props) => props.theme.tertiaryColor};
   cursor: pointer;
+  transition: all .3s;
 
+  &:hover {
+    transform: translateY(-3px);
+    color: ${(props) => props.theme.linkHoverColor};
+}
 `;
 
 export const GithubIcon = styled(VscGithub)`
@@ -51,6 +55,12 @@ export const GithubIcon = styled(VscGithub)`
   margin-bottom: 20px;
   cursor: pointer;
   padding: 2px;
+  transition: all .3s;
+
+  &:hover {
+    transform: translateY(-3px);
+    color: ${(props) => props.theme.linkHoverColor};
+}
 `;
 
 export const Email = styled.p`
