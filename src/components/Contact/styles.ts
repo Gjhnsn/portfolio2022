@@ -61,6 +61,11 @@ export const SubmitButton = styled.input`
   border: 1px solid ${(props) => props.theme.accentColor};
   color: ${(props) => props.theme.accentColor};
   border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => props.theme.sendMessageHover}
+  }
 `;
 
 //-------------- contact result messages
