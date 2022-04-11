@@ -39,7 +39,7 @@ export const MessageBox = styled.textarea`
   border-radius: 5px;
   resize: none;
   padding: 10px;
-  color: white;
+  color: ${(props) => props.theme.contentText};
   outline: none;
 `;
 
@@ -49,7 +49,7 @@ export const InputField = styled.input`
   border-radius: 5px;
   height: 40px;
   padding: 0 10px;
-  color: white;
+  color: ${(props) => props.theme.contentText};
   outline: none;
 `;
 
