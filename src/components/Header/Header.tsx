@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link, LinkList, Nav, StyledLogo } from "./styles";
+import { Link, LinkList, Nav, StyledLogo, Anchor } from "./styles";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNav);
+    return () => {
+      window.removeEventListener("scroll", controlNav);
+    };
+  }, []);
 
   const controlNav = () => {
     let lastScrollY = window.scrollY;
@@ -17,22 +24,30 @@ const Header = () => {
     });
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", controlNav);
-    return () => {
-      window.removeEventListener("scroll", controlNav);
-    };
-  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <Nav showNav={showNav}>
-      <StyledLogo />
+      <StyledLogo onClick={scrollToTop} />
       <div>
         <LinkList>
-          <Link style={{ animationDelay: "1s" }}><a href='#home'>Home</a></Link>
-          <Link style={{ animationDelay: "1.2s" }}><a href='#about'>About</a></Link>
-          <Link style={{ animationDelay: "1.4s" }}><a href="#projects">Projects</a></Link>
-          <Link style={{ animationDelay: "1.6s" }}><a href="#contact">Contact</a></Link>
+          <Link style={{ animationDelay: "1s" }}>
+            <Anchor href="#home">Home</Anchor>
+          </Link>
+          <Link style={{ animationDelay: "1.2s" }}>
+            <Anchor href="#about">About</Anchor>
+          </Link>
+          <Link style={{ animationDelay: "1.4s" }}>
+            <Anchor href="#projects">Projects</Anchor>
+          </Link>
+          <Link style={{ animationDelay: "1.6s" }}>
+            <Anchor href="#contact">Contact</Anchor>
+          </Link>
         </LinkList>
       </div>
     </Nav>
