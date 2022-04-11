@@ -49,8 +49,12 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
       <CardBorder>
         <ProjectCardData>
           <LinkWrapper>
-            <ViewCodeIcon />
-            <OpenIcon />
+            <ViewCodeIcon
+              onClick={() => window.open(`${project.repoLink}`, "_blank")}
+            />
+            <OpenIcon
+              onClick={() => window.open(`${project.liveLink}`, "_blank")}
+            />
           </LinkWrapper>
           <ProjectName>{project.name}</ProjectName>
           <Description>
