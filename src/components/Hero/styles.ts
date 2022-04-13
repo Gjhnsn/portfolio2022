@@ -57,6 +57,7 @@ export const Square1 = styled.div`
   position: relative;
   right: 50px;
   top: 120px;
+  box-shadow: ${(props) => props.theme.secondaryBoxShadow};
 `
 
 export const Square2 = styled.div`
@@ -69,4 +70,6 @@ export const Square2 = styled.div`
   position: relative;
   left: 180px;
   top: 70px;
+  box-shadow: ${(props) => props.theme.secondaryBoxShadow};
+
 `
