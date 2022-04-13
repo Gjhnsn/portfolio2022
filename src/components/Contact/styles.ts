@@ -16,6 +16,7 @@ export const ContactForm = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 100px;
 `;
 
 export const InputWrapper = styled.div`
