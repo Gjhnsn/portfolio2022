@@ -70,6 +70,8 @@ export const ImageWrapper = styled.div`
     bottom: 31px;
     left: 17px;
     transition: transform .3s;
+    box-shadow: ${(props) => props.theme.secondaryBoxShadow};
+
   }
 
   &:hover::after {
