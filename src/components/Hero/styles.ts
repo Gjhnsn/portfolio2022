@@ -38,6 +38,7 @@ export const ImageBackground = styled.div`
 
 // ---------------- accent square elements
 
+// ---------------- square wrapper = same size as background image
 export const SquareWrapper = styled.div`
   height: 100%;
   width: 40%;

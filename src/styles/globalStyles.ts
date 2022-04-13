@@ -94,7 +94,7 @@ export const darkTheme = {
   headerText: "#CFCFC5",
   accentColor: "#D7AF70",
   contentText: "#FFFFFF",
-  secondaryText: "#5C5C5C",
+  secondaryText: "#8A8A8A",
   tertiaryColor: "#5F6A59",
   gradientColor: "(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82))",
   secondaryGradient: "(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))",

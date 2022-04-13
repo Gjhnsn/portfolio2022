@@ -5,7 +5,7 @@ import { FooterBackGround, FooterText } from "./styles";
 const Footer = () => {
   return (
     <FooterBackGround>
-      <FooterText>Garrett Johnson</FooterText>
+      <FooterText>2022</FooterText>
     </FooterBackGround>
   );
 };
