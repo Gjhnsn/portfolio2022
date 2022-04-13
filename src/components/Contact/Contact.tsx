@@ -64,28 +64,28 @@ const Contact = () => {
   );
 
   return (
-    <section id='contact'>
-    <Layout>
-      <HeaderContainer>
-        <h2>Contact</h2>
-        <Underline />
-      </HeaderContainer>
-      <ContactTitle>Lets Get In Touch</ContactTitle>
-      <ContactForm onSubmit={handleContactSubmit}>
-        <InputWrapper>
-          <InputColumn>
-            <InputField type="text" placeholder="name" name="name" />
-            <InputField type="email" placeholder="email" name="email" />
-          </InputColumn>
-          <InputColumn>
-            <MessageBox placeholder="message" name="message" />
-          </InputColumn>
-        </InputWrapper>
-        <SubmitButton type="submit" value="Send Message"></SubmitButton>
-        {successMessage && renderSuccessMessage()}
-        {errorMessage && renderErrorMessage()}
-      </ContactForm>
-    </Layout>
+    <section id="contact">
+      <Layout>
+        <HeaderContainer>
+          <h2>Contact</h2>
+          <Underline />
+        </HeaderContainer>
+        <ContactTitle>Lets Get In Touch</ContactTitle>
+        <ContactForm onSubmit={handleContactSubmit}>
+          <InputWrapper>
+            <InputColumn>
+              <InputField type="text" placeholder="name" name="name" />
+              <InputField type="email" placeholder="email" name="email" />
+            </InputColumn>
+            <InputColumn>
+              <MessageBox placeholder="message" name="message" />
+            </InputColumn>
+          </InputWrapper>
+          <SubmitButton type="submit" value="Send Message"></SubmitButton>
+          {successMessage && renderSuccessMessage()}
+          {errorMessage && renderErrorMessage()}
+        </ContactForm>
+      </Layout>
     </section>
   );
 };

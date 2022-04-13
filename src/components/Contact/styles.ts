@@ -65,7 +65,7 @@ export const SubmitButton = styled.input`
   cursor: pointer;
 
   &:hover {
-    background-color: ${(props) => props.theme.sendMessageHover}
+    background-color: ${(props) => props.theme.sendMessageHover};
   }
 `;
 
@@ -99,10 +99,11 @@ const AnimateMessage = keyframes`
 }`;
 
 export const MessageWrapper = styled.div`
-  margin-top: 15px;
   display: flex;
   justify-content: center;
   border-radius: 5px;
+  position: absolute;
+  margin-top: 250px;
 `;
 
 export const ResultMessage = styled.p<IMessageProps>`
