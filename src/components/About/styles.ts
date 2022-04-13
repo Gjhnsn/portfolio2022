@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FlexWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 `;
 
@@ -35,11 +36,14 @@ export const ToolList = styled.ul`
 
 export const ToolListItem = styled.li`
   margin-bottom: 10px;
+  display: flex;
   align-items: center;
 `;
 
 export const TechTool = styled.p`
   color: ${(props) => props.theme.secondaryText};
+  font-family: 'Sora', sans-serif;
+  font-size: .8rem;
 `;
 
 // ----------------------------------------- right side content
@@ -67,7 +71,7 @@ export const ImageWrapper = styled.div`
     width: 425px;
     border: 2px solid ${(props) => props.theme.accentColor};
     border-radius: 10px;
-    bottom: 31px;
+    top: 17px;
     left: 17px;
     transition: transform .3s;
     box-shadow: ${(props) => props.theme.secondaryBoxShadow};

@@ -15,9 +15,12 @@ export const FlexWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const NameHeader = styled.div`
-
+export const NameHeader = styled.h1`
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: ${(props) => props.theme.body}; */
+  text-shadow: -.8px -.8px 0 ${(props) => props.theme.body}, .8px -.8px 0 ${(props) => props.theme.body}, -.8px .8px 0 ${(props) => props.theme.body}, .8px .8px 0 ${(props) => props.theme.body};
 `;
+
 export const SubTitle = styled.div`
 `;
 

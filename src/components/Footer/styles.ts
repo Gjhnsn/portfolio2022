@@ -30,4 +30,6 @@ export const FooterText = styled.p`
     color: lightgray;
     position: relative;
     z-index: 1;
+    letter-spacing: 2px;
+    font-weight: 100;
 `

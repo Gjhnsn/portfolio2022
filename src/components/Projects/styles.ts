@@ -75,7 +75,8 @@ export const TitleContainer = styled.div`
 
 export const ProjectTitle = styled.h3`
   transition: all 0.5s ease;
-  font-size: 55px;
+  font-size: 3rem;
+  font-weight: 400;
   padding: 3px 10px;
   text-align: center;
   opacity: 1;
@@ -202,6 +203,7 @@ export const ViewCodeIcon = styled(VscGithub)`
 export const ProjectName = styled.h3`
   color: ${(props) => props.theme.accentColor};
   margin: 20px 0 35px 0;
+  
 `;
 
 export const Description = styled.div`
@@ -217,8 +219,12 @@ export const CardFooter = styled.ul`
   display: flex;
 `;
 
-export const ProjectTech = styled.li``;
+export const ProjectTech = styled.li`
+  display: flex;
+  align-items: center;
+`;
 
 export const TechList = styled.p`
   color: ${(props) => props.theme.secondaryText};
+  font-size: .8rem;
 `;

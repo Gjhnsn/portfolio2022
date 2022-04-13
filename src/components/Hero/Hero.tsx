@@ -17,9 +17,9 @@ const Hero = () => {
       <LayoutContainer style={{marginBottom: '100px'}} className="landing">
         <TextContainer>
           <FlexWrapper>
-            <NameHeader>
-              <h1>Garrett Johnson</h1>
-            </NameHeader>
+            <div>
+              <NameHeader>Garrett Johnson</NameHeader>
+            </div>
             <SubTitle>
               <h3>web developer</h3>
             </SubTitle>

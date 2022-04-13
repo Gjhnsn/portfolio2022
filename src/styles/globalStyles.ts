@@ -34,42 +34,65 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     h1 {
       color: ${(props) => props.theme.headerText};
       font-weight: 600;
-      font-size: 75px;
+      font-size: 5rem;
       letter-spacing: 6px;
       // ------------------- temp font
       font-family: Arial;
+
+      
+      // font-family: 'Poppins', sans-serif;
+
+      // font-family: 'Open Sans', sans-serif;
+
+      // sora ++
+      font-family: 'Sora', sans-serif;
+
+ 
+
     }
 
     h2 {
       color: ${(props) => props.theme.headerText};
-      font-weight: 600;
-      font-size: 64px;
+      font-weight: 500;
+      font-size: 4rem;
       letter-spacing: 6px;
       // ------------------- temp font
       font-family: Arial;
+      font-family: 'Sora', sans-serif;
+
     }
 
     h3 {
       color: ${(props) => props.theme.accentColor};
-      font-size: 35px;
+      font-size: 2rem;
       font-weight: 300;
       letter-spacing: 3px;
       // ------------------- temp font
       font-family: Arial;
+      font-family: 'Sora', sans-serif;
+
     }
 
     p {
         color: ${(props) => props.theme.contentText};
-    }
+        font-family: 'Poppins', sans-serif;
+        font-size: .9rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+      }
 
     li {
       color: ${(props) => props.theme.accentColor};
       display: flex;
+      font-family: 'JetBrains Mono', monospace;
+
     }
 
     a {
       text-decoration: none;
-      color: ${(props) => props.theme.headerText}
+      color: ${(props) => props.theme.headerText};
+      font-family: 'Sora', sans-serif;
+      font-size: .85rem;
     }
 
     // -------------------------- keep input styles with autocomplete/focus

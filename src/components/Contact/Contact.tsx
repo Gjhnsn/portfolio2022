@@ -70,7 +70,7 @@ const Contact = () => {
           <h2>Contact</h2>
           <Underline />
         </HeaderContainer>
-        <ContactTitle>Lets Get In Touch</ContactTitle>
+        <ContactTitle>lets connect!</ContactTitle>
         <ContactForm onSubmit={handleContactSubmit}>
           <InputWrapper>
             <InputColumn>
