@@ -37,6 +37,11 @@ export const StyledLogo = styled(Logo)`
   fill: ${(props) => props.theme.tertiaryColor};
   animation: ${onStart} 1.3s 1 ease forwards;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    fill: ${(props) => props.theme.linkHoverColor};
+  }
 `;
 
 export const LinkList = styled.ul`

@@ -4,10 +4,10 @@ import { IMessageProps } from "../../utils/models";
 const success = "#66bb6a";
 const error = "#e57373";
 
-export const ContactTitle = styled.h2`
+export const ContactTitle = styled.h3`
   margin-top: 50px;
   margin-bottom: 25px;
-  font-size: 50px;
+  color: ${(props) => props.theme.accentColor}
 `;
 
 export const ContactForm = styled.form`
@@ -42,6 +42,8 @@ export const MessageBox = styled.textarea`
   padding: 10px;
   color: ${(props) => props.theme.contentText};
   outline: none;
+  font-family: 'Sora', sans-serif;
+  letter-spacing: .3px;
 `;
 
 export const InputField = styled.input`
@@ -52,6 +54,8 @@ export const InputField = styled.input`
   padding: 0 10px;
   color: ${(props) => props.theme.contentText};
   outline: none;
+  font-family: 'Sora', sans-serif;
+  letter-spacing: .3px;
 `;
 
 export const SubmitButton = styled.input`
@@ -63,6 +67,9 @@ export const SubmitButton = styled.input`
   color: ${(props) => props.theme.accentColor};
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Sora', sans-serif;
+  letter-spacing: .3px;
+
 
   &:hover {
     background-color: ${(props) => props.theme.sendMessageHover};
@@ -94,7 +101,7 @@ const AnimateMessage = keyframes`
 100% {
   width: 0%;
   opacity: 0;
-  padding: 10px 0;
+  padding: 10px 0; 
 }
 }`;
 
@@ -103,15 +110,17 @@ export const MessageWrapper = styled.div`
   justify-content: center;
   border-radius: 5px;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 245px;
 `;
 
 export const ResultMessage = styled.p<IMessageProps>`
   background-color: ${(props) => (props.successMessage ? success : error)};
   border-radius: 5px;
-  font-size: 18px;
+  font-size: .9rem;
+  font-family: 'Sora', sans-serif;
+  font-weight: 300;
   color: white;
-  letter-spacing: 2px;
+  letter-spacing: .8px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;

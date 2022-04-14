@@ -68,6 +68,9 @@ export const Email = styled.p`
   text-orientation: sideways;
   writing-mode: vertical-lr;
   color: ${(props) => props.theme.tertiaryColor};
+  font-size: .8rem;
+  font-weight: 400;
+  letter-spacing: .9px;
 `;
 
 export const ShortLine = styled.div`

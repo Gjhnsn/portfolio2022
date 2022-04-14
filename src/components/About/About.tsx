@@ -52,7 +52,7 @@ const About: FC = () => {
     return techTools.map((item: string) => {
       return (
         <ToolListItem key={item}>
-          <TiMinus style={{ marginRight: `10px` }} />
+          <TiMinus style={{ margin: `0 10px 1px 0` }} />
           <TechTool>{item}</TechTool>
         </ToolListItem>
       );

@@ -26,7 +26,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
       <ProjectTech key={item}>
         <TiMinus
           style={{
-            margin: "0 5px 0 10px",
+            margin: "0 5px 1px 10px",
           }}
         />
         <TechList>{item}</TechList>
