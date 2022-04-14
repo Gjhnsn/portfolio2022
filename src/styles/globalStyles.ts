@@ -77,7 +77,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
         color: ${(props) => props.theme.contentText};
         font-family: 'Poppins', sans-serif;
         font-size: .9rem;
-        font-weight: 200;
+        font-weight: 300;
         letter-spacing: 1px;
       }
 

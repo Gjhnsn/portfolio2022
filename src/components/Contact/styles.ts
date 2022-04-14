@@ -101,7 +101,7 @@ const AnimateMessage = keyframes`
 100% {
   width: 0%;
   opacity: 0;
-  padding: 10px 0;
+  padding: 10px 0; 
 }
 }`;
 
@@ -110,7 +110,7 @@ export const MessageWrapper = styled.div`
   justify-content: center;
   border-radius: 5px;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 245px;
 `;
 
 export const ResultMessage = styled.p<IMessageProps>`
@@ -121,7 +121,7 @@ export const ResultMessage = styled.p<IMessageProps>`
   font-weight: 300;
   letter-spacing: .1px;
   color: white;
-  letter-spacing: 2px;
+  letter-spacing: .8px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
