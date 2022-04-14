@@ -226,5 +226,6 @@ export const ProjectTech = styled.li`
 
 export const TechList = styled.p`
   color: ${(props) => props.theme.secondaryText};
-  font-size: .8rem;
+  font-size: .85rem;
+  font-family: 'Sora', sans-serif;
 `;

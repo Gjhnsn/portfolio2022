@@ -14,22 +14,21 @@ export const FooterBackGround = styled.div`
   position: absolute;
   z-index: 100;
 
-
   &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 80px;
-      right: 0;
-      background: rgba(40, 40, 40, 0.5);  
-      
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    right: 0;
+    background: rgba(40, 40, 40, 0.5);
   }
 `;
 
 export const FooterText = styled.p`
-    color: lightgray;
-    position: relative;
-    z-index: 1;
-    letter-spacing: 2px;
-    font-weight: 100;
-`
+  color: lightgray;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 2px;
+  font-weight: 100;
+`;
+

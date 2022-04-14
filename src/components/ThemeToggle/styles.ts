@@ -13,6 +13,7 @@ export const SunIcon = styled(FiSun)`
   height: auto;
   width: 28px;
   transition: all 0.3s ease;
+  color: ${(props) => props.theme.tertiaryColor};
 
   &:hover {
     transform: translateY(-3px);
@@ -25,6 +26,7 @@ export const MoonIcon = styled(HiOutlineMoon)`
   height: auto;
   width: 28px;
   transition: all 0.3s;
+  color: ${(props) => props.theme.tertiaryColor};
 
   &:hover {
     transform: translateY(-3px);

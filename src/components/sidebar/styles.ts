@@ -69,7 +69,7 @@ export const Email = styled.p`
   writing-mode: vertical-lr;
   color: ${(props) => props.theme.tertiaryColor};
   font-size: .8rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: .9px;
 `;
 
