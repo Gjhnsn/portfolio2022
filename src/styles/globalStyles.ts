@@ -133,7 +133,7 @@ export const lightTheme = {
   body: "#CFCFC5",
   headerText: "#181E1B",
   accentColor: "#485B49",
-  contentText: "#000000",
+  contentText: "#222",
   secondaryText: "#565858",
   tertiaryColor: "#5D4733",
   gradientColor: "(rgba(40, 40, 40, .9), rgba(40, 40, 40, .9))",
