@@ -119,7 +119,6 @@ export const ResultMessage = styled.p<IMessageProps>`
   font-size: .9rem;
   font-family: 'Sora', sans-serif;
   font-weight: 300;
-  letter-spacing: .1px;
   color: white;
   letter-spacing: .8px;
   text-align: center;

@@ -36,19 +36,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       font-weight: 600;
       font-size: 5rem;
       letter-spacing: 6px;
-      // ------------------- temp font
-      font-family: Arial;
-
-      
-      // font-family: 'Poppins', sans-serif;
-
-      // font-family: 'Open Sans', sans-serif;
-
-      // sora ++
       font-family: 'Sora', sans-serif;
-
- 
-
     }
 
     h2 {
@@ -56,10 +44,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       font-weight: 500;
       font-size: 4rem;
       letter-spacing: 6px;
-      // ------------------- temp font
-      font-family: Arial;
       font-family: 'Sora', sans-serif;
-
     }
 
     h3 {
@@ -67,10 +52,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       font-size: 2rem;
       font-weight: 400;
       letter-spacing: 3px;
-      // ------------------- temp font
-      font-family: Arial;
       font-family: 'Sora', sans-serif;
-
     }
 
     p {
