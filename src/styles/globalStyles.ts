@@ -116,7 +116,7 @@ export const darkTheme = {
   body: "#181E1B",
   headerText: "#CFCFC5",
   accentColor: "#D7AF70",
-  contentText: "#FFFFFF",
+  contentText: "#DDD",
   secondaryText: "#A8A8A8",
   tertiaryColor: "#7A8872",
   gradientColor: "(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82))",
