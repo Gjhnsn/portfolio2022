@@ -20,6 +20,7 @@ import { IProjectCardProps } from "../../utils/models";
 import { TiMinus } from "react-icons/ti";
 
 const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
+
   // array of tech used for each project from projectData
   const techList = project.techUsed.map((item) => {
     return (
@@ -38,7 +39,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
 
   return (
     <ProjectContainer>
-      <TitleContainer>
+      <TitleContainer >
         <ProjectTitle>{project.name}</ProjectTitle>
       </TitleContainer>
       <ProjectCardImage projectImg={projectImg}>

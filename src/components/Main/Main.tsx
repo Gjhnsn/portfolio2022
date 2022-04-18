@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
@@ -8,6 +8,7 @@ import Projects from "../Projects/Projects";
 import { Wrapper } from "./styles";
 
 const Main = () => {
+
   return (
     <>
       <Header />

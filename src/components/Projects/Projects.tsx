@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard";
 import { projectData } from "../../utils/projectData";
 
 const Projects = () => {
+
   // map through project data to render cards
   const renderProjects = () => {
     const cards = projectData.map((project) => {

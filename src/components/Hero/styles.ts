@@ -58,8 +58,8 @@ export const Square1 = styled.div`
   border-color: ${(props) => props.theme.accentColor};
   border-radius: 10px;
   position: relative;
-  right: 50px;
-  top: 120px;
+  left: 150px;
+  top: 420px;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
 `
 
@@ -71,8 +71,8 @@ export const Square2 = styled.div`
   border-color: ${(props) => props.theme.accentColor};
   border-radius: 10px;
   position: relative;
-  left: 180px;
-  top: 70px;
+  right: 70px;
+  bottom: 125px;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
 
 `
