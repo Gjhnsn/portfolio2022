@@ -18,7 +18,6 @@ import img2 from "../../assets/about/pro2.png";
 import img3 from "../../assets/about/pro3.png";
 import img4 from "../../assets/about/pro4.png";
 import img5 from "../../assets/about/pro5.png";
-import img6 from "../../assets/about/pro6.png";
 
 // possible icon choice imports
 import { FiTriangle, FiZap, FiChevronRight } from "react-icons/fi";
@@ -27,7 +26,7 @@ import { TiMinus, TiSpanner } from "react-icons/ti";
 const About: FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  const aboutImages: string[] = [img1, img2, img3, img4, img5, img6];
+  const aboutImages: string[] = [img1, img2, img3, img4, img5];
 
   // ----- cycle through aboutImages array
   useEffect(() => {
