@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../assets/treeBg.jpg";
+import background from "../../assets/pine.jpg";
 
 export const TextContainer = styled.div`
   display: flex;
@@ -16,13 +16,13 @@ export const FlexWrapper = styled.div`
 `;
 
 export const NameHeader = styled.h1`
-  /* -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: ${(props) => props.theme.body}; */
-  text-shadow: -.8px -.8px 0 ${(props) => props.theme.body}, .8px -.8px 0 ${(props) => props.theme.body}, -.8px .8px 0 ${(props) => props.theme.body}, .8px .8px 0 ${(props) => props.theme.body};
+  text-shadow: -0.8px -0.8px 0 ${(props) => props.theme.body},
+    0.8px -0.8px 0 ${(props) => props.theme.body},
+    -0.8px 0.8px 0 ${(props) => props.theme.body},
+    0.8px 0.8px 0 ${(props) => props.theme.body};
 `;
 
-export const SubTitle = styled.div`
-`;
+export const SubTitle = styled.div``;
 
 export const ImageBackground = styled.div`
   /* may dynamically change bg color with mode */
@@ -48,7 +48,7 @@ export const SquareWrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-`
+`;
 
 export const Square1 = styled.div`
   height: 350px;
@@ -61,7 +61,30 @@ export const Square1 = styled.div`
   left: 150px;
   top: 420px;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.theme.headerText};
+  font-weight: 600;
+  font-size: 0;
+  font-family: "Sora", sans-serif;
+  transition: font-size .2s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.headerText};
+    font-weight: 600;
+    font-size: 14rem;
+    font-family: "Sora", sans-serif;
+    transition: font-size .2s ease;
+    text-shadow: -0.8px -0.8px 0 ${(props) => props.theme.body},
+    0.8px -0.8px 0 ${(props) => props.theme.body},
+    -0.8px 0.8px 0 ${(props) => props.theme.body},
+    0.8px 0.8px 0 ${(props) => props.theme.body};
+  }
+`;
 
 export const Square2 = styled.div`
   height: 275px;
@@ -74,5 +97,24 @@ export const Square2 = styled.div`
   right: 70px;
   bottom: 125px;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.theme.headerText};
+  font-weight: 600;
+  font-size: 0;
+  font-family: "Sora", sans-serif;
+  transition: font-size .2s ease;
 
-`
+  &:hover {
+    color: ${(props) => props.theme.headerText};
+    font-weight: 600;
+    font-size: 10rem;
+    font-family: "Sora", sans-serif;
+    transition: font-size .2s ease;
+    text-shadow: -0.8px -.8px 0 ${(props) => props.theme.body},
+    0.8px -0.8px 0 ${(props) => props.theme.body},
+    -0.8px 0.8px 0 ${(props) => props.theme.body},
+    0.8px 0.8px 0 ${(props) => props.theme.body};
+  }
+`;

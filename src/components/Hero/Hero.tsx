@@ -41,12 +41,12 @@ const Hero = () => {
         style={{ transform: `translateY(${scrollOffset * 0.08}px)` }}
       />
       <SquareWrapper>
-        <Square1
-          style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}
-        />
-        <Square2
-          style={{ transform: `translateY(-${scrollOffset * 0.2}px)` }}
-        />
+        <Square1 style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}>
+          J
+        </Square1>
+        <Square2 style={{ transform: `translateY(-${scrollOffset * 0.2}px)` }}>
+          G
+        </Square2>
       </SquareWrapper>
     </section>
   );
