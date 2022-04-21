@@ -9,7 +9,6 @@ const onStart = keyframes`
 {
   0% {
       opacity: 0;
-      /* transform: scale(0.5); */
   }
 100% {
     transform: translateY(-100px);
