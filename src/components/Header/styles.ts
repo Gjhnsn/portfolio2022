@@ -5,6 +5,7 @@ import { IHeaderProps } from "../../utils/models";
 const onStart = keyframes`
 {
   0% {
+    transform: translateY(-50px);
       opacity: 0;
   }
 100% {
@@ -35,9 +36,11 @@ export const Nav = styled.nav<IHeaderProps>`
 // ---------------------- logo svg imported here as react component
 export const StyledLogo = styled(Logo)`
   fill: ${(props) => props.theme.tertiaryColor};
-  animation: ${onStart} 1.3s 1 ease forwards;
   cursor: pointer;
   transition: all 0.2s ease;
+  animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: 1.4s;
+  opacity: 0;
 
   &:hover {
     fill: ${(props) => props.theme.linkHoverColor};
@@ -53,7 +56,7 @@ export const LinkList = styled.ul`
 export const Link = styled.li`
   margin-left: 50px;
   opacity: 0;
-  animation: ${onStart} 1.3s 1 ease forwards;
+  animation: ${onStart} .8s 1 ease forwards;
 
   &:first-child {
     margin-left: 0;

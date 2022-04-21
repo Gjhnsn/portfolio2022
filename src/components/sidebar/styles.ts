@@ -9,7 +9,7 @@ const onStart = keyframes`
 {
   0% {
       opacity: 0;
-      transform: scale(0.5);
+      /* transform: scale(0.5); */
   }
 100% {
     transform: translateY(-100px);
@@ -24,7 +24,9 @@ export const Container = styled.div`
   align-items: center;
   bottom: -100px;
   margin-left: 20px;
-  animation: ${onStart} 1.3s 1 ease forwards;
+  animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: 2.3s;
+  opacity: 0;
   transform-origin: bottom;
 `;
 

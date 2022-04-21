@@ -36,16 +36,16 @@ const Header = () => {
       <StyledLogo onClick={scrollToTop} />
       <div>
         <LinkList>
-          <Link style={{ animationDelay: "1s" }}>
+          <Link style={{ animationDelay: "1.6s" }}>
             <Anchor href="#home">Home</Anchor>
           </Link>
-          <Link style={{ animationDelay: "1.2s" }}>
+          <Link style={{ animationDelay: "1.7s" }}>
             <Anchor href="#about">About</Anchor>
           </Link>
-          <Link style={{ animationDelay: "1.4s" }}>
+          <Link style={{ animationDelay: "1.8s" }}>
             <Anchor href="#projects">Projects</Anchor>
           </Link>
-          <Link style={{ animationDelay: "1.6s" }}>
+          <Link style={{ animationDelay: "1.9s" }}>
             <Anchor href="#contact">Contact</Anchor>
           </Link>
         </LinkList>

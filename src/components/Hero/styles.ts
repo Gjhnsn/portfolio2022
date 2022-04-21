@@ -1,5 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import background from "../../assets/pine.jpg";
+
+const onStart = keyframes`
+{
+  0% {
+      opacity: 0;
+      transform: translateY(75px);
+  }
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+}`;
 
 export const TextContainer = styled.div`
   display: flex;
@@ -20,9 +32,14 @@ export const NameHeader = styled.h1`
     0.8px -0.8px 0 ${(props) => props.theme.body},
     -0.8px 0.8px 0 ${(props) => props.theme.body},
     0.8px 0.8px 0 ${(props) => props.theme.body};
+    animation: ${onStart} 1s 1 ease forwards;
 `;
 
-export const SubTitle = styled.div``;
+export const SubTitle = styled.div`
+  animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: .2s;
+  opacity: 0;
+`;
 
 export const ImageBackground = styled.div`
   /* may dynamically change bg color with mode */
@@ -72,6 +89,10 @@ export const Square1 = styled.div`
   font-size: 0;
   font-family: "Sora", sans-serif;
   transition: font-size .2s ease;
+  animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: .9s;
+  opacity: 0;
+
 
   &:hover {
     color: ${(props) => props.theme.headerText};
@@ -105,6 +126,10 @@ export const Square2 = styled.div`
   font-size: 0;
   font-family: "Sora", sans-serif;
   transition: font-size .2s ease;
+  animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: .6s;
+  opacity: 0;
+
 
   &:hover {
     color: ${(props) => props.theme.headerText};
