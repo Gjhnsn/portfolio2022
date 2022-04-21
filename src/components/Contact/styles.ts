@@ -5,7 +5,7 @@ const success = "#66bb6a";
 const error = "#e57373";
 
 export const ContactTitle = styled.h3`
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 25px;
   color: ${(props) => props.theme.accentColor}
 `;
@@ -16,14 +16,13 @@ export const ContactForm = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 `;
 
 export const InputWrapper = styled.div`
   display: flex;
   width: 100%;
-  margin-bottom: 25px;
-`;
+  `;
 
 export const InputColumn = styled.div`
   display: flex;
@@ -31,6 +30,7 @@ export const InputColumn = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 0 20px;
+  margin-bottom: 25px;
 `;
 
 export const MessageBox = styled.textarea`
