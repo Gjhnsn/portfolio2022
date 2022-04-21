@@ -80,7 +80,7 @@ export const ImageWrapper = styled.div`
 
   &:hover::after {
       content: "";
-      transform: translateY(-2%) translateX(-2%);
+      transform: translateY(-9%) translateX(-9%);
     }
 `;
 
@@ -89,6 +89,7 @@ export const AboutImage = styled.div`
   width: 100%;
   background-position: 50% 50%;
   background-size: 100%;
+  image-rendering: -webkit-optimize-contrast;
   transform: scale(1.2);
   transition: .7s ease;
   
