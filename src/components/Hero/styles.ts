@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import background from "../../assets/pine.jpg";
 
+
 const onStart = keyframes`
 {
   0% {
@@ -9,6 +10,16 @@ const onStart = keyframes`
   }
 100% {
     transform: translateY(0);
+    opacity: 1;
+}
+}`;
+
+const squareFade = keyframes`
+{
+  0% {
+      opacity: 0;
+  }
+100% {
     opacity: 1;
 }
 }`;
@@ -89,8 +100,8 @@ export const Square1 = styled.div`
   font-size: 0;
   font-family: "Sora", sans-serif;
   transition: font-size .2s ease;
-  animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: .9s;
+  animation: ${squareFade} 1.7s 1 ease-in forwards;
+  animation-delay: .5s;
   opacity: 0;
 
 
@@ -126,8 +137,8 @@ export const Square2 = styled.div`
   font-size: 0;
   font-family: "Sora", sans-serif;
   transition: font-size .2s ease;
-  animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: .6s;
+  animation: ${squareFade} 1.7s 1 ease-in forwards;
+  animation-delay: .2s;
   opacity: 0;
 
 

@@ -3,7 +3,6 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 
 
-
 // ----------------------------- sidebar float up animation
 const onStart = keyframes`
 {
@@ -24,7 +23,7 @@ export const Container = styled.div`
   bottom: -100px;
   margin-left: 20px;
   animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: 2.3s;
+  animation-delay: 2.1s;
   opacity: 0;
   transform-origin: bottom;
 `;
