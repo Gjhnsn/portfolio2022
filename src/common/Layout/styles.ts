@@ -9,5 +9,5 @@ export const LayoutContainer = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   /* temporary border for styling structure */
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 `;

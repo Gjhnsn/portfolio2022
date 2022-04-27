@@ -1,5 +1,16 @@
 import styled, { keyframes } from "styled-components";
 import background from "../../assets/pine.jpg";
+import { uiSize } from "../../utils/mobileScreens";
+
+interface IuiScreenSize {
+  mobile: string;
+  mobileLandscape: string;
+  smallTablet: string;
+  tablet: string;
+  bigTablet: string;
+  laptop13in: string;
+  laptop15in: string;
+}
 
 
 const onStart = keyframes`
@@ -44,6 +55,10 @@ export const NameHeader = styled.h1`
     -0.8px 0.8px 0 ${(props) => props.theme.body},
     0.8px 0.8px 0 ${(props) => props.theme.body};
     animation: ${onStart} 1s 1 ease forwards;
+
+    @media ${uiSize.tablet} {
+      color: blue;
+    }
 `;
 
 export const SubTitle = styled.div`
@@ -154,3 +169,4 @@ export const Square2 = styled.div`
     0.8px 0.8px 0 ${(props) => props.theme.body};
   }
 `;
+
