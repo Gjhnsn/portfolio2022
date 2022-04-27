@@ -23,7 +23,6 @@ export const Nav = styled.nav<IHeaderProps>`
   align-items: center;
   width: 100%;
   height: 80px;
-  /* margin: 20px 0px; */
   backdrop-filter: blur(7px);
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   padding: 0px 50px;
@@ -39,7 +38,7 @@ export const StyledLogo = styled(Logo)`
   cursor: pointer;
   transition: all 0.2s ease;
   animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: 1.4s;
+  animation-delay: 1.3s;
   opacity: 0;
 
   &:hover {
