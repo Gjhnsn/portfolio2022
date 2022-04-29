@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from "../../assets/flower.jpg";
+import { uiSize } from "../../utils/mobileScreens";
 
 export const FooterBackGround = styled.div`
   width: 100%;
@@ -12,7 +13,13 @@ export const FooterBackGround = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 100;
+  z-index: -1;
+
+  @media ${uiSize.mobile} {
+    /* display: none; */
+    height: 140px;
+    align-items: flex-end;
+  }
 
   &:after {
     content: "";
@@ -20,15 +27,25 @@ export const FooterBackGround = styled.div`
     width: 100%;
     height: 80px;
     right: 0;
-    background: rgba(40, 40, 40, 0.5);
+    background: rgba(40, 40, 40, 0.85);
+
+    @media ${uiSize.mobile} {
+    /* display: none; */
+    height: 140px;
+    
+  }
   }
 `;
 
 export const FooterText = styled.p`
-  color: lightgray;
+  color: #c4c4c4;
   position: relative;
   z-index: 1;
   letter-spacing: 2px;
-  font-weight: 100;
+  font-weight: 200;
+
+  @media ${uiSize.mobile} {
+    padding-bottom: 20px
+  }
 `;
 

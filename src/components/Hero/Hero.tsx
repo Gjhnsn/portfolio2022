@@ -1,13 +1,14 @@
 import React, { FC, useState, useEffect } from "react";
 import {
   TextContainer,
-  Square1,
   NameHeader,
   SubTitle,
   ImageBackground,
-  Square2,
   FlexWrapper,
   SquareWrapper,
+  TopSquare,
+  BottomSquare,
+  SubText,
 } from "./styles";
 import { LayoutContainer } from "../../common/Layout/styles";
 
@@ -32,7 +33,7 @@ const Hero = () => {
               <NameHeader>Garrett Johnson</NameHeader>
             </div>
             <SubTitle>
-              <h3>web developer</h3>
+              <SubText>web developer</SubText>
             </SubTitle>
           </FlexWrapper>
         </TextContainer>
@@ -41,12 +42,14 @@ const Hero = () => {
         style={{ transform: `translateY(${scrollOffset * 0.08}px)` }}
       />
       <SquareWrapper>
-        <Square1 style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}>
+        <BottomSquare style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}>
           J
-        </Square1>
-        <Square2 style={{ transform: `translateY(-${scrollOffset * 0.2}px)` }}>
+        </BottomSquare>
+      {/* </SquareWrapper>
+      <SquareWrapper>   */}
+        <TopSquare style={{ transform: `translateY(-${scrollOffset * 0.2}px)` }}>
           G
-        </Square2>
+        </TopSquare>
       </SquareWrapper>
     </section>
   );

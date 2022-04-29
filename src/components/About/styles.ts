@@ -1,10 +1,17 @@
 import styled from "styled-components";
+import { uiSize } from "../../utils/mobileScreens";
 
 export const FlexWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border: 5px solid white;
+
+  @media ${uiSize.mobileLandscape} {
+    flex-direction: column;
+    
+  }
 `;
 
 // ------------------------------------- left side content
@@ -13,6 +20,10 @@ export const LeftContent = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 50%;
+
+  @media ${uiSize.mobileLandscape} {
+    max-width: 100%;
+  }
 `;
 
 export const Underline = styled.div`
@@ -52,6 +63,11 @@ export const RightContent = styled.div`
   max-width: 50%;
   display: block;
   position: relative;
+
+  @media ${uiSize.mobileLandscape} {
+    max-width: 100%;
+    align-items: center;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -60,6 +76,11 @@ export const ImageWrapper = styled.div`
   border-radius: 5px;
   overflow: hidden;
   box-shadow: ${(props) => props.theme.boxShadow};
+
+  @media ${uiSize.mobileLandscape} {
+    height: 300px;
+    width: 300px;
+  }
 
 /* ------------------------ Gold accent border */
   &:after {
@@ -76,6 +97,10 @@ export const ImageWrapper = styled.div`
     transition: transform .3s;
     box-shadow: ${(props) => props.theme.secondaryBoxShadow};
 
+    @media ${uiSize.mobileLandscape} {
+    height: 300px;
+    width: 300px;
+  }
   }
 
   &:hover::after {
