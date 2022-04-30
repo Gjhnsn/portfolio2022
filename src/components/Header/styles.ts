@@ -1,7 +1,12 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { IHeaderProps } from "../../utils/models";
 import { uiSize } from "../../utils/mobileScreens";
+import { Interface } from "readline";
+
+interface INavProps {
+  showNavToggle: boolean
+}
 
 const onStart = keyframes`
 {
@@ -61,42 +66,48 @@ export const Hamburger = styled.div`
   display: none;
 
   span {
-    height: 2px;
-    width: 25px;
+    height: 3px;
+    width: 30px;
     background-color: ${(props) => props.theme.tertiaryColor};
-    margin-bottom: 5px;
+    margin: 4px 0;
     border-radius: 5px;
   }
 
   @media ${uiSize.mobile} {
     display: flex;
+    align-self: center;
   }
 `
 
-export const LinkList = styled.ul`
+export const LinkList = styled.ul<INavProps>`
   display: flex;
   flex-direction: row;
   list-style: none;
 
   @media ${uiSize.mobile} {
-    /* overflow: hidden; */
-    flex-basis: 100%;
+    overflow: hidden;
+    height: ${(props) => props.showNavToggle ?' 60vh' : '0'};
+    /* flex-basis: 100%; */
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 85vw;
-    border: 1px solid orange;
+    transition: height .3s ease-in;
+    /* border: 1px solid orange; */
   }
 `;
 
-export const Link = styled.li`
+export const Link = styled.li<INavProps>`
   margin-left: 50px;
   opacity: 0;
   animation: ${onStart} .8s 1 ease forwards;
 
   @media ${uiSize.mobile} {
+    animation: none;
     margin-left: 0;
     padding: 50px 10px;
+    opacity: ${(props) => props.showNavToggle ? '1' : '0'};
+    transition: opacity .5s ease-in;
   }
 
   &:first-child {
