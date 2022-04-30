@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { IMessageProps } from "../../utils/models";
+import { uiSize } from "../../utils/mobileScreens";
 
 const success = "#66bb6a";
 const error = "#e57373";
@@ -22,6 +23,10 @@ export const ContactForm = styled.form`
 export const InputWrapper = styled.div`
   display: flex;
   width: 100%;
+
+  @media ${uiSize.mobile} {
+  flex-direction: column;
+}
   `;
 
 export const InputColumn = styled.div`

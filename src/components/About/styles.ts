@@ -37,6 +37,10 @@ export const TextWrapper = styled.div`
   align-self: flex-end;
   padding-left: 100px;
   margin-bottom: 20px;
+
+  @media ${uiSize.mobile} {
+    padding-left: 50px;
+  }
 `;
 
 export const ToolList = styled.ul`

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ProjectCardImgProps } from "../../utils/models";
 import { MdOpenInNew } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
+import { uiSize } from "../../utils/mobileScreens";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -32,6 +33,11 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   align-items: center;
   transition: all 0.5s ease;
   z-index: 2;
+
+  @media ${uiSize.mobile} {
+    height: 300px;
+    width: 340px;
+  }
 `;
 
 export const ProjectCardOverlay = styled.div`
@@ -100,6 +106,11 @@ export const ProjectCardData = styled.div`
   align-items: flex-end;
   padding: 30px 30px 30px 70px;
   opacity: 0;
+
+  @media ${uiSize.mobile} {
+    height: 350px;
+    width: 350px;
+  }
 `;
 
 export const CardBorder = styled.div`

@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
   }
 
   @media ${uiSize.mobile} {
-    max-width: 450px;
+    max-width: 100vw;
   }
 
 `;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, LinkList, Nav, StyledLogo, Anchor } from "./styles";
+import { Link, LinkList, Nav, StyledLogo, Anchor, Hamburger } from "./styles";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(true);
@@ -34,6 +34,11 @@ const Header = () => {
   return (
     <Nav showNav={showNav}>
       <StyledLogo onClick={scrollToTop} />
+      <Hamburger>
+        <span />
+        <span />
+        <span />
+      </Hamburger>
       <div>
         <LinkList>
           <Link style={{ animationDelay: "1.4s" }}>
