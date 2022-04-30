@@ -2,10 +2,11 @@ import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { IHeaderProps } from "../../utils/models";
 import { uiSize } from "../../utils/mobileScreens";
-import { Interface } from "readline";
+import { Twirl as Hamburger } from 'hamburger-react'
+
 
 interface INavProps {
-  showNavToggle: boolean
+  showMobileNav: boolean
 }
 
 const onStart = keyframes`
@@ -18,6 +19,17 @@ const onStart = keyframes`
     opacity: 1;
 }
 }`;
+
+export const StyledHamburger = styled.div`
+  display: none;
+  color: ${(props) => props.theme.tertiaryColor};
+  cursor: pointer;
+  
+  @media ${uiSize.mobile} {
+    display: block;
+    align-self: center;
+  }
+`
 
 // ---------------------------- TODO --- complete nav scroll styles
 
@@ -60,7 +72,8 @@ export const StyledLogo = styled(Logo)`
   }
 `;
 
-export const Hamburger = styled.div`
+
+export const Burger = styled.div`
   flex-direction: column;
   cursor: pointer;
   display: none;
@@ -86,7 +99,7 @@ export const LinkList = styled.ul<INavProps>`
 
   @media ${uiSize.mobile} {
     overflow: hidden;
-    height: ${(props) => props.showNavToggle ?' 60vh' : '0'};
+    height: ${(props) => props.showMobileNav ?' 60vh' : '0'};
     /* flex-basis: 100%; */
     flex-direction: column;
     align-items: center;
@@ -106,7 +119,7 @@ export const Link = styled.li<INavProps>`
     animation: none;
     margin-left: 0;
     padding: 50px 10px;
-    opacity: ${(props) => props.showNavToggle ? '1' : '0'};
+    opacity: ${(props) => props.showMobileNav ? '1' : '0'};
     transition: opacity .5s ease-in;
   }
 

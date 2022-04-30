@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Link, LinkList, Nav, StyledLogo, Anchor, Hamburger } from "./styles";
+import React, { useEffect, useState, FC } from "react";
+import { Link, LinkList, Nav, StyledLogo, Anchor, Burger, StyledHamburger } from "./styles";
+import { Twirl as Hamburger } from 'hamburger-react'
+
+
 
 const Header = () => {
   const [showNav, setShowNav] = useState(true);
-  const [showNavToggle, setShowNavToggle] = useState(false)
+  const [showMobileNav, setShowMobileNav] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", controlNav);
@@ -35,23 +38,26 @@ const Header = () => {
   return (
     <Nav showNav={showNav}>
       <StyledLogo onClick={scrollToTop} />
-      <Hamburger onClick={() => setShowNavToggle(!showNavToggle)}>
+      {/* <Burger onClick={() => setShowMobileNav(!showMobileNav)}>
         <span />
         <span />
         <span />
-      </Hamburger>
+      </Burger> */}
+      <StyledHamburger>
+         <Hamburger onToggle={toggled => {toggled ? setShowMobileNav(true) : setShowMobileNav(false)}} direction="right" rounded label="Show menu"/>
+      </StyledHamburger>
       <div>
-        <LinkList showNavToggle={showNavToggle}>
-          <Link style={{ animationDelay: "1.4s" }} showNavToggle={showNavToggle}>
+        <LinkList showMobileNav={showMobileNav}>
+          <Link style={{ animationDelay: "1.4s" }} showMobileNav={showMobileNav}>
             <Anchor href="#home">Home</Anchor>
           </Link>
-          <Link style={{ animationDelay: "1.5s" }} showNavToggle={showNavToggle}>
+          <Link style={{ animationDelay: "1.5s" }} showMobileNav={showMobileNav}>
             <Anchor href="#about">About</Anchor>
           </Link>
-          <Link style={{ animationDelay: "1.6s" }} showNavToggle={showNavToggle}>
+          <Link style={{ animationDelay: "1.6s" }} showMobileNav={showMobileNav}>
             <Anchor href="#projects">Projects</Anchor>
           </Link>
-          <Link style={{ animationDelay: "1.7s" }} showNavToggle={showNavToggle}>
+          <Link style={{ animationDelay: "1.7s" }} showMobileNav={showMobileNav}>
             <Anchor href="#contact">Contact</Anchor>
           </Link>
         </LinkList>
