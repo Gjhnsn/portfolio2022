@@ -8,7 +8,8 @@ import {
   Email,
   LinkedInIcon,
   GithubIcon,
-  IconWrapper
+  IconWrapper,
+  ToggleWrapper
 } from "./styles";
 
 const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
@@ -27,8 +28,9 @@ const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
         <GithubIcon
           onClick={() => window.open("https://github.com/Gjhnsn", "_blank")}
         />
-
+        <ToggleWrapper>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+        </ToggleWrapper>
       </IconWrapper>
       <ShortLine />
       <div>

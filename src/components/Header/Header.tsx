@@ -7,15 +7,15 @@ import {
   Anchor,
   Burger,
   StyledHamburger,
-  MobileNavBackdrop,
   MobileBackdrop,
 } from "./styles";
 import { Twirl as Hamburger } from "hamburger-react";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
+import { IThemeProps } from "../../utils/models";
 
-const Header = () => {
+const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
   const [showNav, setShowNav] = useState(true);
   const [showMobileNav, setShowMobileNav] = useState(false);
-  const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", controlNav);
@@ -67,11 +67,6 @@ const Header = () => {
     <>
       <Nav showNav={showNav}>
         <StyledLogo onClick={scrollToTop} />
-        {/* <Burger onClick={() => setShowMobileNav(!showMobileNav)}>
-        <span />
-        <span />
-        <span />
-      </Burger> */}
         <StyledHamburger>
           <Hamburger
             
@@ -112,6 +107,8 @@ const Header = () => {
           >
             <Anchor href="#contact">Contact</Anchor>
           </Link>
+          
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
         </LinkList>
       </Nav>
       {showMobileNav ? mobileMenuBackdrop() : null}

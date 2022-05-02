@@ -53,7 +53,7 @@ export const IconWrapper = styled.div`
 
 
     @media ${uiSize.mobile} {
-      width: 55%;
+      width: 35%;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-around;
@@ -158,3 +158,9 @@ export const ShortLine = styled.div`
     display: none;
   }
 `;
+
+export const ToggleWrapper = styled.div`
+  @media ${uiSize.mobile} {
+    display: none;
+  }
+`

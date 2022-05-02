@@ -21,6 +21,17 @@ const onStart = keyframes`
 }
 }`;
 
+const backdrop = keyframes`
+{
+  0% {
+    
+      opacity: 0;
+  }
+100% {
+    opacity: .5;
+}
+}`;
+
 // ---------------------------- TODO --- complete nav scroll styles
 
 export const Nav = styled.nav<IHeaderProps>`
@@ -82,6 +93,9 @@ export const StyledHamburger = styled.div`
   display: none;
   color: ${(props) => props.theme.tertiaryColor};
   cursor: pointer;
+  animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
   
   @media ${uiSize.mobile} {
     display: block;
@@ -109,21 +123,6 @@ export const Burger = styled.div`
   }
 `
 
-export const MobileNavBackdrop = styled.div`
-  display: none;
-
-  /* @media ${uiSize.mobile} {
-    display: block;
-    position: absolute;
-    
-    height: 100vh;
-    width: 100vw;
-    background-color: green;
-    z-index: -1000;
-  } */
-
-`
-
 export const LinkList = styled.ul<INavProps>`
   display: flex;
   flex-direction: row;
@@ -139,7 +138,7 @@ export const LinkList = styled.ul<INavProps>`
     justify-content: center;
     width: 100vw;
     transition: height .3s ease-in;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     padding: 0 30px;
   }
 `;
@@ -151,8 +150,9 @@ export const MobileBackdrop = styled.div`
   bottom: 0;
   left: 0;
   background-color: ${(props) => props.theme.tertiaryColor};
-  opacity: .7;
+  opacity: .5;
   z-index: 1;
+  animation: ${backdrop} 1s 1 ease forwards;
 `
 
 export const Link = styled.li<INavProps>`

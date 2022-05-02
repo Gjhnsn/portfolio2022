@@ -25,9 +25,9 @@ export const SunIcon = styled(FiSun)`
   }
 
   @media ${uiSize.mobile} {
-    color: #c4c4c4;
     height: auto;
-  width: 28px;
+    width: 40px;
+    margin: 10px 8px;
   }
 
   &:hover {
@@ -48,9 +48,9 @@ export const MoonIcon = styled(HiOutlineMoon)`
   }
 
   @media ${uiSize.mobile} {
-    color: #c4c4c4;
     height: auto;
-  width: 28px;
+  width: 40px;
+  margin: 10px 8px;
   }
 
   &:hover {
