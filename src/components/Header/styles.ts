@@ -2,8 +2,9 @@ import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { IHeaderProps } from "../../utils/models";
 import { uiSize } from "../../utils/mobileScreens";
-import { Twirl as Hamburger } from 'hamburger-react'
 
+
+// --------------------- TODO: ADD BACKGROUND OVERLAY FOR MOBILE NAV TO CLICK OUT
 
 interface INavProps {
   showMobileNav: boolean
@@ -19,17 +20,6 @@ const onStart = keyframes`
     opacity: 1;
 }
 }`;
-
-export const StyledHamburger = styled.div`
-  display: none;
-  color: ${(props) => props.theme.tertiaryColor};
-  cursor: pointer;
-  
-  @media ${uiSize.mobile} {
-    display: block;
-    align-self: center;
-  }
-`
 
 // ---------------------------- TODO --- complete nav scroll styles
 
@@ -49,13 +39,25 @@ export const Nav = styled.nav<IHeaderProps>`
     props.showNav ? `translateY(0px)` : `translateY(-80px)`};
   transition: transform 0.2s ease-in;
   flex-wrap: wrap;
-
   border: 1px solid pink;
 
   @media ${uiSize.mobile} {
-    padding: 15px 30px;
+    
+    padding: 15px 0px;
     width: 100%;
   }
+
+  /* &:after {
+    content: '';
+    display: none;
+
+    @media ${uiSize.mobile} {
+      display: block;
+      background-color: green;
+      height: 100vh;
+      width: 100vw;
+    }
+  } */
 `;
 
 // ---------------------- logo svg imported here as react component
@@ -70,8 +72,23 @@ export const StyledLogo = styled(Logo)`
   &:hover {
     fill: ${(props) => props.theme.linkHoverColor};
   }
+
+  @media ${uiSize.mobile} {
+    margin-left: 30px;
+  }
 `;
 
+export const StyledHamburger = styled.div`
+  display: none;
+  color: ${(props) => props.theme.tertiaryColor};
+  cursor: pointer;
+  
+  @media ${uiSize.mobile} {
+    display: block;
+    align-self: center;
+    margin-right: 30px;
+  }
+`
 
 export const Burger = styled.div`
   flex-direction: column;
@@ -92,23 +109,51 @@ export const Burger = styled.div`
   }
 `
 
+export const MobileNavBackdrop = styled.div`
+  display: none;
+
+  /* @media ${uiSize.mobile} {
+    display: block;
+    position: absolute;
+    
+    height: 100vh;
+    width: 100vw;
+    background-color: green;
+    z-index: -1000;
+  } */
+
+`
+
 export const LinkList = styled.ul<INavProps>`
   display: flex;
   flex-direction: row;
   list-style: none;
 
+
   @media ${uiSize.mobile} {
     overflow: hidden;
-    height: ${(props) => props.showMobileNav ?' 60vh' : '0'};
+    height: ${(props) => props.showMobileNav ?' 50vh' : '0'};
     /* flex-basis: 100%; */
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 85vw;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100vw;
     transition: height .3s ease-in;
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
+    padding: 0 30px;
   }
 `;
+
+export const MobileBackdrop = styled.div`
+  position: fixed;  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: ${(props) => props.theme.tertiaryColor};
+  opacity: .7;
+  z-index: 1;
+`
 
 export const Link = styled.li<INavProps>`
   margin-left: 50px;
@@ -118,7 +163,7 @@ export const Link = styled.li<INavProps>`
   @media ${uiSize.mobile} {
     animation: none;
     margin-left: 0;
-    padding: 50px 10px;
+    padding: 30px 10px;
     opacity: ${(props) => props.showMobileNav ? '1' : '0'};
     transition: opacity .5s ease-in;
   }
