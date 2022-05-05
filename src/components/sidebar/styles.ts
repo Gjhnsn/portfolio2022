@@ -29,10 +29,6 @@ export const Container = styled.div`
   transform-origin: bottom;
 
   @media ${uiSize.mobileLandscape} {
-    margin-left: 10px;
-  }
-
-  @media ${uiSize.mobile} {
     position: static;
     bottom: 0;
     animation: none;
@@ -42,7 +38,19 @@ export const Container = styled.div`
     width: 90%;
     z-index: 110;
     padding-bottom: 0;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 0 auto;  }
+
+  @media ${uiSize.mobile} {
+    /* position: static;
+    bottom: 0;
+    animation: none;
+    opacity: 1;
+    justify-content: space-between;
+    height: 65px;
+    width: 90%;
+    z-index: 110;
+    padding-bottom: 0;
+    margin: 20px auto 0 auto; */
   }
 `;
 
@@ -52,7 +60,7 @@ export const IconWrapper = styled.div`
   flex-direction: column-reverse;
 
 
-    @media ${uiSize.mobile} {
+    @media ${uiSize.mobileLandscape} {
       width: 35%;
       display: flex;
       flex-direction: row-reverse;
@@ -67,7 +75,7 @@ export const LongLine = styled.div`
   background-color: ${(props) => props.theme.tertiaryColor};
   margin-top: 20px;
 
-@media ${uiSize.mobile} {
+@media ${uiSize.mobileLandscape} {
     display: none;
   }
 `;
@@ -80,13 +88,15 @@ export const LinkedInIcon = styled(AiOutlineLinkedin)`
   transition: all .3s;
 
   @media ${uiSize.mobileLandscape} {
-    width: 25px;
-  }
-
-  @media ${uiSize.mobile} {
     color: #c4c4c4;
     height: 30px;
     width: 30px;
+  }
+
+  @media ${uiSize.mobile} {
+    /* color: #c4c4c4;
+    height: 30px;
+    width: 30px; */
   }
 
   &:hover {
@@ -105,15 +115,17 @@ export const GithubIcon = styled(VscGithub)`
   transition: all .3s;
 
   @media ${uiSize.mobileLandscape} {
-    width: 25px;
-    height: 25px;
-  }
-
-  @media ${uiSize.mobile} {
     margin-bottom: 0;
     color: #c4c4c4;
     height: 30px;
     width: 30px;
+  }
+
+  @media ${uiSize.mobile} {
+    /* margin-bottom: 0;
+    color: #c4c4c4;
+    height: 30px;
+    width: 30px; */
   }
 
   &:hover {
@@ -131,11 +143,11 @@ export const Email = styled.p`
   font-weight: 400;
   letter-spacing: .9px;
 
-  @media ${uiSize.mobileLandscape} {
+  /* @media ${uiSize.mobileLandscape} {
     font-size: .65rem;
-  }
+  } */
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     transform: rotate(0deg);
     writing-mode: horizontal-tb;
     color: #c4c4c4;
@@ -150,17 +162,17 @@ export const ShortLine = styled.div`
   background-color: ${(props) => props.theme.tertiaryColor};
   margin: 20px 0;
 
-  @media ${uiSize.mobileLandscape} {
+  /* @media ${uiSize.mobileLandscape} {
     height: 10px;
-  }
+  } */
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     display: none;
   }
 `;
 
 export const ToggleWrapper = styled.div`
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     display: none;
   }
 `

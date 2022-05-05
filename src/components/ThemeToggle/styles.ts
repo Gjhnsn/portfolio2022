@@ -20,11 +20,11 @@ export const SunIcon = styled(FiSun)`
   transition: all 0.3s ease;
   color: ${(props) => props.theme.tertiaryColor};
 
-  @media ${uiSize.mobileLandscape} {
+  /* @media ${uiSize.mobileLandscape} {
     width: 25px;
-  }
+  } */
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     height: auto;
     width: 40px;
     margin: 10px 8px;
@@ -33,6 +33,10 @@ export const SunIcon = styled(FiSun)`
   &:hover {
     transform: translateY(-3px);
     color: ${(props) => props.theme.linkHoverColor};
+
+    @media ${uiSize.mobileLandscape} {
+      transform: translateY(0px);
+    }
   }
 `;
 
@@ -43,18 +47,22 @@ export const MoonIcon = styled(HiOutlineMoon)`
   transition: all 0.3s;
   color: ${(props) => props.theme.tertiaryColor};
 
-  @media ${uiSize.mobileLandscape} {
+  /* @media ${uiSize.mobileLandscape} {
     width: 25px;
-  }
+  } */
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     height: auto;
-  width: 40px;
-  margin: 10px 8px;
+    width: 40px;
+    margin: 10px 8px;
   }
 
   &:hover {
     transform: translateY(-3px);
     color: ${(props) => props.theme.linkHoverColor};
+
+    @media ${uiSize.mobileLandscape} {
+      transform: translateY(0px);
+    }
   }
 `;

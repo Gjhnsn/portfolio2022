@@ -15,7 +15,7 @@ export const FooterBackGround = styled.div`
   position: absolute;
   z-index: -1;
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     /* display: none; */
     height: 140px;
     align-items: flex-end;
@@ -29,7 +29,7 @@ export const FooterBackGround = styled.div`
     right: 0;
     background: rgba(40, 40, 40, 0.85);
 
-    @media ${uiSize.mobile} {
+    @media ${uiSize.mobileLandscape} {
     /* display: none; */
     height: 140px;
     
@@ -44,7 +44,7 @@ export const FooterText = styled.p`
   letter-spacing: 2px;
   font-weight: 200;
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     padding-bottom: 20px
   }
 `;

@@ -8,10 +8,12 @@ import {
   Burger,
   StyledHamburger,
   MobileBackdrop,
+  ToggleWrapper,
 } from "./styles";
 import { Twirl as Hamburger } from "hamburger-react";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import { IThemeProps } from "../../utils/models";
+
 
 const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
   const [showNav, setShowNav] = useState(true);
@@ -50,18 +52,6 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
     );
   };
 
-  const hamburgerMenu = () => {
-    return (
-      <Hamburger
-        onToggle={(toggled) => {
-          toggled ? setShowMobileNav(true) : setShowMobileNav(false);
-        }}
-        direction="right"
-        rounded
-        label="Show menu"
-      />
-    );
-  };
 
   return (
     <>
@@ -107,11 +97,12 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
           >
             <Anchor href="#contact">Contact</Anchor>
           </Link>
-          
+          <ToggleWrapper>
           <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
+          </ToggleWrapper>
         </LinkList>
       </Nav>
-      {showMobileNav ? mobileMenuBackdrop() : null}
+      {showMobileNav && mobileMenuBackdrop()}
     </>
   );
 };

@@ -22,13 +22,14 @@ export const LayoutContainer = styled.div`
 
   @media ${uiSize.smallTablet} {
     max-width: 550px;
+    padding: 55px 0;
   }
 
   @media ${uiSize.mobileLandscape} {
-    max-width: 430px;
+    max-width: 530px;
   }
 
   @media ${uiSize.mobile} {
-    max-width: 350px;
+    padding: 55px 0;
   }
 `;

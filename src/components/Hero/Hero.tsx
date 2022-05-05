@@ -11,8 +11,9 @@ import {
   SubText,
 } from "./styles";
 import { LayoutContainer } from "../../common/Layout/styles";
+import { IThemeProps } from "../../utils/models";
 
-const Hero = () => {
+const Hero: FC<IThemeProps> = ({theme, toggleTheme}) => {
   const [scrollOffset, setScrollOffset] = useState(0);
   // ---------------------------------------------------------window.scrollY getting scroll positio
 
@@ -42,7 +43,7 @@ const Hero = () => {
         style={{ transform: `translateY(${scrollOffset * 0.08}px)` }}
       />
       <SquareWrapper>
-        <BottomSquare style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}>
+        <BottomSquare  style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}>
           J
         </BottomSquare>
       {/* </SquareWrapper>

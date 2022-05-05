@@ -34,14 +34,35 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   transition: all 0.5s ease;
   z-index: 2;
 
-  @media ${uiSize.mobile} {
-    height: 300px;
-    width: 340px;
+  @media ${uiSize.projectLayout} {
+    transform: translateX(0px);
+    align-self: flex-start;
+    z-index: 2;
+    right: 75px;
+    top: 65px;
+    margin: -65px 0 0 0;
+    position: relative;
+  }
+
+  @media ${uiSize.smallTablet} {
+    /* height: 360px;
+    width: 400px;
+    right: 40px; */
+    display: none;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    /* height: 330px;
+    width: 370px;
+    right: 0;
+    z-index: -2; */
+    display: none;
   }
 `;
 
 export const ProjectCardOverlay = styled.div`
-  background: rgba(40, 40, 40, 0.5);
+  background-image: linear-gradient${(props) => props.theme.projectGradient};
+  /* background: rgba(40, 40, 40, 0.5); */
   opacity: 1;
   border-radius: 9px;
   position: absolute;
@@ -51,6 +72,10 @@ export const ProjectCardOverlay = styled.div`
   width: 100%;
   height: 100%;
   transition: all 0.5s ease;
+
+  @media ${uiSize.projectLayout} {
+    display: none;
+  }
 `;
 
 // ----------------------------------------- alternate title style, keeping until final decision
@@ -77,6 +102,10 @@ export const TitleContainer = styled.div`
   margin-right: 620px;
   display: flex;
   align-items: center;
+
+  @media ${uiSize.projectLayout} {
+    display: none;
+  }
 `;
 
 export const ProjectTitle = styled.h3`
@@ -91,7 +120,7 @@ export const ProjectTitle = styled.h3`
   letter-spacing: 10px;
 `;
 
-export const ProjectCardData = styled.div`
+export const ProjectCardData = styled.div<ProjectCardImgProps>`
   height: 500px;
   width: 500px;
   transition: all 0.5s ease;
@@ -107,20 +136,54 @@ export const ProjectCardData = styled.div`
   padding: 30px 30px 30px 70px;
   opacity: 0;
 
+  @media ${uiSize.projectLayout} {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: none;
+    padding: 30px;
+    min-height: 500px;
+    height: auto;
+    /* background-image: linear-gradient${(props) => props.theme.projectGradient}, url(${(props) => props.projectImg});
+    background-size: cover;
+    background-position: 50% 50%; */
+  }
+
+  @media ${uiSize.smallTablet} {
+    width: auto;
+    background-image: linear-gradient${(props) => props.theme.mobileProjectGradient}, url(${(props) => props.projectImg});
+    background-size: cover;
+    background-position: 50% 50%; 
+    border-radius: 10px;
+}
+
   @media ${uiSize.mobile} {
-    height: 350px;
-    width: 350px;
+   
   }
 `;
 
 export const CardBorder = styled.div`
   border-radius: 10px;
-  border-width: 2px;
+  border-width: ${(props) => props.theme.borderWidth};
   border-style: solid;
   border-color: ${(props) => props.theme.accentColor};
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   transition: transform 0.5s ease;
   z-index: 1;
+  
+  @media ${uiSize.projectLayout} {
+    align-self: flex-end;
+    background-color: ${(props) => props.theme.body};
+    position: relative;
+    left: 65px;
+  }
+
+  @media ${uiSize.smallTablet} {
+    left: 0px;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    background: transparent;
+  }
 `;
 
 export const ProjectContainer = styled.div`
@@ -131,26 +194,43 @@ export const ProjectContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid red;
 
   &:hover {
     width: 100%;
+    
+    @media ${uiSize.projectLayout} {
+      width: auto;
+    }
   }
+
 
   /* slide top card to left on hover */
   &:hover {
     ${ProjectCardImage} {
       transition: all 0.5s ease;
       transform: translateX(-47.5%);
+
+      @media ${uiSize.projectLayout} {
+        transform: translateX(0%);
+        transition: none;
+      }
     }
   }
+  
 
   /* fade out overlay on hover */
   &:hover {
     ${ProjectCardOverlay} {
       transition: all 0.5s ease;
       opacity: 0;
+
+      @media ${uiSize.projectLayout} {
+        transition: none;
+      }
     }
   }
+
 
   /* fade out title on hover */
   &:hover {
@@ -162,21 +242,44 @@ export const ProjectContainer = styled.div`
     }
   }
 
+
   /* slide bottom card right on hover */
   &:hover {
     ${CardBorder} {
       transition: transform 0.5s ease;
       transform: translateX(45%);
+
+      @media ${uiSize.projectLayout} {
+      transform: translateX(0);
+      transition: none;
     }
+    }
+    
   }
+
 
   &:hover {
     ${ProjectCardData} {
       transition: all 0.8s ease;
       opacity: 1;
+
+      @media ${uiSize.projectLayout} {
+       transition: none;
+    }
     }
   }
+
+  @media ${uiSize.projectLayout} {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    padding: 0;
+  }
 `;
+
 
 // ------------------------------------- project data styles begin (right card)
 export const LinkWrapper = styled.div`
@@ -213,21 +316,31 @@ export const ViewCodeIcon = styled(VscGithub)`
 
 export const ProjectName = styled.h3`
   color: ${(props) => props.theme.accentColor};
-  margin: 20px 0 35px 0;
-  
+  margin: 20px 0 20px 0;
+  font-size: 1.8rem;
 `;
 
 export const Description = styled.div`
-  text-align: right;
+  text-align: left;
+  text-indent: 50px;
+
+  @media ${uiSize.projectLayout} {
+    padding-bottom: 80px;
+  }
 `;
 
 export const CardFooter = styled.ul`
   position: absolute;
   bottom: 0;
   left: 0;
-  padding-left: 70px;
+  padding-left: 59px;
   padding-bottom: 30px;
   display: flex;
+  /* border: 1px solid blue; */
+
+  @media ${uiSize.projectLayout} {
+    padding-left: 19px;
+  }
 `;
 
 export const ProjectTech = styled.li`

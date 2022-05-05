@@ -48,7 +48,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
 
       {/* --------------------- right side card begins here */}
       <CardBorder>
-        <ProjectCardData>
+        <ProjectCardData projectImg={projectImg}>
           <LinkWrapper>
             <ViewCodeIcon
               onClick={() => window.open(`${project.repoLink}`, "_blank")}

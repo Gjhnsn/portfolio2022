@@ -52,7 +52,7 @@ export const Nav = styled.nav<IHeaderProps>`
   flex-wrap: wrap;
   border: 1px solid pink;
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     
     padding: 15px 0px;
     width: 100%;
@@ -84,7 +84,7 @@ export const StyledLogo = styled(Logo)`
     fill: ${(props) => props.theme.linkHoverColor};
   }
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     margin-left: 30px;
   }
 `;
@@ -95,9 +95,9 @@ export const StyledHamburger = styled.div`
   cursor: pointer;
   animation: ${onStart} 1s 1 ease forwards;
   animation-delay: 1.3s;
-  opacity: 0;
+  /* opacity: 0; */
   
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     display: block;
     align-self: center;
     margin-right: 30px;
@@ -117,7 +117,7 @@ export const Burger = styled.div`
     border-radius: 5px;
   }
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     display: flex;
     align-self: center;
   }
@@ -129,9 +129,9 @@ export const LinkList = styled.ul<INavProps>`
   list-style: none;
 
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     overflow: hidden;
-    height: ${(props) => props.showMobileNav ?' 50vh' : '0'};
+    height: ${(props) => props.showMobileNav ? '55vh' : '0'};
     /* flex-basis: 100%; */
     flex-direction: column;
     align-items: flex-end;
@@ -151,8 +151,16 @@ export const MobileBackdrop = styled.div`
   left: 0;
   background-color: ${(props) => props.theme.tertiaryColor};
   opacity: .5;
-  z-index: 1;
-  animation: ${backdrop} 1s 1 ease forwards;
+  z-index: 5;
+  animation: ${backdrop} .7s 1 ease forwards;
+`
+
+export const ToggleWrapper = styled.div`
+  display: none;
+
+  @media ${uiSize.mobileLandscape} {
+    display: block;
+  }
 `
 
 export const Link = styled.li<INavProps>`
@@ -160,7 +168,7 @@ export const Link = styled.li<INavProps>`
   opacity: 0;
   animation: ${onStart} .8s 1 ease forwards;
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     animation: none;
     margin-left: 0;
     padding: 30px 10px;
@@ -181,7 +189,9 @@ export const Anchor = styled.a`
     color: ${(props) => props.theme.linkHoverColor};
   }
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     font-size: 1.5rem;
   }
 `;
+
+

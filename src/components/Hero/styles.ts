@@ -1,6 +1,8 @@
 import styled, { keyframes } from "styled-components";
-import background from "../../assets/pine.jpg";
+import background from "../../assets/flower.jpg";
 import { uiSize } from "../../utils/mobileScreens";
+import { darkTheme, lightTheme } from "../../styles/globalStyles";
+import { isPropertySignature } from "typescript";
 
 const onStart = keyframes`
 {
@@ -32,7 +34,7 @@ export const TextContainer = styled.div`
   width: 100%;
   z-index: 10;
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     top: -18vh;
   }
 `;
@@ -43,10 +45,10 @@ export const FlexWrapper = styled.div`
 `;
 
 export const NameHeader = styled.h1`
-  text-shadow: -0.8px -0.8px 0 ${(props) => props.theme.body},
+  /* text-shadow: -0.8px -0.8px 0 ${(props) => props.theme.body},
     0.8px -0.8px 0 ${(props) => props.theme.body},
     -0.8px 0.8px 0 ${(props) => props.theme.body},
-    0.8px 0.8px 0 ${(props) => props.theme.body};
+    0.8px 0.8px 0 ${(props) => props.theme.body}; */
   animation: ${onStart} 1s 1 ease forwards;
 
   @media ${uiSize.laptop13in} {
@@ -87,17 +89,17 @@ export const SubText = styled.h3`
   }
 
   @media ${uiSize.mobile} {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 `;
 
 export const ImageBackground = styled.div`
   /* may dynamically change bg color with mode */
-  background-image: linear-gradient${(props) => props.theme.gradientColor},
+  background-image: linear-gradient${(props) => props.theme.projectGradient},
     url(${background});
   height: 100%;
   width: 40%;
-  background-position: center;
+  background-position: 30%;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -105,7 +107,7 @@ export const ImageBackground = styled.div`
   bottom: 0;
   right: 0;
 
-  @media ${uiSize.mobile} {
+  @media ${uiSize.mobileLandscape} {
     height: 60%;
     width: 100%;
     bottom: 0;
@@ -123,10 +125,8 @@ export const SquareWrapper = styled.div`
   position: absolute;
   display: flex;
   justify-content: center;
-
   top: 0;
   right: 0;
-  border: 1px solid white;
 
   @media ${uiSize.smallTablet} {
     width: 100%;
@@ -136,14 +136,18 @@ export const SquareWrapper = styled.div`
 export const BottomSquare = styled.div`
   height: 350px;
   width: 350px;
-  border-width: 2px;
+  border-width: ${(props) => props.theme.borderWidth};
   border-style: solid;
-  border-color: ${(props) => props.theme.accentColor};
+  /* border-color: ${({theme}) => theme === 'light' ? lightTheme.body : darkTheme.accentColor}; */
+  border-color: ${({theme}) => theme.accentColor};
+  
   border-radius: 10px;
   position: relative;
   /* z-index: 1; */
   left: 130px;
   top: 155px;
+
+
 
   align-self: center;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
@@ -179,13 +183,14 @@ export const BottomSquare = styled.div`
   @media ${uiSize.smallTablet} {
     height: 240px;
     width: 240px;
-    left: 330px;
+    left: 280px;
     };
 
   @media ${uiSize.mobileLandscape} {
     height: 200px;
     width: 200px;
-    left: 250px;
+    top: 190px;
+    left: 130px;
   }
 
   @media ${uiSize.mobile} {
@@ -195,7 +200,11 @@ export const BottomSquare = styled.div`
     width: 175px;
   }
 
-  &:hover {
+  @media ${uiSize.smallMobile} {
+    left: 110px;
+  }
+
+  /* &:hover {
     color: ${(props) => props.theme.headerText};
     font-weight: 600;
     font-size: 14rem;
@@ -205,13 +214,13 @@ export const BottomSquare = styled.div`
       0.8px -0.8px 0 ${(props) => props.theme.body},
       -0.8px 0.8px 0 ${(props) => props.theme.body},
       0.8px 0.8px 0 ${(props) => props.theme.body};
-  }
+  } */
 `;
 
 export const TopSquare = styled.div`
   height: 275px;
   width: 275px;
-  border-width: 2px;
+  border-width: ${(props) => props.theme.borderWidth};
   border-style: solid;
   border-color: ${(props) => props.theme.accentColor};
   border-radius: 10px;
@@ -250,7 +259,7 @@ export const TopSquare = styled.div`
   }
 
   @media ${uiSize.smallTablet} {
-    right: 80px;
+    right: 120px;
     bottom: 70px;
     height: 200px;
     width: 200px;
@@ -259,7 +268,8 @@ export const TopSquare = styled.div`
   @media ${uiSize.mobileLandscape} {
     height: 150px;
     width: 150px;
-    bottom: 30px;
+    top: 80px;
+    right: 180px;
   }
 
   @media ${uiSize.mobile} {
@@ -269,7 +279,7 @@ export const TopSquare = styled.div`
     width: 125px;
   }
 
-  &:hover {
+  /* &:hover {
     color: ${(props) => props.theme.headerText};
     font-weight: 600;
     font-size: 10rem;
@@ -279,5 +289,5 @@ export const TopSquare = styled.div`
       0.8px -0.8px 0 ${(props) => props.theme.body},
       -0.8px 0.8px 0 ${(props) => props.theme.body},
       0.8px 0.8px 0 ${(props) => props.theme.body};
-  }
+  } */
 `;

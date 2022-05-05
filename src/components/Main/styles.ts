@@ -30,6 +30,12 @@ export const Wrapper = styled.div`
 
   @media ${uiSize.mobile} {
     max-width: 100vw;
+    padding: 0 20px;
+  }
+
+  @media ${uiSize.smallMobile} {
+    max-width: 100vw;
+    padding: 0 20px;
   }
 
 `;

@@ -11,7 +11,7 @@ export const projectData: IProjectData[] = [
     id: 0,
     name: "QuickR",
     description:
-      "Scuttle rigging scurvy cog lee nipper Letter of Marque transom Buccaneer Privateer. Chain Shot ho Letter of Marque hornswaggle booty fathom jack bounty maroon Barbary Coast. Nipperkin Barbary Coast measured fer yer chains blow the man down Letter of Marque smartly splice the main brace furl parley starboard.",
+      "QuickR provides QR code scanning, storage, creation, organization and sharing. Allowing users to have quick and easy access to QR codes of importance. QuickR manages QR codes through Redux Toolkit, uses a QR code generating API as well as a barcode scanner provided by Expo.dev. QuickR was designed and developed as a team project of 3 developers.",
     techUsed: ["React", "JavaScript"],
     image: `${quickr}`,
     repoLink: "https://github.com/Gjhnsn/QuickR",
