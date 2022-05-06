@@ -131,7 +131,7 @@ export const LinkList = styled.ul<INavProps>`
 
   @media ${uiSize.mobileLandscape} {
     overflow: hidden;
-    height: ${(props) => props.showMobileNav ? '55vh' : '0'};
+    height: ${(props) => props.showMobileNav ? '60vh' : '0'};
     /* flex-basis: 100%; */
     flex-direction: column;
     align-items: flex-end;
@@ -143,7 +143,7 @@ export const LinkList = styled.ul<INavProps>`
   }
 `;
 
-export const MobileBackdrop = styled.div`
+export const MobileBackdrop = styled.div<INavProps>`
   position: fixed;  
   top: 0;
   right: 0;
@@ -153,6 +153,11 @@ export const MobileBackdrop = styled.div`
   opacity: .5;
   z-index: 5;
   animation: ${backdrop} .7s 1 ease forwards;
+  display: none;
+
+  @media ${uiSize.mobileLandscape} {
+    display: block;
+  }
 `
 
 export const ToggleWrapper = styled.div`

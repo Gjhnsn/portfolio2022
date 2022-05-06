@@ -13,12 +13,13 @@ export const FooterBackGround = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 
   @media ${uiSize.mobileLandscape} {
     /* display: none; */
     height: 140px;
     align-items: flex-end;
+    z-index: -1;
   }
 
   &:after {
@@ -30,9 +31,7 @@ export const FooterBackGround = styled.div`
     background: rgba(40, 40, 40, 0.85);
 
     @media ${uiSize.mobileLandscape} {
-    /* display: none; */
     height: 140px;
-    
   }
   }
 `;
@@ -45,7 +44,8 @@ export const FooterText = styled.p`
   font-weight: 200;
 
   @media ${uiSize.mobileLandscape} {
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    font-size: .9rem;
   }
 `;
 

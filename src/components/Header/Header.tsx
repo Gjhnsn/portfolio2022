@@ -48,7 +48,7 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
 
   const mobileMenuBackdrop = () => {
     return (
-      <MobileBackdrop onClick={() => setShowMobileNav(false)}></MobileBackdrop>
+      <MobileBackdrop onClick={() => setShowMobileNav(false)} showMobileNav={showMobileNav}></MobileBackdrop>
     );
   };
 
