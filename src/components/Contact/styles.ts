@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { IMessageProps } from "../../utils/models";
+import { uiSize } from "../../utils/mobileScreens";
 
 const success = "#66bb6a";
 const error = "#e57373";
@@ -7,7 +8,12 @@ const error = "#e57373";
 export const ContactTitle = styled.h3`
   margin-top: 100px;
   margin-bottom: 25px;
-  color: ${(props) => props.theme.accentColor}
+  color: ${(props) => props.theme.accentColor};
+
+  @media ${uiSize.smallTablet} {
+    margin-bottom: 0;
+    margin-top: 50px;
+  }
 `;
 
 export const ContactForm = styled.form`
@@ -16,12 +22,18 @@ export const ContactForm = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 75px;
+  padding-bottom: 75px;
+  position: relative;
+  margin-bottom: 0px;
 `;
 
 export const InputWrapper = styled.div`
   display: flex;
   width: 100%;
+
+  @media ${uiSize.smallTablet} {
+  flex-direction: column;
+}
   `;
 
 export const InputColumn = styled.div`
@@ -56,6 +68,10 @@ export const InputField = styled.input`
   outline: none;
   font-family: 'Sora', sans-serif;
   letter-spacing: .3px;
+
+  @media ${uiSize.smallTablet} {
+    margin-top: 25px;
+  }
 `;
 
 export const SubmitButton = styled.input`
@@ -110,7 +126,9 @@ export const MessageWrapper = styled.div`
   justify-content: center;
   border-radius: 5px;
   position: absolute;
-  margin-top: 245px;
+  bottom: 0;
+
+ 
 `;
 
 export const ResultMessage = styled.p<IMessageProps>`

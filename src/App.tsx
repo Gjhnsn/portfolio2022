@@ -19,7 +19,7 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
-        <Main />
+        <Main theme={theme} toggleTheme={toggleTheme}/>
         <Sidebar theme={theme} toggleTheme={toggleTheme} />
       </>
     </ThemeProvider>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { uiSize } from "../../utils/mobileScreens";
 
 export const LayoutContainer = styled.div`
   padding: 100px 0;
@@ -8,6 +9,25 @@ export const LayoutContainer = styled.div`
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
-  /* temporary border for styling structure */
-  /* border: 1px solid blue; */
+
+  @media ${uiSize.bigTablet} {
+    max-width: 900px;
+  }
+
+  @media ${uiSize.tablet} {
+    max-width: 750px;
+  }
+
+  @media ${uiSize.smallTablet} {
+    max-width: 550px;
+    padding: 55px 0;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    max-width: 530px;
+  }
+
+  @media ${uiSize.mobile} {
+    padding: 55px 0;
+  }
 `;

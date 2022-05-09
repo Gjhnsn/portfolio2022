@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../assets/treeBg.jpg";
+import { uiSize } from "../../utils/mobileScreens";
 
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -8,4 +8,33 @@ export const Wrapper = styled.div`
   padding: 0 150px;
   display: block;
   justify-content: center;
+
+  @media ${uiSize.bigTablet} {
+    max-width: 1280px;
+  }
+
+  @media ${uiSize.tablet} {
+    max-width: 1000px;
+  }
+
+  @media ${uiSize.smallTablet} {
+    max-width: 750px;
+    padding: 0 50px;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    max-width: 650px;
+    padding: 0 50px;
+  }
+
+  @media ${uiSize.mobile} {
+    max-width: 100vw;
+    padding: 0 20px;
+  }
+
+  @media ${uiSize.smallMobile} {
+    max-width: 100vw;
+    padding: 0 20px;
+  }
+
 `;

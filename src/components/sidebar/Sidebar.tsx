@@ -8,27 +8,34 @@ import {
   Email,
   LinkedInIcon,
   GithubIcon,
+  IconWrapper,
+  ToggleWrapper
 } from "./styles";
 
 const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
   return (
     <Container>
       <LongLine />
-      <LinkedInIcon
-        onClick={() =>
-          window.open(
-            "https://www.linkedin.com/in/garrett-johnson-b08377162/",
-            "_blank"
-          )
-        }
-      />
-      <GithubIcon
-        onClick={() => window.open("https://github.com/Gjhnsn", "_blank")}
-      />
-
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <IconWrapper>
+        <LinkedInIcon
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/garrett-johnson-b08377162/",
+              "_blank"
+            )
+          }
+        />
+        <GithubIcon
+          onClick={() => window.open("https://github.com/Gjhnsn", "_blank")}
+        />
+        <ToggleWrapper>
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+        </ToggleWrapper>
+      </IconWrapper>
       <ShortLine />
-      <Email>garrett.bjnsn@gmail.com</Email>
+      <div>
+        <Email>garrett.bjnsn@gmail.com</Email>
+      </div>
       <ShortLine />
     </Container>
   );

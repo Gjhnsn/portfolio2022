@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
+import { uiSize } from "../../utils/mobileScreens";
 
 
 // ----------------------------- sidebar float up animation
@@ -26,13 +27,48 @@ export const Container = styled.div`
   animation-delay: 2.1s;
   opacity: 0;
   transform-origin: bottom;
+
+  @media ${uiSize.mobileLandscape} {
+    position: static;
+    bottom: 0;
+    animation: none;
+    opacity: 1;
+    justify-content: space-between;
+    height: 65px;
+    width: 90%;
+    z-index: 110;
+    padding-bottom: 0;
+    margin: 20px auto 0 auto;  }
+
+  @media ${uiSize.mobile} {
+   
+  }
 `;
+
+export const IconWrapper = styled.div`
+  
+  display: flex;
+  flex-direction: column-reverse;
+
+
+    @media ${uiSize.mobileLandscape} {
+      width: 35%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      align-items: center;
+    }
+`
 
 export const LongLine = styled.div`
   width: 1px;
   height: 80px;
   background-color: ${(props) => props.theme.tertiaryColor};
   margin-top: 20px;
+
+@media ${uiSize.mobileLandscape} {
+    display: none;
+  }
 `;
 
 export const LinkedInIcon = styled(AiOutlineLinkedin)`
@@ -41,6 +77,16 @@ export const LinkedInIcon = styled(AiOutlineLinkedin)`
   color: ${(props) => props.theme.tertiaryColor};
   cursor: pointer;
   transition: all .3s;
+
+  @media ${uiSize.mobileLandscape} {
+    color: ${(props) => props.theme.contentText};
+  opacity: .6;
+    height: 30px;
+    width: 30px;
+  }
+
+  @media ${uiSize.mobile} {
+  }
 
   &:hover {
     transform: translateY(-3px);
@@ -57,6 +103,18 @@ export const GithubIcon = styled(VscGithub)`
   padding: 2px;
   transition: all .3s;
 
+  @media ${uiSize.mobileLandscape} {
+    margin-bottom: 0;
+    color: ${(props) => props.theme.contentText};
+  opacity: .6;
+    height: 30px;
+    width: 30px;
+  }
+
+  @media ${uiSize.mobile} {
+   
+  }
+
   &:hover {
     transform: translateY(-3px);
     color: ${(props) => props.theme.linkHoverColor};
@@ -71,6 +129,15 @@ export const Email = styled.p`
   font-size: .8rem;
   font-weight: 400;
   letter-spacing: .9px;
+
+  @media ${uiSize.mobileLandscape} {
+    transform: rotate(0deg);
+    writing-mode: horizontal-tb;
+    color: ${(props) => props.theme.contentText};
+  opacity: .6;
+    font-weight: 300;
+    font-size: .9rem;
+  }
 `;
 
 export const ShortLine = styled.div`
@@ -78,4 +145,14 @@ export const ShortLine = styled.div`
   height: 20px;
   background-color: ${(props) => props.theme.tertiaryColor};
   margin: 20px 0;
+
+  @media ${uiSize.mobileLandscape} {
+    display: none;
+  }
 `;
+
+export const ToggleWrapper = styled.div`
+  @media ${uiSize.mobileLandscape} {
+    display: none;
+  }
+`

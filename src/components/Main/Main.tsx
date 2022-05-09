@@ -1,4 +1,5 @@
-import React from "react";
+import React, { FC } from "react";
+import { IThemeProps } from "../../utils/models";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
@@ -7,11 +8,11 @@ import Hero from "../Hero/Hero";
 import Projects from "../Projects/Projects";
 import { Wrapper } from "./styles";
 
-const Main = () => {
+const Main: FC<IThemeProps> = ({ theme, toggleTheme }) => {
 
   return (
     <>
-      <Header />
+      <Header theme={theme} toggleTheme={toggleTheme}/>
       <Wrapper>
         <Hero />
         <About />

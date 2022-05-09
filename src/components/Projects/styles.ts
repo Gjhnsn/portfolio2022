@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ProjectCardImgProps } from "../../utils/models";
 import { MdOpenInNew } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
+import { uiSize } from "../../utils/mobileScreens";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -14,15 +15,9 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   height: 450px;
   width: 490px;
   transform: translateX(-20px);
-
   background-image: url(${(props) => props.projectImg});
   background-size: cover;
   background-position: 50% 50%;
-
-  /* temporary code below for styling purposes */
-  /* transform: translateX(-45%); */
-  /* delete above when styling is done */
-
   margin: 0 5px;
   position: absolute;
   border-radius: 10px;
@@ -32,10 +27,28 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   align-items: center;
   transition: all 0.5s ease;
   z-index: 2;
+
+  @media ${uiSize.projectLayout} {
+    transform: translateX(0px);
+    align-self: flex-start;
+    z-index: 2;
+    right: 75px;
+    top: 65px;
+    margin: -65px 0 0 0;
+    position: relative;
+  }
+
+  @media ${uiSize.smallTablet} {
+    display: none;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    display: none;
+  }
 `;
 
 export const ProjectCardOverlay = styled.div`
-  background: rgba(40, 40, 40, 0.5);
+  background-image: linear-gradient${(props) => props.theme.projectGradient};
   opacity: 1;
   border-radius: 9px;
   position: absolute;
@@ -45,25 +58,11 @@ export const ProjectCardOverlay = styled.div`
   width: 100%;
   height: 100%;
   transition: all 0.5s ease;
-`;
 
-// ----------------------------------------- alternate title style, keeping until final decision
-// export const ProjectTitle = styled.h3`
-//   transition: all 0.5s ease;
-//   font-size: 40px;
-//   padding: 8px 30px;
-//   text-align: center;
-//   opacity: 1;
-//   z-index: 10;
-//   border-radius: 5px;
-//   color: ${(props) => props.theme.headerText};
-//   letter-spacing: 7px;
-//   border: 2px solid ${(props) => props.theme.accentColor};
-//   background: linear-gradient${(props) => props.theme.gradientColor};
-//  position: absolute;
-//  bottom: 0;
-//  left: 0;
-// `;
+  @media ${uiSize.projectLayout} {
+    display: none;
+  }
+`;
 
 export const TitleContainer = styled.div`
   transform: rotate(270deg);
@@ -71,6 +70,10 @@ export const TitleContainer = styled.div`
   margin-right: 620px;
   display: flex;
   align-items: center;
+
+  @media ${uiSize.projectLayout} {
+    display: none;
+  }
 `;
 
 export const ProjectTitle = styled.h3`
@@ -85,31 +88,62 @@ export const ProjectTitle = styled.h3`
   letter-spacing: 10px;
 `;
 
-export const ProjectCardData = styled.div`
+export const ProjectCardData = styled.div<ProjectCardImgProps>`
   height: 500px;
   width: 500px;
   transition: all 0.5s ease;
   transform: translateX(5px);
-
-  /* temporary code below for styling purposes */
-  /* transform: translateX(45%); */
-  /* delete above when styling is done */
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 30px 30px 30px 70px;
   opacity: 0;
+
+  @media ${uiSize.projectLayout} {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: none;
+    padding: 30px;
+    min-height: 500px;
+    height: auto;
+  }
+
+  @media ${uiSize.smallTablet} {
+    width: auto;
+    background-image: linear-gradient${(props) => props.theme.mobileProjectGradient}, url(${(props) => props.projectImg});
+    background-size: cover;
+    background-position: 50% 50%; 
+    border-radius: 10px;
+}
+
+  @media ${uiSize.mobile} {
+   
+  }
 `;
 
 export const CardBorder = styled.div`
   border-radius: 10px;
-  border-width: 2px;
+  border-width: ${(props) => props.theme.borderWidth};
   border-style: solid;
   border-color: ${(props) => props.theme.accentColor};
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   transition: transform 0.5s ease;
   z-index: 1;
+  
+  @media ${uiSize.projectLayout} {
+    align-self: flex-end;
+    background-color: ${(props) => props.theme.body};
+    position: relative;
+    left: 65px;
+  }
+
+  @media ${uiSize.smallTablet} {
+    left: 0px;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    background: transparent;
+  }
 `;
 
 export const ProjectContainer = styled.div`
@@ -123,23 +157,39 @@ export const ProjectContainer = styled.div`
 
   &:hover {
     width: 100%;
+    
+    @media ${uiSize.projectLayout} {
+      width: auto;
+    }
   }
+
 
   /* slide top card to left on hover */
   &:hover {
     ${ProjectCardImage} {
       transition: all 0.5s ease;
       transform: translateX(-47.5%);
+
+      @media ${uiSize.projectLayout} {
+        transform: translateX(0%);
+        transition: none;
+      }
     }
   }
+  
 
   /* fade out overlay on hover */
   &:hover {
     ${ProjectCardOverlay} {
       transition: all 0.5s ease;
       opacity: 0;
+
+      @media ${uiSize.projectLayout} {
+        transition: none;
+      }
     }
   }
+
 
   /* fade out title on hover */
   &:hover {
@@ -151,21 +201,44 @@ export const ProjectContainer = styled.div`
     }
   }
 
+
   /* slide bottom card right on hover */
   &:hover {
     ${CardBorder} {
       transition: transform 0.5s ease;
       transform: translateX(45%);
+
+      @media ${uiSize.projectLayout} {
+      transform: translateX(0);
+      transition: none;
     }
+    }
+    
   }
+
 
   &:hover {
     ${ProjectCardData} {
       transition: all 0.8s ease;
       opacity: 1;
+
+      @media ${uiSize.projectLayout} {
+       transition: none;
+    }
     }
   }
+
+  @media ${uiSize.projectLayout} {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+  }
+
+  @media ${uiSize.mobileLandscape} {
+    padding: 0;
+  }
 `;
+
 
 // ------------------------------------- project data styles begin (right card)
 export const LinkWrapper = styled.div`
@@ -202,21 +275,30 @@ export const ViewCodeIcon = styled(VscGithub)`
 
 export const ProjectName = styled.h3`
   color: ${(props) => props.theme.accentColor};
-  margin: 20px 0 35px 0;
-  
+  margin: 20px 0 20px 0;
+  font-size: 1.8rem;
 `;
 
 export const Description = styled.div`
-  text-align: right;
+  text-align: left;
+  text-indent: 50px;
+
+  @media ${uiSize.projectLayout} {
+    padding-bottom: 80px;
+  }
 `;
 
 export const CardFooter = styled.ul`
   position: absolute;
   bottom: 0;
   left: 0;
-  padding-left: 70px;
+  padding-left: 59px;
   padding-bottom: 30px;
   display: flex;
+
+  @media ${uiSize.projectLayout} {
+    padding-left: 19px;
+  }
 `;
 
 export const ProjectTech = styled.li`
