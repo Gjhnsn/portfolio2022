@@ -45,10 +45,6 @@ export const FlexWrapper = styled.div`
 `;
 
 export const NameHeader = styled.h1`
-  /* text-shadow: -0.8px -0.8px 0 ${(props) => props.theme.body},
-    0.8px -0.8px 0 ${(props) => props.theme.body},
-    -0.8px 0.8px 0 ${(props) => props.theme.body},
-    0.8px 0.8px 0 ${(props) => props.theme.body}; */
   animation: ${onStart} 1s 1 ease forwards;
 
   @media ${uiSize.laptop13in} {
@@ -59,20 +55,16 @@ export const NameHeader = styled.h1`
     font-size: 4rem;
   }
 
-  /* @media ${uiSize.tablet} {
-      font-size: 5rem;
-    } */
-
   @media ${uiSize.smallTablet} {
     font-size: 3.2rem;
   }
 
   @media ${uiSize.mobileLandscape} {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   @media ${uiSize.mobile} {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     letter-spacing: 2px;
   }
 `;
@@ -94,7 +86,6 @@ export const SubText = styled.h3`
 `;
 
 export const ImageBackground = styled.div`
-  /* may dynamically change bg color with mode */
   background-image: linear-gradient${(props) => props.theme.projectGradient},
     url(${background});
   height: 100%;
@@ -138,17 +129,11 @@ export const BottomSquare = styled.div`
   width: 350px;
   border-width: ${(props) => props.theme.borderWidth};
   border-style: solid;
-  /* border-color: ${({theme}) => theme === 'light' ? lightTheme.body : darkTheme.accentColor}; */
   border-color: ${({theme}) => theme.accentColor};
-  
   border-radius: 10px;
   position: relative;
-  /* z-index: 1; */
   left: 130px;
   top: 155px;
-
-
-
   align-self: center;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   display: flex;
@@ -227,9 +212,7 @@ export const TopSquare = styled.div`
   position: relative;
   right: 450px;
   bottom: 125px;
-
   align-self: center;
-
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   display: flex;
   justify-content: center;

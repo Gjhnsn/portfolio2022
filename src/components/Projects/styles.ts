@@ -15,15 +15,9 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   height: 450px;
   width: 490px;
   transform: translateX(-20px);
-
   background-image: url(${(props) => props.projectImg});
   background-size: cover;
   background-position: 50% 50%;
-
-  /* temporary code below for styling purposes */
-  /* transform: translateX(-45%); */
-  /* delete above when styling is done */
-
   margin: 0 5px;
   position: absolute;
   border-radius: 10px;
@@ -45,24 +39,16 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   }
 
   @media ${uiSize.smallTablet} {
-    /* height: 360px;
-    width: 400px;
-    right: 40px; */
     display: none;
   }
 
   @media ${uiSize.mobileLandscape} {
-    /* height: 330px;
-    width: 370px;
-    right: 0;
-    z-index: -2; */
     display: none;
   }
 `;
 
 export const ProjectCardOverlay = styled.div`
   background-image: linear-gradient${(props) => props.theme.projectGradient};
-  /* background: rgba(40, 40, 40, 0.5); */
   opacity: 1;
   border-radius: 9px;
   position: absolute;
@@ -77,24 +63,6 @@ export const ProjectCardOverlay = styled.div`
     display: none;
   }
 `;
-
-// ----------------------------------------- alternate title style, keeping until final decision
-// export const ProjectTitle = styled.h3`
-//   transition: all 0.5s ease;
-//   font-size: 40px;
-//   padding: 8px 30px;
-//   text-align: center;
-//   opacity: 1;
-//   z-index: 10;
-//   border-radius: 5px;
-//   color: ${(props) => props.theme.headerText};
-//   letter-spacing: 7px;
-//   border: 2px solid ${(props) => props.theme.accentColor};
-//   background: linear-gradient${(props) => props.theme.gradientColor};
-//  position: absolute;
-//  bottom: 0;
-//  left: 0;
-// `;
 
 export const TitleContainer = styled.div`
   transform: rotate(270deg);
@@ -125,11 +93,6 @@ export const ProjectCardData = styled.div<ProjectCardImgProps>`
   width: 500px;
   transition: all 0.5s ease;
   transform: translateX(5px);
-
-  /* temporary code below for styling purposes */
-  /* transform: translateX(45%); */
-  /* delete above when styling is done */
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -143,9 +106,6 @@ export const ProjectCardData = styled.div<ProjectCardImgProps>`
     padding: 30px;
     min-height: 500px;
     height: auto;
-    /* background-image: linear-gradient${(props) => props.theme.projectGradient}, url(${(props) => props.projectImg});
-    background-size: cover;
-    background-position: 50% 50%; */
   }
 
   @media ${uiSize.smallTablet} {
@@ -194,7 +154,6 @@ export const ProjectContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid red;
 
   &:hover {
     width: 100%;
@@ -336,7 +295,6 @@ export const CardFooter = styled.ul`
   padding-left: 59px;
   padding-bottom: 30px;
   display: flex;
-  /* border: 1px solid blue; */
 
   @media ${uiSize.projectLayout} {
     padding-left: 19px;

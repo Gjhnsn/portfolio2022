@@ -21,7 +21,6 @@ export const LeftContent = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 50%;
-  border: 2px solid orange;
 
   @media ${uiSize.bigTablet} {
     max-width: 60%;
@@ -30,10 +29,6 @@ export const LeftContent = styled.div`
   @media ${uiSize.smallTablet} {
     max-width: 100%;
   }
-
-  /* @media ${uiSize.mobileLandscape} {
-    max-width: 100%;
-  } */
 `;
 
 export const Underline = styled.div`
@@ -74,7 +69,7 @@ export const ToolListItem = styled.li`
   align-items: center;
 
   @media ${uiSize.mobile} {
-    margin: 0 5px 10px 0;
+    margin: 0 5px 5px 0;
   }
 `;
 

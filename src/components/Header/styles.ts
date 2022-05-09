@@ -41,7 +41,6 @@ export const Nav = styled.nav<IHeaderProps>`
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  /* height: 80px; */
   backdrop-filter: blur(7px);
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   padding: 15px 50px;
@@ -50,25 +49,12 @@ export const Nav = styled.nav<IHeaderProps>`
     props.showNav ? `translateY(0px)` : `translateY(-80px)`};
   transition: transform 0.2s ease-in;
   flex-wrap: wrap;
-  border: 1px solid pink;
 
   @media ${uiSize.mobileLandscape} {
     
     padding: 15px 0px;
     width: 100%;
   }
-
-  /* &:after {
-    content: '';
-    display: none;
-
-    @media ${uiSize.mobile} {
-      display: block;
-      background-color: green;
-      height: 100vh;
-      width: 100vw;
-    }
-  } */
 `;
 
 // ---------------------- logo svg imported here as react component
@@ -95,7 +81,6 @@ export const StyledHamburger = styled.div`
   cursor: pointer;
   animation: ${onStart} 1s 1 ease forwards;
   animation-delay: 1.3s;
-  /* opacity: 0; */
   
   @media ${uiSize.mobileLandscape} {
     display: block;
@@ -132,13 +117,11 @@ export const LinkList = styled.ul<INavProps>`
   @media ${uiSize.mobileLandscape} {
     overflow: hidden;
     height: ${(props) => props.showMobileNav ? '60vh' : '0'};
-    /* flex-basis: 100%; */
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     width: 100vw;
     transition: height .3s ease-in;
-    /* border: 1px solid orange; */
     padding: 0 30px;
   }
 `;

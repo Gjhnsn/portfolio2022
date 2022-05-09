@@ -126,12 +126,9 @@ export const MessageWrapper = styled.div`
   justify-content: center;
   border-radius: 5px;
   position: absolute;
-  /* margin-top: 245px; */
   bottom: 0;
 
-  @media ${uiSize.smallTablet} {
-    /* margin-top: 390px; */
-  }
+ 
 `;
 
 export const ResultMessage = styled.p<IMessageProps>`

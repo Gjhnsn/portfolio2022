@@ -20,9 +20,6 @@ export const SunIcon = styled(FiSun)`
   transition: all 0.3s ease;
   color: ${(props) => props.theme.tertiaryColor};
 
-  /* @media ${uiSize.mobileLandscape} {
-    width: 25px;
-  } */
 
   @media ${uiSize.mobileLandscape} {
     height: auto;
@@ -47,9 +44,6 @@ export const MoonIcon = styled(HiOutlineMoon)`
   transition: all 0.3s;
   color: ${(props) => props.theme.tertiaryColor};
 
-  /* @media ${uiSize.mobileLandscape} {
-    width: 25px;
-  } */
 
   @media ${uiSize.mobileLandscape} {
     height: auto;

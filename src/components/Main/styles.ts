@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   padding: 0 150px;
   display: block;
   justify-content: center;
-  border: 3px solid green;
 
   @media ${uiSize.bigTablet} {
     max-width: 1280px;

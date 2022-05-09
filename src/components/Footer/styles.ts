@@ -16,7 +16,6 @@ export const FooterBackGround = styled.div`
   z-index: 1;
 
   @media ${uiSize.mobileLandscape} {
-    /* display: none; */
     height: 140px;
     align-items: flex-end;
     z-index: -1;
@@ -28,7 +27,7 @@ export const FooterBackGround = styled.div`
     width: 100%;
     height: 80px;
     right: 0;
-    background: rgba(40, 40, 40, 0.85);
+    background-image: linear-gradient${(props) => props.theme.projectGradient};
 
     @media ${uiSize.mobileLandscape} {
     height: 140px;
@@ -37,15 +36,17 @@ export const FooterBackGround = styled.div`
 `;
 
 export const FooterText = styled.p`
-  color: #c4c4c4;
+  color: ${(props) => props.theme.contentText};
   position: relative;
   z-index: 1;
   letter-spacing: 2px;
   font-weight: 200;
+  opacity: .6;
 
   @media ${uiSize.mobileLandscape} {
     padding-bottom: 20px;
     font-size: .9rem;
+    font-weight: 300;
   }
 `;
 

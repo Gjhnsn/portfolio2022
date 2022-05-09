@@ -59,7 +59,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       }
 
       @media ${uiSize.mobile} {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
     }
 
@@ -168,7 +168,7 @@ export const lightTheme = {
   navGradient: "rgba(207, 207, 197, .85)",
   mobileNavBackdrop: "rgba(207, 207, 197, .65)",
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
-  secondaryBoxShadow: `rgba(0, 0, 0, 0.45) 1px -3px 10px`,
+  secondaryBoxShadow: `rgba(0, 0, 0, 0.35) 1px -3px 10px`,
   linkHoverColor: `#896B4D`,
   sendMessageHover: `rgba(120, 147, 125, .3)`
 };

@@ -9,8 +9,6 @@ export const LayoutContainer = styled.div`
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
-  /* temporary border for styling structure */
-  border: 1px solid blue;
 
   @media ${uiSize.bigTablet} {
     max-width: 900px;
