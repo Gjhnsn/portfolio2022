@@ -14,7 +14,7 @@ const Main: FC<IThemeProps> = ({ theme, toggleTheme }) => {
     <>
       <Header theme={theme} toggleTheme={toggleTheme}/>
       <Wrapper>
-        <Hero theme={theme} toggleTheme={toggleTheme}/>
+        <Hero />
         <About />
         <Projects />
         <Contact />

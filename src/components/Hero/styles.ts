@@ -1,8 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import background from "../../assets/flower.jpg";
 import { uiSize } from "../../utils/mobileScreens";
-import { darkTheme, lightTheme } from "../../styles/globalStyles";
-import { isPropertySignature } from "typescript";
 
 const onStart = keyframes`
 {
