@@ -15,7 +15,7 @@ export const projectData: IProjectData[] = [
     techUsed: ["React", "JavaScript"],
     image: `${quickr}`,
     repoLink: "https://github.com/Gjhnsn/QuickR",
-    liveLink: "live.link",
+    liveLink: "https://youtu.be/7HeWyDv62aY",
   },
   {
     id: 1,
