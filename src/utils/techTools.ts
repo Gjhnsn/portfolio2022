@@ -2,15 +2,13 @@
 
 export const techTools: string[] = [
     'JavaScript',
+    'TypeScript',
     'React',
     'React Native',
-    'TypeScript',
     'CSS',
+    'Styled-Components',
     'Sass',
-    'Styled-components',
     'Bootstrap',
-    'Redux Toolkit',
-    'Git',
-    'Responsive Design',
-    'Accessible Design'
+    'Redux',
+    'Figma',
 ]

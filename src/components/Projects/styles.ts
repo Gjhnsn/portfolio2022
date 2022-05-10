@@ -96,7 +96,7 @@ export const ProjectCardData = styled.div<ProjectCardImgProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 30px 30px 30px 70px;
+  padding: 25px 30px 30px 65px;
   opacity: 0;
 
   @media ${uiSize.projectLayout} {
@@ -292,9 +292,11 @@ export const CardFooter = styled.ul`
   position: absolute;
   bottom: 0;
   left: 0;
-  padding-left: 59px;
-  padding-bottom: 30px;
+  padding-left: 54px;
+  padding-bottom: 20px;
+  padding-right: 30px;
   display: flex;
+  flex-wrap: wrap;
 
   @media ${uiSize.projectLayout} {
     padding-left: 19px;
