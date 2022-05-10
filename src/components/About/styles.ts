@@ -59,8 +59,13 @@ export const TextWrapper = styled.div`
 
 export const ToolList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 200px));
+  grid-template-columns: repeat(2, minmax(150px, 180px));
   width: 100%;
+
+  @media ${uiSize.mobile} {
+    grid-template-columns: repeat(2, minmax(150px, 150px));
+
+  }
 `;
 
 export const ToolListItem = styled.li`

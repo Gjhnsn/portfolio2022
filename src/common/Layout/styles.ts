@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { uiSize } from "../../utils/mobileScreens";
 
-export const LayoutContainer = styled.div`
+export const LayoutContainer = styled.section`
   padding: 100px 0;
   display: flex;
   flex-direction: column;
