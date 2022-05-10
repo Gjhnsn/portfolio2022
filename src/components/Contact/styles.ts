@@ -5,13 +5,6 @@ import { uiSize } from "../../utils/mobileScreens";
 const success = "#66bb6a";
 const error = "#e57373";
 
-export const TitleWrapper = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 export const ContactTitle = styled.h3`
   margin-top: 100px;
   margin-bottom: 25px;
