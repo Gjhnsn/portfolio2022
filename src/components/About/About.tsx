@@ -21,9 +21,7 @@ import img5 from "../../assets/about/pro5.png";
 
 import img from "../../assets/edit.png";
 
-// possible icon choice imports
-import { FiTriangle, FiZap, FiChevronRight } from "react-icons/fi";
-import { TiMinus, TiSpanner } from "react-icons/ti";
+import { TiMinus } from "react-icons/ti";
 
 const About: FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -74,7 +72,7 @@ const About: FC = () => {
                 puzzles of the web.
               </p>
               <p>
-                When I first discovered web develpment it quickly became a
+                When I first discovered web development it quickly became a
                 natural fit. I truly enjoy the creative process of coming up
                 with solutions for both design and logic.
               </p>
@@ -82,11 +80,6 @@ const About: FC = () => {
                 I enjoy designing and building clean user interfaces, creating
                 enjoyable interactions, and the skill building that comes with
                 every project.
-                {/* along with the learning process that
-                comes with web development. */}
-                {/* along with the pursuit to learn and discover more */}
-                {/* finding creative and efficient
-                solutions to problems. */}
               </p>
             </TextWrapper>
             <div>

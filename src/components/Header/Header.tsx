@@ -14,7 +14,6 @@ import { Twirl as Hamburger } from "hamburger-react";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import { IThemeProps } from "../../utils/models";
 
-
 const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
   const [showNav, setShowNav] = useState(true);
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -48,10 +47,12 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
 
   const mobileMenuBackdrop = () => {
     return (
-      <MobileBackdrop onClick={() => setShowMobileNav(false)} showMobileNav={showMobileNav}></MobileBackdrop>
+      <MobileBackdrop
+        onClick={() => setShowMobileNav(false)}
+        showMobileNav={showMobileNav}
+      ></MobileBackdrop>
     );
   };
-
 
   return (
     <>
@@ -59,7 +60,6 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
         <StyledLogo onClick={scrollToTop} />
         <StyledHamburger>
           <Hamburger
-            
             toggled={showMobileNav}
             toggle={setShowMobileNav}
             direction="right"
@@ -98,7 +98,7 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
             <Anchor href="#contact">Contact</Anchor>
           </Link>
           <ToggleWrapper>
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           </ToggleWrapper>
         </LinkList>
       </Nav>

@@ -37,9 +37,8 @@ const Contact = () => {
       inputError();
       return false;
     } else {
-
       setEmptyFieldMessage(false);
-      
+
       emailjs
         .sendForm(
           `${process.env.REACT_APP_SERVICE_ID}`,

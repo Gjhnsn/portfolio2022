@@ -3,11 +3,10 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { IHeaderProps } from "../../utils/models";
 import { uiSize } from "../../utils/mobileScreens";
 
-
 // --------------------- TODO: ADD BACKGROUND OVERLAY FOR MOBILE NAV TO CLICK OUT
 
 interface INavProps {
-  showMobileNav: boolean
+  showMobileNav: boolean;
 }
 
 const onStart = keyframes`
@@ -51,7 +50,6 @@ export const Nav = styled.nav<IHeaderProps>`
   flex-wrap: wrap;
 
   @media ${uiSize.mobileLandscape} {
-    
     padding: 15px 0px;
     width: 100%;
   }
@@ -81,13 +79,13 @@ export const StyledHamburger = styled.div`
   cursor: pointer;
   animation: ${onStart} 1s 1 ease forwards;
   animation-delay: 1.3s;
-  
+
   @media ${uiSize.mobileLandscape} {
     display: block;
     align-self: center;
     margin-right: 30px;
   }
-`
+`;
 
 export const Burger = styled.div`
   flex-direction: column;
@@ -106,42 +104,41 @@ export const Burger = styled.div`
     display: flex;
     align-self: center;
   }
-`
+`;
 
 export const LinkList = styled.ul<INavProps>`
   display: flex;
   flex-direction: row;
   list-style: none;
 
-
   @media ${uiSize.mobileLandscape} {
     overflow: hidden;
-    height: ${(props) => props.showMobileNav ? '60vh' : '0'};
+    height: ${(props) => (props.showMobileNav ? "60vh" : "0")};
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     width: 100vw;
-    transition: height .3s ease-in;
+    transition: height 0.3s ease-in;
     padding: 0 30px;
   }
 `;
 
 export const MobileBackdrop = styled.div<INavProps>`
-  position: fixed;  
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: ${(props) => props.theme.tertiaryColor};
-  opacity: .5;
+  opacity: 0.5;
   z-index: 5;
-  animation: ${backdrop} .7s 1 ease forwards;
+  animation: ${backdrop} 0.7s 1 ease forwards;
   display: none;
 
   @media ${uiSize.mobileLandscape} {
     display: block;
   }
-`
+`;
 
 export const ToggleWrapper = styled.div`
   display: none;
@@ -149,19 +146,19 @@ export const ToggleWrapper = styled.div`
   @media ${uiSize.mobileLandscape} {
     display: block;
   }
-`
+`;
 
 export const Link = styled.li<INavProps>`
   margin-left: 50px;
   opacity: 0;
-  animation: ${onStart} .8s 1 ease forwards;
+  animation: ${onStart} 0.8s 1 ease forwards;
 
   @media ${uiSize.mobileLandscape} {
     animation: none;
     margin-left: 0;
     padding: 30px 10px;
-    opacity: ${(props) => props.showMobileNav ? '1' : '0'};
-    transition: opacity .5s ease-in;
+    opacity: ${(props) => (props.showMobileNav ? "1" : "0")};
+    transition: opacity 0.5s ease-in;
   }
 
   &:first-child {
@@ -181,5 +178,3 @@ export const Anchor = styled.a`
     font-size: 1.5rem;
   }
 `;
-
-

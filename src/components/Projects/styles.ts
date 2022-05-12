@@ -115,10 +115,6 @@ export const ProjectCardData = styled.div<ProjectCardImgProps>`
     background-position: 50% 50%; 
     border-radius: 10px;
 }
-
-  @media ${uiSize.mobile} {
-   
-  }
 `;
 
 export const CardBorder = styled.div`
