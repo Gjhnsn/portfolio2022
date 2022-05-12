@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Sidebar from "./components/Sidebar/Sidebar";
+import "./App.css";
+import { GlobalStyles, darkTheme, lightTheme } from "./styles/globalStyles";
+import { useDarkMode } from "./utils/useDarkMode";
+import { ThemeProvider } from "styled-components";
+import Main from "./components/Main/Main";
+
 
 function App() {
+  const [theme, toggleTheme] = useDarkMode();
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themeMode}>
+      <>
+        <GlobalStyles />
+        <Main theme={theme} toggleTheme={toggleTheme}/>
+        <Sidebar theme={theme} toggleTheme={toggleTheme} />
+      </>
+    </ThemeProvider>
   );
 }
 
