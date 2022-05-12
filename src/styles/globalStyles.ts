@@ -142,7 +142,6 @@ export const darkTheme = {
   borderWidth: '2px',
   gradientColor: "(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))",
   secondaryGradient: "(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))",
-  // projectGradient: "(rgba(18, 18, 18, .95), rgba(18, 18, 18, .95))",
   projectGradient: "(rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5))",
   mobileProjectGradient: "(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.92))",
   navGradient: "rgba(24, 30, 27, .85)",

@@ -38,11 +38,8 @@ export const Container = styled.div`
     width: 90%;
     z-index: 110;
     padding-bottom: 0;
-    margin: 20px auto 0 auto;  }
-
-  @media ${uiSize.mobile} {
-   
-  }
+    margin: 20px auto 0 auto;  
+    }
 `;
 
 export const IconWrapper = styled.div`
@@ -85,9 +82,6 @@ export const LinkedInIcon = styled(AiOutlineLinkedin)`
     width: 30px;
   }
 
-  @media ${uiSize.mobile} {
-  }
-
   &:hover {
     transform: translateY(-3px);
     color: ${(props) => props.theme.linkHoverColor};
@@ -106,13 +100,9 @@ export const GithubIcon = styled(VscGithub)`
   @media ${uiSize.mobileLandscape} {
     margin-bottom: 0;
     color: ${(props) => props.theme.contentText};
-  opacity: .6;
+    opacity: .6;
     height: 30px;
     width: 30px;
-  }
-
-  @media ${uiSize.mobile} {
-   
   }
 
   &:hover {
@@ -134,7 +124,7 @@ export const Email = styled.p`
     transform: rotate(0deg);
     writing-mode: horizontal-tb;
     color: ${(props) => props.theme.contentText};
-  opacity: .6;
+    opacity: .6;
     font-weight: 300;
     font-size: .9rem;
   }

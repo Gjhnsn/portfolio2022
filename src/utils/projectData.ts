@@ -4,7 +4,6 @@ import pocketDex from "../assets/project_imgs/pocketDex1.png";
 import omnomnom from "../assets/project_imgs/omnomnom.png";
 import toadTv from "../assets/project_imgs/toadTV.png";
 
-// data values not yet finalized
 
 export const projectData: IProjectData[] = [
   {

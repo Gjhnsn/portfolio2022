@@ -186,18 +186,6 @@ export const BottomSquare = styled.div`
   @media ${uiSize.smallMobile} {
     left: 110px;
   }
-
-  /* &:hover {
-    color: ${(props) => props.theme.headerText};
-    font-weight: 600;
-    font-size: 14rem;
-    font-family: "Sora", sans-serif;
-    transition: font-size 0.2s ease;
-    text-shadow: -0.8px -0.8px 0 ${(props) => props.theme.body},
-      0.8px -0.8px 0 ${(props) => props.theme.body},
-      -0.8px 0.8px 0 ${(props) => props.theme.body},
-      0.8px 0.8px 0 ${(props) => props.theme.body};
-  } */
 `;
 
 export const TopSquare = styled.div`
@@ -231,14 +219,6 @@ export const TopSquare = styled.div`
     right: 330px;
   }
 
-  @media ${uiSize.bigTablet} {
-   
-  }
-
-  @media ${uiSize.tablet} {
-    
-  }
-
   @media ${uiSize.smallTablet} {
     right: 120px;
     bottom: 70px;
@@ -259,16 +239,4 @@ export const TopSquare = styled.div`
     height: 125px;
     width: 125px;
   }
-
-  /* &:hover {
-    color: ${(props) => props.theme.headerText};
-    font-weight: 600;
-    font-size: 10rem;
-    font-family: "Sora", sans-serif;
-    transition: font-size 0.2s ease;
-    text-shadow: -0.8px -0.8px 0 ${(props) => props.theme.body},
-      0.8px -0.8px 0 ${(props) => props.theme.body},
-      -0.8px 0.8px 0 ${(props) => props.theme.body},
-      0.8px 0.8px 0 ${(props) => props.theme.body};
-  } */
 `;

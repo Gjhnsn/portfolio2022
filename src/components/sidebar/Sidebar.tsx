@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   GithubIcon,
   IconWrapper,
-  ToggleWrapper
+  ToggleWrapper,
 } from "./styles";
 
 const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
@@ -29,7 +29,7 @@ const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
           onClick={() => window.open("https://github.com/Gjhnsn", "_blank")}
         />
         <ToggleWrapper>
-        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </ToggleWrapper>
       </IconWrapper>
       <ShortLine />

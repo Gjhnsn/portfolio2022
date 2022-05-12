@@ -1,4 +1,4 @@
-import React, { useEffect, FC } from "react";
+import React, { useEffect } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./App.css";
 import { GlobalStyles, darkTheme, lightTheme } from "./styles/globalStyles";

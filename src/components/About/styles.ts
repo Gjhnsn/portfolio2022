@@ -10,9 +10,6 @@ export const FlexWrapper = styled.div`
   @media ${uiSize.smallTablet} {
     flex-direction: column;
   }
-
-  @media ${uiSize.mobileLandscape} {
-  }
 `;
 
 // ------------------------------------- left side content
@@ -46,7 +43,6 @@ export const TextWrapper = styled.div`
   p:nth-child(even) {
   margin: 15px 0px;
 }
-
 
   span {
     color: ${(props) => props.theme.accentColor};

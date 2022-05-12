@@ -1,5 +1,3 @@
-import React from "react";
-import Layout from "../../common/Layout/Layout";
 import { FooterBackGround, FooterText } from "./styles";
 
 const Footer = () => {
@@ -7,7 +5,6 @@ const Footer = () => {
   
     <FooterBackGround>
       <FooterText>2022</FooterText>
-     
     </FooterBackGround>
     
   );
