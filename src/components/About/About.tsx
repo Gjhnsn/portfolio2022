@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC } from "react";
 import Layout from "../../common/Layout/Layout";
 import { techTools } from "../../utils/techTools";
 import {
@@ -13,39 +13,10 @@ import {
   ToolList,
   ToolListItem,
 } from "./styles";
-import img1 from "../../assets/about/pro1.png";
-import img2 from "../../assets/about/pro2.png";
-import img3 from "../../assets/about/pro3.png";
-import img4 from "../../assets/about/pro4.png";
-import img5 from "../../assets/about/pro5.png";
-
-import img from "../../assets/edit.png";
-
+import bgIMG from "../../assets/aboutIMG.png";
 import { TiMinus } from "react-icons/ti";
 
 const About: FC = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  const aboutImages: string[] = [img];
-
-  // ----- cycle through aboutImages array
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentImage((currentImage) =>
-        currentImage < aboutImages.length - 1 ? currentImage + 1 : 0
-      );
-    }, 8000);
-    return () => clearInterval(slideInterval);
-  }, [aboutImages.length]);
-
-  const renderAboutImage = () => {
-    const bgImage = aboutImages[Math.floor(Math.random() * aboutImages.length)];
-
-    return (
-      <AboutImage style={{ backgroundImage: `url(${bgImage})` }}></AboutImage>
-    );
-  };
-
   // map through tech stack and return list of tools
   const renderTechTools = () => {
     return techTools.map((item: string) => {
@@ -91,7 +62,11 @@ const About: FC = () => {
             </div>
           </LeftContent>
           <RightContent>
-            <ImageWrapper>{renderAboutImage()}</ImageWrapper>
+            <ImageWrapper>
+              <AboutImage
+                style={{ backgroundImage: `url(${bgIMG})` }}
+              ></AboutImage>
+            </ImageWrapper>
           </RightContent>
         </FlexWrapper>
       </Layout>
