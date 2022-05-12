@@ -2,47 +2,37 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: bug
+labels: ''
 assignees: ''
 
 ---
 
-## Expected Behavior
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-_Report what **should** be happening._
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-## Actual/Current Behavior
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-_Describe what is currently happening._
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-## Steps to Reproduce the Problem
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
 
-  1. 
-  2. 
-  3. 
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
 
-## Pre-Testing TODOs
-
-_What needs to be done before testing._
-
-  1. Change DB values in x collection to y.
-
-## Testing Steps
-
-### If you are not a member of this project, _skip this step_
-
-_How do the users test this change?_
-
-  1. Navigate to x screen
-  2. Click on y button
-  3. Observe z result
-
-## Environment
-
-_Please provide **OS Version** and **Platform/Browser**._
-
-## Learning
-
-_Describe the research stage._
-
-_Links to blog posts, patterns, libraries or addons that could be used to solve this problem._
+**Additional context**
+Add any other context about the problem here.
