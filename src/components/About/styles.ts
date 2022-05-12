@@ -40,16 +40,26 @@ export const Underline = styled.div`
 
 export const TextWrapper = styled.div`
   align-self: flex-end;
-  padding-left: 100px;
+  padding-left: 20px;
   margin-bottom: 20px;
 
+  p:nth-child(even) {
+  margin: 15px 0px;
+}
+
+
+  span {
+    color: ${(props) => props.theme.accentColor};
+    font-weight:400;
+  }
+
   @media ${uiSize.bigTablet} {
-    padding-left: 80px;
+    padding-left: 20px;
     padding-right: 10px;
   }
 
   @media ${uiSize.tablet} {
-    padding-left: 60px;
+    padding-left: 20px;
   }
 
   @media ${uiSize.mobile} {
@@ -62,9 +72,12 @@ export const ToolList = styled.ul`
   grid-template-columns: repeat(2, minmax(150px, 180px));
   width: 100%;
 
-  @media ${uiSize.mobile} {
-    grid-template-columns: repeat(2, minmax(150px, 150px));
+  p:nth-child(even) {
+  margin:  0px;
+}
 
+  @media ${uiSize.mobile} {
+    grid-template-columns: repeat(2, minmax(150px, 180px));
   }
 `;
 
@@ -72,6 +85,7 @@ export const ToolListItem = styled.li`
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  width: 100%;
 
   @media ${uiSize.mobile} {
     margin: 0 5px 5px 0;
@@ -84,7 +98,7 @@ export const TechTool = styled.p`
   font-size: .8rem;
 
   @media ${uiSize.mobile} {
-    font-size: .7rem;
+    font-size: .8rem;
   }
 `;
 

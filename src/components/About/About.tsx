@@ -19,6 +19,8 @@ import img3 from "../../assets/about/pro3.png";
 import img4 from "../../assets/about/pro4.png";
 import img5 from "../../assets/about/pro5.png";
 
+import img from "../../assets/edit.png";
+
 // possible icon choice imports
 import { FiTriangle, FiZap, FiChevronRight } from "react-icons/fi";
 import { TiMinus, TiSpanner } from "react-icons/ti";
@@ -26,7 +28,7 @@ import { TiMinus, TiSpanner } from "react-icons/ti";
 const About: FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  const aboutImages: string[] = [img1, img2, img3, img4, img5];
+  const aboutImages: string[] = [img];
 
   // ----- cycle through aboutImages array
   useEffect(() => {
@@ -59,33 +61,47 @@ const About: FC = () => {
   };
 
   return (
-    <section id='about'>
-    <Layout>
-      <FlexWrapper>
-        <LeftContent>
-          <h2>About</h2>
-          <Underline />
-          <TextWrapper>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-              aperiam earum ducimus quisquam ipsum distinctio error architecto
-              voluptates ratione iure enim repellendus pariatur aut nisi
-              temporibus ad, animi nam praesentium.
-            </p>
-          </TextWrapper>
-          <div>
-            <h3>my toolbox</h3>
+    <section id="about">
+      <Layout>
+        <FlexWrapper>
+          <LeftContent>
+            <h2>About</h2>
             <Underline />
             <TextWrapper>
-              <ToolList>{renderTechTools()}</ToolList>
+              <p>
+                <span>Hey!</span> My name is Garrett Johnson, I am a web
+                developer based out of California. Helping iron out the pixel
+                puzzles of the web.
+              </p>
+              <p>
+                When I first discovered web develpment it quickly became a
+                natural fit. I truly enjoy the creative process of coming up
+                with solutions for both design and logic.
+              </p>
+              <p>
+                I enjoy designing and building clean user interfaces, creating
+                enjoyable interactions, and the skill building that comes with
+                every project.
+                {/* along with the learning process that
+                comes with web development. */}
+                {/* along with the pursuit to learn and discover more */}
+                {/* finding creative and efficient
+                solutions to problems. */}
+              </p>
             </TextWrapper>
-          </div>
-        </LeftContent>
-        <RightContent>
-          <ImageWrapper>{renderAboutImage()}</ImageWrapper>
-        </RightContent>
-      </FlexWrapper>
-    </Layout>
+            <div>
+              <h3>my toolbox</h3>
+              <Underline />
+              <TextWrapper>
+                <ToolList>{renderTechTools()}</ToolList>
+              </TextWrapper>
+            </div>
+          </LeftContent>
+          <RightContent>
+            <ImageWrapper>{renderAboutImage()}</ImageWrapper>
+          </RightContent>
+        </FlexWrapper>
+      </Layout>
     </section>
   );
 };
