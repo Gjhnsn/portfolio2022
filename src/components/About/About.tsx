@@ -1,4 +1,7 @@
 import React, { FC } from "react";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import { fadeInVariant } from "../../utils/animations";
 import Layout from "../../common/Layout/Layout";
 import { techTools } from "../../utils/techTools";
 import {
@@ -16,7 +19,15 @@ import {
 import bgIMG from "../../assets/aboutIMG.png";
 import { TiMinus } from "react-icons/ti";
 
+
 const About: FC = () => {
+
+  const [aboutRef, aboutInView] = useInView({
+    threshold: .25,
+    triggerOnce: true,
+  })
+
+
   // map through tech stack and return list of tools
   const renderTechTools = () => {
     return techTools.map((item: string) => {
@@ -29,8 +40,15 @@ const About: FC = () => {
     });
   };
 
+  
+
   return (
-    <section id="about">
+    <motion.section id="about"
+    variants={fadeInVariant}
+    initial="hidden"
+    animate={aboutInView ? "visible" : "hidden"}
+    ref={aboutRef}
+    >
       <Layout>
         <FlexWrapper>
           <LeftContent>
@@ -70,7 +88,7 @@ const About: FC = () => {
           </RightContent>
         </FlexWrapper>
       </Layout>
-    </section>
+    </motion.section>
   );
 };
 

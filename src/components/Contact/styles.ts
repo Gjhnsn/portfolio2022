@@ -58,6 +58,10 @@ export const MessageBox = styled.textarea`
   letter-spacing: 0.3px;
   display: flex;
   align-items: flex-start;
+
+  ::placeholder {
+    color: ${(props) => props.theme.secondaryText};
+  }
 `;
 
 export const InputField = styled.input`
@@ -74,9 +78,13 @@ export const InputField = styled.input`
   @media ${uiSize.smallTablet} {
     margin-top: 25px;
   }
+
+  ::placeholder {
+    color: ${(props) => props.theme.secondaryText};
+  }
 `;
 
-export const SubmitButton = styled.input`
+export const SubmitButton = styled.button`
   border: 1px solid blue;
   padding: 8px 25px;
   align-self: center;

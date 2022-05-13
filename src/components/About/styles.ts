@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { uiSize } from "../../utils/mobileScreens";
+import { motion } from 'framer-motion';
+
 
 export const FlexWrapper = styled.div`
   display: flex;
@@ -14,7 +16,7 @@ export const FlexWrapper = styled.div`
 
 // ------------------------------------- left side content
 
-export const LeftContent = styled.div`
+export const LeftContent = styled(motion.div)`
   display: flex;
   flex-direction: column;
   max-width: 50%;
@@ -204,7 +206,7 @@ export const ImageWrapper = styled.div`
       transform: translateY(-9%) translateX(-9%);
 
       @media ${uiSize.tablet} {
-        transform: translateY(-7%) translateX(-7%);
+        transform: translateY(-8%) translateX(-8%);
       }
     }
 `;

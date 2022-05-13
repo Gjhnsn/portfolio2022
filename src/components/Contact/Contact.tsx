@@ -15,6 +15,9 @@ import {
   EmptyNotification,
 } from "./styles";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { fadeInVariant } from "../../utils/animations";
 
 const Contact = () => {
   const [successMessage, setSuccessMessage] = useState<boolean>(false);
@@ -25,6 +28,11 @@ const Contact = () => {
   const [inputMessage, setInputMessage] = useState("");
 
   const [emptyFieldMessage, setEmptyFieldMessage] = useState(false);
+
+  const [contactRef, contactInView] = useInView({
+    threshold: 0.15,
+    triggerOnce: true,
+  });
 
   const handleContactSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -98,7 +106,13 @@ const Contact = () => {
   );
 
   return (
-    <section id="contact">
+    <motion.section
+      id="contact"
+      variants={fadeInVariant}
+      initial="hidden"
+      animate={contactInView ? "visible" : "hidden"}
+      ref={contactRef}
+    >
       <Layout>
         <HeaderContainer>
           <h2>Contact</h2>
@@ -142,12 +156,14 @@ const Contact = () => {
               />
             </InputColumn>
           </InputWrapper>
-          <SubmitButton type="submit" value="Send Message"></SubmitButton>
+          <SubmitButton type="submit" value="Send Message">
+            Send Message
+          </SubmitButton>
           {successMessage && renderSuccessMessage()}
           {errorMessage && renderErrorMessage()}
         </ContactForm>
       </Layout>
-    </section>
+    </motion.section>
   );
 };
 

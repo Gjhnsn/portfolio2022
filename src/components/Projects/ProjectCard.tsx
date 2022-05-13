@@ -18,8 +18,16 @@ import {
 } from "./styles";
 import { IProjectCardProps } from "../../utils/models";
 import { TiMinus } from "react-icons/ti";
+import { useInView } from 'react-intersection-observer';
+import { fadeInVariant } from "../../utils/animations";
+
 
 const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
+
+  const [projectsRef, projectsInView] = useInView({
+    threshold: .15,
+    triggerOnce: true,
+  })
 
   // array of tech used for each project from projectData
   const techList = project.techUsed.map((item) => {
@@ -38,7 +46,12 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
   const projectImg = project.image;
 
   return (
-    <ProjectContainer>
+    <ProjectContainer
+    variants={fadeInVariant}
+    initial="hidden"
+    animate={projectsInView ? "visible" : "hidden"}
+    ref={projectsRef}
+    >
       <TitleContainer >
         <ProjectTitle>{project.name}</ProjectTitle>
       </TitleContainer>

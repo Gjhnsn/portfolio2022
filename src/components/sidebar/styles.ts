@@ -77,7 +77,7 @@ export const LinkedInIcon = styled(AiOutlineLinkedin)`
 
   @media ${uiSize.mobileLandscape} {
     color: ${(props) => props.theme.contentText};
-  opacity: .6;
+    opacity: .7;
     height: 30px;
     width: 30px;
   }
@@ -100,7 +100,7 @@ export const GithubIcon = styled(VscGithub)`
   @media ${uiSize.mobileLandscape} {
     margin-bottom: 0;
     color: ${(props) => props.theme.contentText};
-    opacity: .6;
+    opacity: .7;
     height: 30px;
     width: 30px;
   }
@@ -124,8 +124,8 @@ export const Email = styled.p`
     transform: rotate(0deg);
     writing-mode: horizontal-tb;
     color: ${(props) => props.theme.contentText};
-    opacity: .6;
-    font-weight: 300;
+    opacity: .8;
+    font-weight: 200;
     font-size: .9rem;
   }
 `;

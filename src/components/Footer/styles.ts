@@ -41,12 +41,11 @@ export const FooterText = styled.p`
   z-index: 1;
   letter-spacing: 2px;
   font-weight: 200;
-  opacity: .6;
+  opacity: .8;
 
   @media ${uiSize.mobileLandscape} {
     padding-bottom: 20px;
     font-size: .9rem;
-    font-weight: 300;
   }
 `;
 
