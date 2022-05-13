@@ -3,8 +3,9 @@ import { ProjectCardImgProps } from "../../utils/models";
 import { MdOpenInNew } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
 import { uiSize } from "../../utils/mobileScreens";
+import { motion } from "framer-motion";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-self: flex-start;
@@ -142,7 +143,7 @@ export const CardBorder = styled.div`
   }
 `;
 
-export const ProjectContainer = styled.div`
+export const ProjectContainer = styled(motion.div)`
   padding: 0 15px;
   margin-top: 70px;
   margin-bottom: 30px;
