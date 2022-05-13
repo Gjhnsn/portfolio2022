@@ -142,7 +142,7 @@ const Contact = () => {
               />
             </InputColumn>
           </InputWrapper>
-          <SubmitButton type="submit" value="Send Message"></SubmitButton>
+          <SubmitButton type="submit" value="Send Message">Send Message</SubmitButton>
           {successMessage && renderSuccessMessage()}
           {errorMessage && renderErrorMessage()}
         </ContactForm>

@@ -45,7 +45,7 @@ export const Nav = styled.nav<IHeaderProps>`
   padding: 15px 50px;
   background-color: ${(props) => props.theme.navGradient};
   transform: ${(props) =>
-    props.showNav ? `translateY(0px)` : `translateY(-80px)`};
+    props.showNav ? `translateY(0px)` : `translateY(-82px)`};
   transition: transform 0.2s ease-in;
   flex-wrap: wrap;
 
