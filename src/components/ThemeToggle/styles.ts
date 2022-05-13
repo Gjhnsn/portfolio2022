@@ -24,6 +24,7 @@ export const SunIcon = styled(FiSun)`
   @media ${uiSize.mobileLandscape} {
     height: auto;
     width: 40px;
+    height: 40px;
     margin: 10px 8px;
   }
 
@@ -33,6 +34,7 @@ export const SunIcon = styled(FiSun)`
 
     @media ${uiSize.mobileLandscape} {
       transform: translateY(0px);
+      color: ${(props) => props.theme.tertiaryColor};
     }
   }
 `;
@@ -48,6 +50,7 @@ export const MoonIcon = styled(HiOutlineMoon)`
   @media ${uiSize.mobileLandscape} {
     height: auto;
     width: 40px;
+    height: 40px;
     margin: 10px 8px;
   }
 
@@ -57,6 +60,7 @@ export const MoonIcon = styled(HiOutlineMoon)`
 
     @media ${uiSize.mobileLandscape} {
       transform: translateY(0px);
+      color: ${(props) => props.theme.tertiaryColor};
     }
   }
 `;

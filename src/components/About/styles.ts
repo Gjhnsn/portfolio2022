@@ -204,7 +204,7 @@ export const ImageWrapper = styled.div`
       transform: translateY(-9%) translateX(-9%);
 
       @media ${uiSize.tablet} {
-        transform: translateY(-7%) translateX(-7%);
+        transform: translateY(-8%) translateX(-8%);
       }
     }
 `;
