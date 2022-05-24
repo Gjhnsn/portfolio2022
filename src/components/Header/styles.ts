@@ -2,12 +2,8 @@ import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { IHeaderProps } from "../../utils/models";
 import { uiSize } from "../../utils/mobileScreens";
+import { INavProps } from '../../utils/models'
 
-// --------------------- TODO: ADD BACKGROUND OVERLAY FOR MOBILE NAV TO CLICK OUT
-
-interface INavProps {
-  showMobileNav: boolean;
-}
 
 const onStart = keyframes`
 {
@@ -16,6 +12,17 @@ const onStart = keyframes`
       opacity: 0;
   }
 100% {
+    opacity: 1;
+}
+}`;
+
+const hamburgerEnter = keyframes`
+{
+  0% {
+      opacity: 0;
+  }
+100% {
+    transform: translateY(0);
     opacity: 1;
 }
 }`;
@@ -77,32 +84,14 @@ export const StyledHamburger = styled.div`
   display: none;
   color: ${(props) => props.theme.tertiaryColor};
   cursor: pointer;
-  animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: 1.3s;
+  transform: translateY(-55px);
 
   @media ${uiSize.mobileLandscape} {
     display: block;
     align-self: center;
     margin-right: 30px;
-  }
-`;
-
-export const Burger = styled.div`
-  flex-direction: column;
-  cursor: pointer;
-  display: none;
-
-  span {
-    height: 3px;
-    width: 30px;
-    background-color: ${(props) => props.theme.tertiaryColor};
-    margin: 4px 0;
-    border-radius: 5px;
-  }
-
-  @media ${uiSize.mobileLandscape} {
-    display: flex;
-    align-self: center;
+    animation: ${hamburgerEnter} 1s 1 ease forwards;
+    animation-delay: 1.3s;
   }
 `;
 
