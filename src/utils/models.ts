@@ -31,7 +31,13 @@ export interface IHeaderProps {
   showNav: boolean;
 }
 
+// ------------------------------------ used in Header.tsx styles
+export interface INavProps {
+  showMobileNav: boolean;
+}
+
 // ------------------------------------ used in Contact.tsx styles
 export interface IMessageProps {
   successMessage: boolean;
 }
+

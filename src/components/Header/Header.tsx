@@ -5,7 +5,6 @@ import {
   Nav,
   StyledLogo,
   Anchor,
-  Burger,
   StyledHamburger,
   MobileBackdrop,
   ToggleWrapper,
