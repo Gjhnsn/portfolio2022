@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 import { fadeInVariant } from "../../utils/animations";
 import Layout from "../../common/Layout/Layout";
 import { techTools } from "../../utils/techTools";
@@ -15,18 +15,16 @@ import {
   TechTool,
   ToolList,
   ToolListItem,
+  AboutImageOverlay,
 } from "./styles";
 import bgIMG from "../../assets/aboutIMG.png";
 import { TiMinus } from "react-icons/ti";
 
-
 const About: FC = () => {
-
   const [aboutRef, aboutInView] = useInView({
-    threshold: .25,
+    threshold: 0.25,
     triggerOnce: true,
-  })
-
+  });
 
   // map through tech stack and return list of tools
   const renderTechTools = () => {
@@ -40,14 +38,13 @@ const About: FC = () => {
     });
   };
 
-  
-
   return (
-    <motion.section id="about"
-    variants={fadeInVariant}
-    initial="hidden"
-    animate={aboutInView ? "visible" : "hidden"}
-    ref={aboutRef}
+    <motion.section
+      id="about"
+      variants={fadeInVariant}
+      initial="hidden"
+      animate={aboutInView ? "visible" : "hidden"}
+      ref={aboutRef}
     >
       <Layout>
         <FlexWrapper>
@@ -81,9 +78,9 @@ const About: FC = () => {
           </LeftContent>
           <RightContent>
             <ImageWrapper>
-              <AboutImage
-                style={{ backgroundImage: `url(${bgIMG})` }}
-              ></AboutImage>
+              <AboutImageOverlay>
+                <AboutImage src={bgIMG} alt="Garrett Johnson, headshot" />
+              </AboutImageOverlay>
             </ImageWrapper>
           </RightContent>
         </FlexWrapper>
