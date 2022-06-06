@@ -168,7 +168,7 @@ export const ImageWrapper = styled.div`
     border-radius: 10px;
     top: 17px;
     left: 17px;
-    transition: transform .3s;
+    transition: all .3s;
     box-shadow: ${(props) => props.theme.secondaryBoxShadow};
 
     @media ${uiSize.bigTablet} {
@@ -179,7 +179,7 @@ export const ImageWrapper = styled.div`
   } 
 
     @media ${uiSize.tablet} {
-      height: 265px;
+    height: 265px;
     width: 265px;
     top: 10px;
     left: 10px;
@@ -203,13 +203,21 @@ export const ImageWrapper = styled.div`
 
   &:hover::after {
       content: "";
-      transform: translateY(-9%) translateX(-9%);
+      border: none;
+      border-radius: 5px;
+      transform: translateY(-17px) translateX(-17px);
+      box-shadow: ${(props) => props.theme.aboutBorder};
+
+      @media ${uiSize.bigTablet} {
+        transform: translateY(-13px) translateX(-13px);
+      }
 
       @media ${uiSize.tablet} {
-        transform: translateY(-8%) translateX(-8%);
+        transform: translateY(-10px) translateX(-10px);
       }
     }
 `;
+
 
 export const AboutImage = styled.div`
   height: 100%;
