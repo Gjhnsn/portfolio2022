@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import background from "../../assets/flower.jpg";
+import background from "../../assets/flower.webp";
 import { uiSize } from "../../utils/mobileScreens";
 
 const onStart = keyframes`

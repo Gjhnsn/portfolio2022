@@ -18,7 +18,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
   transform: translateX(-20px);
   background-image: url(${(props) => props.projectImg});
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
   margin: 0 5px;
   position: absolute;
   border-radius: 10px;

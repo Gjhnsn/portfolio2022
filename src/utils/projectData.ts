@@ -1,8 +1,8 @@
 import { IProjectData } from "./models";
-import quickr from "../assets/project_imgs/quickr2.png";
-import pocketDex from "../assets/project_imgs/pocketDex1.png";
-import omnomnom from "../assets/project_imgs/omnomnom.png";
-import toadTv from "../assets/project_imgs/toadTV.png";
+import quickr from "../assets/project_imgs/quickr.webp";
+import pocketDex from "../assets/project_imgs/pocketDex.webp";
+import omnomnom from "../assets/project_imgs/omnomnom.webp";
+import toadTv from "../assets/project_imgs/toadTV.webp";
 
 
 export const projectData: IProjectData[] = [

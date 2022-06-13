@@ -17,7 +17,7 @@ import {
   ToolListItem,
   AboutImageOverlay,
 } from "./styles";
-import bgIMG from "../../assets/aboutIMG.png";
+import bgIMG from "../../assets/aboutIMG.webp";
 import { TiMinus } from "react-icons/ti";
 
 const About: FC = () => {
