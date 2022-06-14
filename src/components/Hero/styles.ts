@@ -141,9 +141,6 @@ export const BottomSquare = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.headerText};
-  font-weight: 600;
-  font-size: 0;
-  font-family: "Sora", sans-serif;
   transition: font-size 0.2s ease;
   animation: ${squareFade} 1.7s 1 ease-in forwards;
   animation-delay: 0.5s;
@@ -204,9 +201,6 @@ export const TopSquare = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.headerText};
-  font-weight: 600;
-  font-size: 0;
-  font-family: "Sora", sans-serif;
   transition: font-size 0.2s ease;
   animation: ${squareFade} 1.7s 1 ease-in forwards;
   animation-delay: 0.2s;
