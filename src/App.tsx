@@ -5,6 +5,7 @@ import { GlobalStyles, darkTheme, lightTheme } from "./styles/globalStyles";
 import { useDarkMode } from "./utils/useDarkMode";
 import { ThemeProvider } from "styled-components";
 import Main from "./components/Main/Main";
+import Loader from "./components/Loader/Loader";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
+        <Loader />
         <Main theme={theme} toggleTheme={toggleTheme}/>
         <Sidebar theme={theme} toggleTheme={toggleTheme} />
       </>
