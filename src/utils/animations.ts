@@ -1,3 +1,4 @@
+//------------------------------ used through app as scroll animation
 export const fadeInVariant = {
     hidden: {
       y: '50px',

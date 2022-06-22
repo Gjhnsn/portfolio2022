@@ -44,6 +44,8 @@ export const FlexWrapper = styled.div`
 
 export const NameHeader = styled.h1`
   animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: 3.9s;
+  opacity: 0;
 
   @media ${uiSize.laptop13in} {
     font-size: 4.5rem;
@@ -69,7 +71,7 @@ export const NameHeader = styled.h1`
 
 export const SubTitle = styled.div`
   animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: 0.2s;
+  animation-delay: 4.1s;
   opacity: 0;
 `;
 
@@ -143,7 +145,7 @@ export const BottomSquare = styled.div`
   color: ${(props) => props.theme.headerText};
   transition: font-size 0.2s ease;
   animation: ${squareFade} 1.7s 1 ease-in forwards;
-  animation-delay: 0.5s;
+  animation-delay: 4.4s;
   opacity: 0;
 
   @media ${uiSize.laptop13in} {
@@ -203,7 +205,7 @@ export const TopSquare = styled.div`
   color: ${(props) => props.theme.headerText};
   transition: font-size 0.2s ease;
   animation: ${squareFade} 1.7s 1 ease-in forwards;
-  animation-delay: 0.2s;
+  animation-delay: 4.1s;
   opacity: 0;
 
   @media ${uiSize.laptop13in} {

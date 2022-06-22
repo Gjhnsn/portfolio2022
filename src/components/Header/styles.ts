@@ -68,7 +68,7 @@ export const StyledLogo = styled(Logo)`
   cursor: pointer;
   transition: all 0.2s ease;
   animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: 1.3s;
+  animation-delay: 4.8s;
   opacity: 0;
 
   &:hover {
