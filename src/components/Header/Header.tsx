@@ -5,7 +5,6 @@ import {
   Nav,
   StyledLogo,
   Anchor,
-  Burger,
   StyledHamburger,
   MobileBackdrop,
   ToggleWrapper,
@@ -70,28 +69,28 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
 
         <LinkList showMobileNav={showMobileNav}>
           <Link
-            style={{ animationDelay: "1.4s" }}
+            style={{ animationDelay: "4.9s" }}
             showMobileNav={showMobileNav}
             onClick={() => setShowMobileNav(false)}
           >
             <Anchor href="#home">Home</Anchor>
           </Link>
           <Link
-            style={{ animationDelay: "1.5s" }}
+            style={{ animationDelay: "5s" }}
             showMobileNav={showMobileNav}
             onClick={() => setShowMobileNav(false)}
           >
             <Anchor href="#about">About</Anchor>
           </Link>
           <Link
-            style={{ animationDelay: "1.6s" }}
+            style={{ animationDelay: "5.1s" }}
             showMobileNav={showMobileNav}
             onClick={() => setShowMobileNav(false)}
           >
             <Anchor href="#projects">Projects</Anchor>
           </Link>
           <Link
-            style={{ animationDelay: "1.7s" }}
+            style={{ animationDelay: "5.2s" }}
             showMobileNav={showMobileNav}
             onClick={() => setShowMobileNav(false)}
           >

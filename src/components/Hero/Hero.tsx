@@ -29,9 +29,7 @@ const Hero = () => {
       <LayoutContainer style={{ marginBottom: "100px" }} className="landing">
         <TextContainer>
           <FlexWrapper>
-            <div>
-              <NameHeader>Garrett Johnson</NameHeader>
-            </div>
+            <NameHeader>Garrett Johnson</NameHeader>
             <SubTitle>
               <SubText>web developer</SubText>
             </SubTitle>
@@ -42,12 +40,12 @@ const Hero = () => {
         style={{ transform: `translateY(${scrollOffset * 0.08}px)` }}
       />
       <SquareWrapper>
-        <BottomSquare  style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}>
-          J
-        </BottomSquare>
-        <TopSquare style={{ transform: `translateY(-${scrollOffset * 0.2}px)` }}>
-          G
-        </TopSquare>
+        <BottomSquare
+          style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}
+        ></BottomSquare>
+        <TopSquare
+          style={{ transform: `translateY(-${scrollOffset * 0.2}px)` }}
+        ></TopSquare>
       </SquareWrapper>
     </section>
   );

@@ -9,10 +9,9 @@ import Projects from "../Projects/Projects";
 import { Wrapper } from "./styles";
 
 const Main: FC<IThemeProps> = ({ theme, toggleTheme }) => {
-
   return (
     <>
-      <Header theme={theme} toggleTheme={toggleTheme}/>
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <Wrapper>
         <Hero />
         <About />

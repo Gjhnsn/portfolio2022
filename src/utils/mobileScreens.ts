@@ -22,5 +22,5 @@ export const uiSize: IuiScreenSize = {
     bigTablet: `(max-width: 1280px)`,
     laptop13in: `(max-width: 1440px)`,
     laptop13inHeight: `(max-height: 800px)`,
-    laptop15in: `(max-width: 1920px)`,
+    laptop15in: `(min-width: 1920px)`,
 };

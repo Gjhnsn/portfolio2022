@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import background from "../../assets/flower.jpg";
+import background from "../../assets/flower.webp";
 import { uiSize } from "../../utils/mobileScreens";
 
 const onStart = keyframes`
@@ -32,8 +32,16 @@ export const TextContainer = styled.div`
   width: 100%;
   z-index: 10;
 
+  @media ${uiSize.smallTablet} {
+    width: 60%;
+    right: 80px;
+    top: 125px;
+  }
+
   @media ${uiSize.mobileLandscape} {
     top: -18vh;
+    right: 0;
+    width: 100%;
   }
 `;
 
@@ -44,6 +52,8 @@ export const FlexWrapper = styled.div`
 
 export const NameHeader = styled.h1`
   animation: ${onStart} 1s 1 ease forwards;
+  animation-delay: 3.9s;
+  opacity: 0;
 
   @media ${uiSize.laptop13in} {
     font-size: 4.5rem;
@@ -69,11 +79,13 @@ export const NameHeader = styled.h1`
 
 export const SubTitle = styled.div`
   animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: 0.2s;
+  animation-delay: 4.1s;
   opacity: 0;
 `;
 
 export const SubText = styled.h3`
+  padding-left: 3px;
+
   @media ${uiSize.mobileLandscape} {
     font-size: 1.5rem;
   }
@@ -104,7 +116,6 @@ export const ImageBackground = styled.div`
   }
 `;
 
-
 // ---------------- accent square elements
 
 // ---------------- square wrapper = same size as background image
@@ -127,7 +138,7 @@ export const BottomSquare = styled.div`
   width: 350px;
   border-width: ${(props) => props.theme.borderWidth};
   border-style: solid;
-  border-color: ${({theme}) => theme.accentColor};
+  border-color: ${({ theme }) => theme.accentColor};
   border-radius: 10px;
   position: relative;
   left: 130px;
@@ -141,12 +152,9 @@ export const BottomSquare = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.headerText};
-  font-weight: 600;
-  font-size: 0;
-  font-family: "Sora", sans-serif;
   transition: font-size 0.2s ease;
   animation: ${squareFade} 1.7s 1 ease-in forwards;
-  animation-delay: 0.5s;
+  animation-delay: 4.4s;
   opacity: 0;
 
   @media ${uiSize.laptop13in} {
@@ -155,25 +163,22 @@ export const BottomSquare = styled.div`
     top: 120px;
   }
 
-  @media ${uiSize.bigTablet} {
-    
-  }
-
   @media ${uiSize.tablet} {
-    
+    height: 240px;
+    width: 240px;
   }
 
   @media ${uiSize.smallTablet} {
     height: 240px;
     width: 240px;
     left: 280px;
-    };
+  }
 
   @media ${uiSize.mobileLandscape} {
     height: 200px;
     width: 200px;
-    top: 190px;
-    left: 130px;
+    top: 220px;
+    left: 140px;
   }
 
   @media ${uiSize.mobile} {
@@ -185,6 +190,13 @@ export const BottomSquare = styled.div`
 
   @media ${uiSize.smallMobile} {
     left: 110px;
+  }
+
+  @media ${uiSize.laptop15in} {
+    height: 400px;
+    width: 400px;
+    left: 150px;
+    top: 175px;
   }
 `;
 
@@ -204,12 +216,9 @@ export const TopSquare = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.headerText};
-  font-weight: 600;
-  font-size: 0;
-  font-family: "Sora", sans-serif;
   transition: font-size 0.2s ease;
   animation: ${squareFade} 1.7s 1 ease-in forwards;
-  animation-delay: 0.2s;
+  animation-delay: 4.1s;
   opacity: 0;
 
   @media ${uiSize.laptop13in} {
@@ -217,6 +226,13 @@ export const TopSquare = styled.div`
     width: 225px;
     bottom: 90px;
     right: 330px;
+  }
+
+  @media ${uiSize.tablet} {
+    height: 200px;
+    width: 200px;
+    right: 280px;
+    bottom: 70px;
   }
 
   @media ${uiSize.smallTablet} {
@@ -238,5 +254,12 @@ export const TopSquare = styled.div`
     right: 160px;
     height: 125px;
     width: 125px;
+  }
+
+  @media ${uiSize.laptop15in} {
+    height: 325px;
+    width: 325px;
+    right: 535px;
+    bottom: 135px;
   }
 `;

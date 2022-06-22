@@ -9,6 +9,7 @@ interface ITheme {
   secondartText: string;
   tertiaryColor: string;
   borderWidth: string;
+  aboutBorder: string;
   gradientColor: string;
   secondaryGradient: string;
   projectGradient: string;
@@ -139,9 +140,11 @@ export const darkTheme = {
   contentText: "#DDD",
   secondaryText: "#A8A8A8",
   tertiaryColor: "#7A8872",
-  borderWidth: '2px',
+  borderWidth: "2px",
+  aboutBorder:
+    "RGBA(215,175,112,1) 7px 7px, RGBA(215,175,112,.7) 14px 14px, RGBA(215,175,112,.2) 21px 21px",
   gradientColor: "(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))",
-  secondaryGradient: "(rgba(95, 106, 89, 0.6), rgba(95, 106, 89, 0.6))",
+  secondaryGradient: "(rgba(95, 106, 89, 0.5), rgba(95, 106, 89, 0.6))",
   projectGradient: "(rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5))",
   mobileProjectGradient: "(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.92))",
   navGradient: "rgba(24, 30, 27, .85)",
@@ -149,7 +152,7 @@ export const darkTheme = {
   boxShadow: `-6px 6px 15px rgba(0, 0, 0, .95)`,
   secondaryBoxShadow: `6px -6px 15px rgba(0, 0, 0, .75)`,
   linkHoverColor: `#CFCFC5`,
-  sendMessageHover: `rgba(215, 175, 112, .3)`
+  sendMessageHover: `rgba(215, 175, 112, .3)`,
 };
 
 export const lightTheme = {
@@ -159,9 +162,11 @@ export const lightTheme = {
   contentText: "#222",
   secondaryText: "#565858",
   tertiaryColor: "#5D4733",
-  borderWidth: '3px',
+  borderWidth: "3px",
+  aboutBorder:
+    "RGBA(72, 91, 73,1) 7px 7px, RGBA(72, 91, 73,.7) 14px 14px, RGBA(72, 91, 73,.2) 21px 21px",
   gradientColor: "(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))",
-  secondaryGradient: "(rgba(93, 71, 51, 0.6), rgba(93, 71, 51, 0.6))",
+  secondaryGradient: "(rgba(137, 114, 93, 0.4), rgba(137, 114, 93, 0.6))",
   projectGradient: "(rgba(191, 191, 181, .5), rgba(191, 191, 181, .5))",
   mobileProjectGradient: "(rgba(191, 191, 181, .95), rgba(191, 191, 181, .95))",
   navGradient: "rgba(207, 207, 197, .85)",
@@ -169,5 +174,5 @@ export const lightTheme = {
   boxShadow: `rgba(0, 0, 0, 0.4) -1px 3px 10px`,
   secondaryBoxShadow: `rgba(0, 0, 0, 0.35) 1px -3px 10px`,
   linkHoverColor: `#896B4D`,
-  sendMessageHover: `rgba(120, 147, 125, .3)`
+  sendMessageHover: `rgba(120, 147, 125, .3)`,
 };
