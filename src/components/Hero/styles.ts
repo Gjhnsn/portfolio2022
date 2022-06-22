@@ -221,11 +221,6 @@ export const TopSquare = styled.div`
   animation-delay: 4.1s;
   opacity: 0;
 
-  /* @media ${uiSize.laptop15in} {
-    height: 275px;
-    width: 275px;
-  } */
-
   @media ${uiSize.laptop13in} {
     height: 225px;
     width: 225px;
