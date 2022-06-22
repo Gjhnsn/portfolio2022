@@ -24,7 +24,7 @@ export const Container = styled.div`
   bottom: -100px;
   margin-left: 20px;
   animation: ${onStart} 1s 1 ease forwards;
-  animation-delay: 2.1s;
+  animation-delay: 5.6s;
   opacity: 0;
   transform-origin: bottom;
 
