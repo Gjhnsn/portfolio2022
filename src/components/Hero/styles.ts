@@ -32,8 +32,16 @@ export const TextContainer = styled.div`
   width: 100%;
   z-index: 10;
 
+  @media ${uiSize.smallTablet} {
+    width: 60%;
+    right: 80px;
+    top: 125px;
+  }
+
   @media ${uiSize.mobileLandscape} {
     top: -18vh;
+    right: 0;
+    width: 100%;
   }
 `;
 
@@ -76,6 +84,8 @@ export const SubTitle = styled.div`
 `;
 
 export const SubText = styled.h3`
+  padding-left: 3px;
+
   @media ${uiSize.mobileLandscape} {
     font-size: 1.5rem;
   }
@@ -106,7 +116,6 @@ export const ImageBackground = styled.div`
   }
 `;
 
-
 // ---------------- accent square elements
 
 // ---------------- square wrapper = same size as background image
@@ -129,7 +138,7 @@ export const BottomSquare = styled.div`
   width: 350px;
   border-width: ${(props) => props.theme.borderWidth};
   border-style: solid;
-  border-color: ${({theme}) => theme.accentColor};
+  border-color: ${({ theme }) => theme.accentColor};
   border-radius: 10px;
   position: relative;
   left: 130px;
@@ -154,25 +163,22 @@ export const BottomSquare = styled.div`
     top: 120px;
   }
 
-  @media ${uiSize.bigTablet} {
-    
-  }
-
   @media ${uiSize.tablet} {
-    
+    height: 240px;
+    width: 240px;
   }
 
   @media ${uiSize.smallTablet} {
     height: 240px;
     width: 240px;
     left: 280px;
-    };
+  }
 
   @media ${uiSize.mobileLandscape} {
     height: 200px;
     width: 200px;
-    top: 190px;
-    left: 130px;
+    top: 220px;
+    left: 140px;
   }
 
   @media ${uiSize.mobile} {
@@ -184,6 +190,13 @@ export const BottomSquare = styled.div`
 
   @media ${uiSize.smallMobile} {
     left: 110px;
+  }
+
+  @media ${uiSize.laptop15in} {
+    height: 400px;
+    width: 400px;
+    left: 150px;
+    top: 175px;
   }
 `;
 
@@ -208,11 +221,23 @@ export const TopSquare = styled.div`
   animation-delay: 4.1s;
   opacity: 0;
 
+  /* @media ${uiSize.laptop15in} {
+    height: 275px;
+    width: 275px;
+  } */
+
   @media ${uiSize.laptop13in} {
     height: 225px;
     width: 225px;
     bottom: 90px;
     right: 330px;
+  }
+
+  @media ${uiSize.tablet} {
+    height: 200px;
+    width: 200px;
+    right: 280px;
+    bottom: 70px;
   }
 
   @media ${uiSize.smallTablet} {
@@ -234,5 +259,12 @@ export const TopSquare = styled.div`
     right: 160px;
     height: 125px;
     width: 125px;
+  }
+
+  @media ${uiSize.laptop15in} {
+    height: 325px;
+    width: 325px;
+    right: 535px;
+    bottom: 135px;
   }
 `;
