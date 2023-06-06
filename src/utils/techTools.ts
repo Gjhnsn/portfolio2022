@@ -6,9 +6,9 @@ export const techTools: string[] = [
     'React',
     'React Native',
     'CSS',
-    'Styled-Components',
+    'CSS Frameworks',
     'Sass',
-    'Bootstrap',
+    'Styled-Components',
     'Redux',
     'Figma',
 ]

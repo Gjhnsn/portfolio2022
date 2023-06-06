@@ -31,7 +31,7 @@ const Hero = () => {
           <FlexWrapper>
             <NameHeader>Garrett Johnson</NameHeader>
             <SubTitle>
-              <SubText>web developer</SubText>
+              <SubText>software developer</SubText>
             </SubTitle>
           </FlexWrapper>
         </TextContainer>
