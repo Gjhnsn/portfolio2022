@@ -12,6 +12,7 @@ export interface IProjectData {
   techUsed: string[];
   image: string;
   repoLink: string;
+  altRepoLink?: string;
   liveLink: string;
 }
 
