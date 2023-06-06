@@ -45,6 +45,16 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
 
   const projectImg = project.image;
 
+  const extraProjectLinks = () => {
+    if (!project.altRepoLink) {
+      return
+    } else if (project.altRepoLink && project.name === "MoneyMinder") {
+      return (<p>View original source code <a href={project.altRepoLink} target="_blank">here</a>.</p>)
+    } else if (project.altRepoLink && project.name === "QuickR") {
+      return (<p>View app demo <a href={project.altRepoLink} target="_blank">here</a>.</p>)
+    }
+  }
+
   return (
     <ProjectContainer
     variants={fadeInVariant}
@@ -71,9 +81,12 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
             />
           </LinkWrapper>
           <ProjectName>{project.name}</ProjectName>
+          
           <Description>
             <p>{project.description}</p>
+            { extraProjectLinks() }
           </Description>
+          
           <CardFooter>{techList}</CardFooter>
         </ProjectCardData>
       </CardBorder>

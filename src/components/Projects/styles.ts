@@ -49,6 +49,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
 `;
 
 export const ProjectCardOverlay = styled.div`
+  // project overlay here
   background-image: linear-gradient${(props) => props.theme.projectGradient};
   opacity: 1;
   border-radius: 9px;
@@ -110,12 +111,13 @@ export const ProjectCardData = styled.div<ProjectCardImgProps>`
   }
 
   @media ${uiSize.smallTablet} {
+    // small screen background image
     width: auto;
     background-image: linear-gradient${(props) => props.theme.mobileProjectGradient}, url(${(props) => props.projectImg});
     background-size: cover;
-    background-position: 50% 50%; 
+    background-position: 50% 50%;
     border-radius: 10px;
-}
+  }
 `;
 
 export const CardBorder = styled.div`
@@ -126,7 +128,7 @@ export const CardBorder = styled.div`
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   transition: transform 0.5s ease;
   z-index: 1;
-  
+
   @media ${uiSize.projectLayout} {
     align-self: flex-end;
     background-color: ${(props) => props.theme.body};
@@ -154,12 +156,11 @@ export const ProjectContainer = styled(motion.div)`
 
   &:hover {
     width: 100%;
-    
+
     @media ${uiSize.projectLayout} {
       width: auto;
     }
   }
-
 
   /* slide top card to left on hover */
   &:hover {
@@ -173,7 +174,6 @@ export const ProjectContainer = styled(motion.div)`
       }
     }
   }
-  
 
   /* fade out overlay on hover */
   &:hover {
@@ -187,7 +187,6 @@ export const ProjectContainer = styled(motion.div)`
     }
   }
 
-
   /* fade out title on hover */
   &:hover {
     ${ProjectTitle} {
@@ -198,7 +197,6 @@ export const ProjectContainer = styled(motion.div)`
     }
   }
 
-
   /* slide bottom card right on hover */
   &:hover {
     ${CardBorder} {
@@ -206,13 +204,11 @@ export const ProjectContainer = styled(motion.div)`
       transform: translateX(45%);
 
       @media ${uiSize.projectLayout} {
-      transform: translateX(0);
-      transition: none;
+        transform: translateX(0);
+        transition: none;
+      }
     }
-    }
-    
   }
-
 
   &:hover {
     ${ProjectCardData} {
@@ -220,8 +216,8 @@ export const ProjectContainer = styled(motion.div)`
       opacity: 1;
 
       @media ${uiSize.projectLayout} {
-       transition: none;
-    }
+        transition: none;
+      }
     }
   }
 
@@ -236,7 +232,6 @@ export const ProjectContainer = styled(motion.div)`
   }
 `;
 
-
 // ------------------------------------- project data styles begin (right card)
 export const LinkWrapper = styled.div`
   display: flex;
@@ -249,11 +244,11 @@ export const OpenIcon = styled(MdOpenInNew)`
   color: ${(props) => props.theme.tertiaryColor};
   margin: 0 0 0 25px;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     color: ${(props) => props.theme.linkHoverColor};
-}
+  }
 `;
 
 export const ViewCodeIcon = styled(VscGithub)`
@@ -263,11 +258,11 @@ export const ViewCodeIcon = styled(VscGithub)`
   margin: 0 0 0 25px;
   cursor: pointer;
   z-index: 15;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     color: ${(props) => props.theme.linkHoverColor};
-}
+  }
 `;
 
 export const ProjectName = styled.h3`
@@ -279,6 +274,20 @@ export const ProjectName = styled.h3`
 export const Description = styled.div`
   text-align: left;
   text-indent: 50px;
+
+  p {
+    &:nth-child(2) {
+      text-indent: 0px;
+    }
+    a {
+      color: ${(props) => props.theme.accentColor};
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      line-height: 30px;
+    }
+  }
 
   @media ${uiSize.projectLayout} {
     padding-bottom: 80px;
@@ -307,6 +316,6 @@ export const ProjectTech = styled.li`
 
 export const TechList = styled.p`
   color: ${(props) => props.theme.secondaryText};
-  font-size: .8rem;
-  font-family: 'Sora', sans-serif;
+  font-size: 0.8rem;
+  font-family: "Sora", sans-serif;
 `;
