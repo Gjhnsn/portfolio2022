@@ -4,10 +4,9 @@ import { useInView } from "react-intersection-observer";
 import { fadeInVariant } from "../../utils/animations";
 import Layout from "../../common/Layout/Layout";
 import { techTools } from "../../utils/techTools";
+import { HeaderContainer } from "../Projects/styles";
 import {
   FlexWrapper,
-  LeftContent,
-  RightContent,
   Underline,
   TextWrapper,
   AboutImage,
@@ -16,6 +15,10 @@ import {
   ToolList,
   ToolListItem,
   AboutImageOverlay,
+  TopContent,
+  BottomContent,
+  ImageRelativeContainer,
+  ToolContainer,
 } from "./styles";
 import bgIMG from "../../assets/aboutIMG.webp";
 import { TiMinus } from "react-icons/ti";
@@ -48,41 +51,37 @@ const About: FC = () => {
     >
       <Layout>
         <FlexWrapper>
-          <LeftContent>
+          <HeaderContainer>
             <h2>About</h2>
             <Underline />
+          </HeaderContainer>
+          <TopContent>
             <TextWrapper>
               <p>
-                <span>Hey!</span> My name is Garrett Johnson, I am a web
-                developer based out of California. Helping iron out the pixel
-                puzzles of the web.
-              </p>
-              <p>
-                When I first discovered web development it quickly became a
-                natural fit. I truly enjoy the creative process of coming up
-                with solutions for both design and logic.
-              </p>
-              <p>
-                I enjoy designing and building clean user interfaces, creating
-                enjoyable interactions, and the skill building that comes with
-                every project.
+                <span>Hey! My name is Garrett Johnson</span> 
+                I am a passionate software developer who thrives on crafting efficient, visually captivating, and user-friendly digital experiences. Through my professional experience, I have been fortunate to help develop unique products across a range of industries. I believe beauty is in the detials when it comes to creating compelling web and application experiences, and strive for my work to leave a lasting and impactful impression.
               </p>
             </TextWrapper>
-            <div>
-              <h3>my toolbox</h3>
-              <Underline />
-              <TextWrapper>
-                <ToolList>{renderTechTools()}</ToolList>
-              </TextWrapper>
-            </div>
-          </LeftContent>
-          <RightContent>
-            <ImageWrapper>
-              <AboutImageOverlay>
-                <AboutImage src={bgIMG} alt="Garrett Johnson, headshot" />
-              </AboutImageOverlay>
-            </ImageWrapper>
-          </RightContent>
+
+            <ImageRelativeContainer>
+              <ImageWrapper>
+                <AboutImageOverlay>
+                  <AboutImage src={bgIMG} alt="Garrett Johnson, headshot" />
+                </AboutImageOverlay>
+              </ImageWrapper>
+            </ImageRelativeContainer>
+
+          </TopContent>
+          
+          <BottomContent>
+            <HeaderContainer>
+            <h3>my toolbox</h3>
+            <Underline />
+            </HeaderContainer>
+            <ToolContainer>
+              <ToolList>{renderTechTools()}</ToolList>
+            </ToolContainer>
+          </BottomContent>
         </FlexWrapper>
       </Layout>
     </motion.section>
