@@ -8,8 +8,6 @@ export const FlexWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border: 1px solid pink;
-
 
   @media ${uiSize.smallTablet} {
     flex-direction: column;
@@ -203,73 +201,5 @@ export const AboutImage = styled.img`
   height: 100%;
 `;
 
-
-
-// ----------------------------------------- bottom content
-
-export const BottomContent = styled.div`
-  margin-top: 40px;
-  width: 100%;
-  align-self: flex-start;
-
-  @media ${uiSize.bigTablet} {
-  }
-
-  @media ${uiSize.smallTablet} {
-    max-width: 100%;
-    margin-top: 15px;
-  }
-
-  @media ${uiSize.mobileLandscape} {
-    max-width: 100%;
-    align-items: center;
-  }
-`;
-
-export const ToolContainer = styled.div`
-  width: 100%;
-`
-
-export const ToolList = styled.ul`
-  margin-left: 20px;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(5, 1fr); 
-  width: 100%;
-
-  p:nth-child(even) {
-    margin: 0px;
-  }
-
-  @media ${uiSize.bigTablet} {
-    grid-template-columns: repeat(4, 1fr); 
-
-  }
-
-  @media ${uiSize.tablet} {
-    grid-template-columns: repeat(2, minmax(150px, 180px));
-  }
-`;
-
-export const ToolListItem = styled.li`
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-
-  @media ${uiSize.mobile} {
-    margin: 0 5px 5px 0;
-  }
-`;
-
-export const TechTool = styled.p`
-  color: ${(props) => props.theme.secondaryText};
-  font-family: "Sora", sans-serif;
-  font-size: 0.8rem;
-
-  @media ${uiSize.mobile} {
-    font-size: 0.8rem;
-  }
-`;
 
 
