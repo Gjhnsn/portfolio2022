@@ -10,6 +10,7 @@ interface IuiScreenSize {
     laptop13in: string;
     laptop13inHeight: string;
     laptop15in: string;
+    xlScreen4k: string;
 }
 
 export const uiSize: IuiScreenSize = {
@@ -22,5 +23,6 @@ export const uiSize: IuiScreenSize = {
     bigTablet: `(max-width: 1280px)`,
     laptop13in: `(max-width: 1440px)`,
     laptop13inHeight: `(max-height: 800px)`,
-    laptop15in: `(min-width: 1920px)`,
+    laptop15in: `(min-width: 1921px)`,
+    xlScreen4k: `(min-width: 2160px)`,
 };

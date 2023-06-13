@@ -104,7 +104,7 @@ export const SubmitButton = styled.button`
 //-------------- contact result messages
 
 const AnimateMessage = keyframes`
-{
+
   0% {
     width: 0%;
     opacity: 0;
@@ -127,7 +127,7 @@ const AnimateMessage = keyframes`
   width: 0%;
   opacity: 0;
   padding: 8px 0; 
-}
+
 }`;
 
 export const MessageWrapper = styled.div`

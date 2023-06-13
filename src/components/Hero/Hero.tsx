@@ -6,9 +6,11 @@ import {
   ImageBackground,
   FlexWrapper,
   SquareWrapper,
-  TopSquare,
-  BottomSquare,
   SubText,
+  BlurOverlay,
+  Square1,
+  Square2,
+  Square3
 } from "./styles";
 import { LayoutContainer } from "../../common/Layout/styles";
 
@@ -36,16 +38,15 @@ const Hero = () => {
           </FlexWrapper>
         </TextContainer>
       </LayoutContainer>
-      <ImageBackground
-        style={{ transform: `translateY(${scrollOffset * 0.08}px)` }}
-      />
+      <BlurOverlay />
       <SquareWrapper>
-        <BottomSquare
+        <Square1
           style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}
-        ></BottomSquare>
-        <TopSquare
-          style={{ transform: `translateY(-${scrollOffset * 0.2}px)` }}
-        ></TopSquare>
+        ></Square1>
+        <Square2></Square2>
+        <Square3
+          style={{ transform: `translateY(-${scrollOffset * 0.3}px)` }}
+        ></Square3>
       </SquareWrapper>
     </section>
   );
