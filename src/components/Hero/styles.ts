@@ -3,7 +3,7 @@ import background from "../../assets/flower.webp";
 import { uiSize } from "../../utils/mobileScreens";
 
 const onStart = keyframes`
-{
+
   0% {
       opacity: 0;
       transform: translateY(75px);
@@ -12,36 +12,40 @@ const onStart = keyframes`
     transform: translateY(0);
     opacity: 1;
 }
-}`;
+`;
 
 const squareFade = keyframes`
-{
+
   0% {
       opacity: 0;
   }
 100% {
     opacity: 1;
-}
 }`;
+
+const squareRotate = keyframes`
+  from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+`
 
 export const TextContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  position: relative;
-  top: 100px;
-  width: 100%;
+  position: absolute;
+  width: 50%;
   z-index: 10;
+  left: 15%;
 
   @media ${uiSize.smallTablet} {
-    width: 60%;
-    right: 80px;
-    top: 125px;
+    left: 12%;
   }
 
-  @media ${uiSize.mobileLandscape} {
-    top: -18vh;
-    right: 0;
-    width: 100%;
+  @media ${uiSize.mobile} {
+    left: 5%;
+  }
+
+  @media ${uiSize.xlScreen4k} {
+    left: 15%;
   }
 `;
 
@@ -55,25 +59,30 @@ export const NameHeader = styled.h1`
   animation-delay: 3.9s;
   opacity: 0;
 
-  @media ${uiSize.laptop13in} {
-    font-size: 4.5rem;
-  }
 
   @media ${uiSize.bigTablet} {
-    font-size: 4rem;
+    font-size: 8rem;
+    line-height: 7rem;
   }
 
   @media ${uiSize.smallTablet} {
-    font-size: 3.2rem;
+    font-size: 6rem;
+    line-height: 5rem;
   }
 
   @media ${uiSize.mobileLandscape} {
-    font-size: 2.8rem;
+    font-size: 4rem;
+    line-height: 3.5rem;
   }
 
   @media ${uiSize.mobile} {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  @media ${uiSize.xlScreen4k} {
+    font-size: 18rem;
+    line-height: 15rem;
   }
 `;
 
@@ -92,6 +101,11 @@ export const SubText = styled.h3`
 
   @media ${uiSize.mobile} {
     font-size: 1.3rem;
+  }
+
+  @media ${uiSize.xlScreen4k} {
+    font-size: 5rem;
+    line-height: 4rem;
   }
 `;
 
@@ -116,32 +130,42 @@ export const ImageBackground = styled.div`
   }
 `;
 
+export const BlurOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 105%;
+  width: 100vw;
+  background-color: ${props => props.theme.bodyBlur};
+  backdrop-filter: blur(8px);
+  z-index: -1;
+` 
+
 // ---------------- accent square elements
 
 // ---------------- square wrapper = same size as background image
 export const SquareWrapper = styled.div`
   height: 100%;
-  width: 50%;
+  width: 100%;
   position: absolute;
-  display: flex;
-  justify-content: center;
   top: 0;
   right: 0;
+  overflow-x: hidden;
 
   @media ${uiSize.smallTablet} {
     width: 100%;
   }
 `;
 
-export const BottomSquare = styled.div`
+export const Square1 = styled.div`
   height: 350px;
   width: 350px;
-  border-width: ${(props) => props.theme.borderWidth};
+  border-width: 8px;
   border-style: solid;
   border-color: ${({ theme }) => theme.accentColor};
   border-radius: 10px;
   position: relative;
-  left: 130px;
+  left: 10%;
   top: 155px;
   align-self: center;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
@@ -156,110 +180,94 @@ export const BottomSquare = styled.div`
   animation: ${squareFade} 1.7s 1 ease-in forwards;
   animation-delay: 4.4s;
   opacity: 0;
+  z-index: -2;
 
-  @media ${uiSize.laptop13in} {
-    height: 275px;
-    width: 275px;
-    top: 120px;
-  }
 
-  @media ${uiSize.tablet} {
-    height: 240px;
-    width: 240px;
-  }
 
   @media ${uiSize.smallTablet} {
     height: 240px;
     width: 240px;
-    left: 280px;
+    top: 15%;
   }
 
   @media ${uiSize.mobileLandscape} {
-    height: 200px;
+    height: 250px;
     width: 200px;
-    top: 220px;
-    left: 140px;
+    left: -10%;
+    top: -1%;
+  }
+
+  @media ${uiSize.xlScreen4k} {
+    height: 600px;
+    width: 600px
+  }
+`;
+
+export const Square2 = styled.div`
+  height: 400px;
+  width: 400px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: ${(props) => props.theme.accentColor};
+  border-radius: 20px;
+  position: absolute;
+  right: 25%;
+  bottom: 10%;
+  align-self: center;
+  box-shadow: ${(props) => props.theme.secondaryBoxShadow};
+  color: ${(props) => props.theme.headerText};
+  transition: font-size 0.2s ease;
+  animation: ${squareFade} 1.7s 1 ease-in forwards,  ${squareRotate} 60s linear infinite;
+  animation-delay: 4.1s;
+  opacity: 0;
+  z-index: -2;
+
+  @media ${uiSize.laptop13in} {
+   height: 325px;
+   width: 325px;
+   right: 30%;
+  }
+
+  @media ${uiSize.bigTablet} {
+    height: 225px;
+    width: 225px;
+    right: 30%;
   }
 
   @media ${uiSize.mobile} {
-    top: 190px;
-    left: 110px;
+    right: 40%;
+    bottom: 7%;
     height: 175px;
     width: 175px;
   }
 
   @media ${uiSize.smallMobile} {
-    left: 110px;
+    height: 155px;
+    width: 155px;
   }
 
-  @media ${uiSize.laptop15in} {
-    height: 400px;
-    width: 400px;
-    left: 150px;
-    top: 175px;
+  @media ${uiSize.xlScreen4k} {
+    height: 700px;
+    width: 700px;
   }
 `;
 
-export const TopSquare = styled.div`
-  height: 275px;
-  width: 275px;
-  border-width: ${(props) => props.theme.borderWidth};
+export const Square3 = styled.div`
+  height: 90%;
+  width: 30%;
+  border-width: 8px;
   border-style: solid;
   border-color: ${(props) => props.theme.accentColor};
-  border-radius: 10px;
-  position: relative;
-  right: 450px;
-  bottom: 125px;
+  border-radius: 20px;
+  position: absolute;
+  right: -10%;
+  top: -5%;
   align-self: center;
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: ${(props) => props.theme.headerText};
   transition: font-size 0.2s ease;
   animation: ${squareFade} 1.7s 1 ease-in forwards;
-  animation-delay: 4.1s;
+  animation-delay: 4.3s;
   opacity: 0;
-
-  @media ${uiSize.laptop13in} {
-    height: 225px;
-    width: 225px;
-    bottom: 90px;
-    right: 330px;
-  }
-
-  @media ${uiSize.tablet} {
-    height: 200px;
-    width: 200px;
-    right: 280px;
-    bottom: 70px;
-  }
-
-  @media ${uiSize.smallTablet} {
-    right: 120px;
-    bottom: 70px;
-    height: 200px;
-    width: 200px;
-  }
-
-  @media ${uiSize.mobileLandscape} {
-    height: 150px;
-    width: 150px;
-    top: 80px;
-    right: 180px;
-  }
-
-  @media ${uiSize.mobile} {
-    top: 80px;
-    right: 160px;
-    height: 125px;
-    width: 125px;
-  }
-
-  @media ${uiSize.laptop15in} {
-    height: 325px;
-    width: 325px;
-    right: 535px;
-    bottom: 135px;
-  }
-`;
+  z-index: -2;
+`

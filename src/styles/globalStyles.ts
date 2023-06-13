@@ -3,6 +3,7 @@ import { uiSize } from "../utils/mobileScreens";
 
 interface ITheme {
   body: string;
+  bodyBlur: string;
   headerText: string;
   accentColor: string;
   contentText: string;
@@ -39,9 +40,10 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     h1 {
       color: ${(props) => props.theme.headerText};
       font-weight: 600;
-      font-size: 5rem;
+      font-size: 10rem;
       letter-spacing: 6px;
-      font-family: 'Sora', sans-serif;
+      font-family: 'Inter', sans-serif;
+      line-height: 9rem;
     }
 
     h2 {
@@ -49,7 +51,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       font-weight: 500;
       font-size: 4rem;
       letter-spacing: 6px;
-      font-family: 'Sora', sans-serif;
+      font-family: 'Inter', sans-serif;
 
       @media ${uiSize.bigTablet} {
         font-size: 3.5rem;
@@ -69,7 +71,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
       font-size: 2rem;
       font-weight: 400;
       letter-spacing: 3px;
-      font-family: 'Sora', sans-serif;
+      font-family: 'Inter', sans-serif;
 
       @media ${uiSize.bigTablet} {
       }
@@ -112,7 +114,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
     a {
       text-decoration: none;
       color: ${(props) => props.theme.headerText};
-      font-family: 'Sora', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: .85rem;
     }
 
@@ -135,6 +137,7 @@ export const GlobalStyles = createGlobalStyle<GlobalThemeProps>`
 
 export const darkTheme = {
   body: "#181E1B",
+  bodyBlur: 'rgb(24, 30, 27, .2)',
   headerText: "#F5EEE6",
   accentColor: "#D7AF70",
   contentText: "#DDD",
@@ -157,6 +160,7 @@ export const darkTheme = {
 
 export const lightTheme = {
   body: "#CFCFC5",
+  bodyBlur: 'rgb(207, 207, 197, .2)',
   headerText: "#181E1B",
   accentColor: "#485B49",
   contentText: "#222",

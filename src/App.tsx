@@ -22,7 +22,8 @@ function App() {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflowY = 'auto';
+      document.body.style.overflowX = 'hidden';
       setIsLoading(false)
     }, 4300)
 
