@@ -41,7 +41,7 @@ const About: FC = () => {
             <TextWrapper>
               <p>
                 <span>Hey! I'm Garrett.</span> 
-                I am a passionate software developer who thrives on crafting efficient, visually captivating, and user-friendly digital experiences. Through my professional experience, I have been fortunate to help develop unique products across a range of industries. I believe beauty is in the detials when it comes to creating compelling web and application experiences, and strive for my work to leave a lasting and impactful impression.
+                I am a passionate software developer who thrives on crafting efficient, visually captivating, and user-friendly digital experiences. Through my professional experience, I have been fortunate to help develop unique products across a range of industries. I believe beauty is in the details when it comes to creating compelling web and mobile application experiences, and strive for my work to leave a lasting and impactful impression.
               </p>
             </TextWrapper>
 

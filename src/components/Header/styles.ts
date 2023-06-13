@@ -6,7 +6,7 @@ import { INavProps } from '../../utils/models'
 
 
 const onStart = keyframes`
-{
+
   0% {
     transform: translateY(-50px);
       opacity: 0;
@@ -14,28 +14,28 @@ const onStart = keyframes`
 100% {
     opacity: 1;
 }
-}`;
+`;
 
 const hamburgerEnter = keyframes`
-{
+
   0% {
       opacity: 0;
   }
 100% {
     transform: translateY(0);
     opacity: 1;
-}
+
 }`;
 
 const backdrop = keyframes`
-{
+
   0% {
     
       opacity: 0;
   }
 100% {
     opacity: .5;
-}
+
 }`;
 
 // ---------------------------- TODO --- complete nav scroll styles

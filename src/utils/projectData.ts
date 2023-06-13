@@ -22,8 +22,8 @@ export const projectData: IProjectData[] = [
     id: 1,
     name: "MoneyMinder",
     description:
-      "An expense tracker originally built with React, GraphQL, MongoDB, Mongoose, and Apollo. Later, refactored to a frontend only application utilizing Redux Toolkit for CRUD functionality. The app provides a simple interface for users to manage monthly expenses.",
-    techUsed: ['React', 'Redux Toolkit', 'Styled-Components', 'Framer Motion'],
+      "An expense tracker originally built with React, GraphQL, MongoDB, Mongoose, and Apollo. Later, refactored to a frontend only application utilizing Redux Toolkit for CRUD functionality. This progressive web app provides a simple interface for users to manage monthly expenses.",
+    techUsed: ['React', 'Redux Toolkit', 'Styled-Components', 'Framer Motion', 'PWA'],
     image: `${moneyMinder}`,
     repoLink: "https://github.com/Gjhnsn/expense-tracker-rr",
     altRepoLink: "https://github.com/Gjhnsn/expense-tracker",
