@@ -28,7 +28,9 @@ const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
-      if (lastScrollY < window.scrollY) {
+      if (window.scrollY === 0 || window.scrollY < 0) {
+        setShowNav(true);
+      } else if (lastScrollY < window.scrollY) {
         setShowNav(false);
       } else {
         setShowNav(true);

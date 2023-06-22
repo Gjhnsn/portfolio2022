@@ -13,6 +13,7 @@ import {
   ResultMessage,
   MessageWrapper,
   EmptyNotification,
+  ContactTitleWrapper,
 } from "./styles";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
@@ -79,9 +80,7 @@ const Contact = () => {
   };
 
   // ------------------------------- empty input messages
-  const emptyFieldError = () => {
-    return <EmptyNotification>please fill all text fields</EmptyNotification>;
-  };
+  const emptyFieldError = <EmptyNotification>please fill all text fields</EmptyNotification>;
 
   const inputError = () => {
     setEmptyFieldMessage(true);
@@ -119,9 +118,9 @@ const Contact = () => {
           <Underline />
         </HeaderContainer>
 
-        <ContactTitle>
-          {emptyFieldMessage ? emptyFieldError() : "lets connect!"}
-        </ContactTitle>
+        <ContactTitleWrapper>
+          {emptyFieldMessage ? emptyFieldError : <ContactTitle>lets connect!</ContactTitle>}
+        </ContactTitleWrapper>
 
         <ContactForm onSubmit={handleContactSubmit}>
           <InputWrapper>
