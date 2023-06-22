@@ -10,6 +10,7 @@ import {
   GithubIcon,
   IconWrapper,
   ToggleWrapper,
+  EmailWrapper,
 } from "./styles";
 
 const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
@@ -20,7 +21,7 @@ const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
         <LinkedInIcon
           onClick={() =>
             window.open(
-              "https://www.linkedin.com/in/garrett-johnson-b08377162/",
+              "https://www.linkedin.com/in/garrett-johnson-dev/",
               "_blank"
             )
           }
@@ -33,9 +34,9 @@ const Sidebar: FC<IThemeProps> = ({ theme, toggleTheme }) => {
         </ToggleWrapper>
       </IconWrapper>
       <ShortLine />
-      <div>
+      <EmailWrapper>
         <Email>garrett.bjnsn@gmail.com</Email>
-      </div>
+      </EmailWrapper>
       <ShortLine />
     </Container>
   );
