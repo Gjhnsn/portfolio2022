@@ -6,14 +6,14 @@ import { uiSize } from "../../utils/mobileScreens";
 
 // ----------------------------- sidebar float up animation
 const onStart = keyframes`
-{
+
   0% {
       opacity: 0;
   }
 100% {
     transform: translateY(-100px);
     opacity: 1;
-}
+
 }`;
 
 export const Container = styled.div`
@@ -110,6 +110,11 @@ export const GithubIcon = styled(VscGithub)`
     color: ${(props) => props.theme.linkHoverColor};
 }
 `;
+
+export const EmailWrapper = styled.div`
+  position: relative;
+  display: flex;
+`
 
 export const Email = styled.p`
   transform: rotate(180deg);
