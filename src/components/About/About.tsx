@@ -12,10 +12,10 @@ import {
   AboutImage,
   ImageWrapper,
   AboutImageOverlay,
-  TopContent,
+  Content,
   ImageRelativeContainer,
 } from "./styles";
-import bgIMG from "../../assets/aboutIMG.webp";
+import aboutIMG from "../../assets/about.webp"
 
 const About: FC = () => {
   const [aboutRef, aboutInView] = useInView({
@@ -37,7 +37,7 @@ const About: FC = () => {
             <h2>About</h2>
             <Underline />
           </HeaderContainer>
-          <TopContent>
+          <Content>
             <TextWrapper>
               <p>
                 <span>Hey! I'm Garrett.</span> 
@@ -48,11 +48,11 @@ const About: FC = () => {
             <ImageRelativeContainer>
               <ImageWrapper>
                 <AboutImageOverlay>
-                  <AboutImage src={bgIMG} alt="Garrett Johnson, headshot" />
+                  <AboutImage src={aboutIMG} alt="Garrett Johnson, headshot" />
                 </AboutImageOverlay>
               </ImageWrapper>
             </ImageRelativeContainer>
-          </TopContent>
+          </Content>
         </FlexWrapper>
       </Layout>
     </motion.section>

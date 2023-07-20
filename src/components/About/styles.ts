@@ -16,7 +16,7 @@ export const FlexWrapper = styled.div`
 
 // ------------------------------------- top content
 
-export const TopContent = styled(motion.div)`
+export const Content = styled(motion.div)`
   display: flex;
   max-width: 100%;
 
@@ -175,30 +175,42 @@ export const ImageWrapper = styled.div`
 export const AboutImageOverlay = styled.div`
   height: 100%;
   width: 100%;
-  transform: scale(1.2);
+  transform: scale(1.5) translateY(10%);
   transition: 0.7s ease;
+  display: flex;
+  justify-content: center;
 
   /* ----------------------------- gradient overlay */
-  &:after {
+  /* &:after {
     content: "";
     position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient${(props) => props.theme.secondaryGradient};
+    top: 0;
+    display: flex; 
+    width: 130%;
+    height: 130%;
+   // background: linear-gradient${(props) => props.theme.secondaryGradient};
+    opacity: .7;
     z-index: 10;
+
   }
+  &:hover:after {
+     transform-origin: bottom;
+     transform: translateX(100%);
+     transition: .5s ease;
+     } */
 
   &:hover {
-    transform: scale(1);
+    transform: scale(1.45) translate(1.5%, 8.5%) ;
+    
   }
 `;
 
 export const AboutImage = styled.img`
-  background-position: 50%, 50%;
-  width: 100%;
+  width: auto;
   height: 100%;
+  position: absolute;
+  top: 1.5%;
 `;
 
 
