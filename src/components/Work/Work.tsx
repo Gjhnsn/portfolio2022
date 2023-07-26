@@ -4,14 +4,28 @@ import { workData } from "../../utils/workData";
 import WorkCard from "./WorkCard";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { fadeInVariant } from "../../utils/animations";
 
 const Work = () => {
   const renderWork = workData.map((project) => {
     return <WorkCard key={project.id} project={project} />;
   });
 
+  const [workRef, workInView] = useInView({
+    threshold: 0.15,
+    triggerOnce: true,
+  });
+
   return (
-    <section>
+    <motion.section 
+      id="contact"
+      variants={fadeInVariant}
+      initial="hidden"
+      animate={workInView ? "visible" : "hidden"}
+      ref={workRef}
+      >
       <Layout>
         <HeaderContainer>
             <h2>Work</h2>
@@ -19,7 +33,7 @@ const Work = () => {
         </HeaderContainer>
         {renderWork}
       </Layout>
-    </section>
+    </motion.section>
   );
 };
 
