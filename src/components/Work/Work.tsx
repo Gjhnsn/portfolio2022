@@ -27,7 +27,7 @@ const Work = () => {
       ref={workRef}
       >
       <Layout>
-        <HeaderContainer>
+        <HeaderContainer  style={{marginBottom: '15px'}}>
             <h2>Work</h2>
             <Underline />
         </HeaderContainer>

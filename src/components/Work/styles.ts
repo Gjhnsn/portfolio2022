@@ -14,6 +14,7 @@ export const Card = styled.div`
     margin-bottom: 40px;
     border-radius: 5px;
     position: relative;
+    box-shadow: ${props => props.theme.boxShadow};
 
     &:last-child {
         margin-bottom: 0;

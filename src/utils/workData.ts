@@ -14,7 +14,7 @@ export const workData: IWorkData[] = [
         id: 1,
         title: "Navigate Housing Portal",
         image: '',
-        description: 'Developed an admin dashboard that optimizes workflow for Navigate Housing Partners realators and admins. Allows for simplified management and sharing of documents and contact information.',
+        description: 'An admin dashboard that optimizes workflow for Navigate Housing Partners realators and admins. Allows for simplified management and sharing of documents and contact information.',
         techUsed: ['React', 'Express', 'GraphQl', 'Apollo', 'MongoDB', 'AntDesign', 'Tailwind'],
         liveLink: '',
         company: 'Bitwise Industries',
