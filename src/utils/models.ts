@@ -16,14 +16,36 @@ export interface IProjectData {
   liveLink: string;
 }
 
+// ------------------------------ used for work data at worktData.ts
+export interface IWorkData {
+  id: number;
+  title: string;
+  description: string;
+  techUsed: string[];
+  image?: string;
+  liveLink?: string;
+  company: string;
+}
+
 // ------------------------------------ used at ProjectCard.tsx
 export interface IProjectCardProps {
   project: IProjectData;
 }
 
+// ------------------------------------ used at WorkCard.tsx
+export interface IWorkCardProps {
+  project: IWorkData;
+}
+
 // ------------------------------------ used in styles of ProjectCard.tsx
 // ------------------------------------ used for passing project image path as prop
 export interface ProjectCardImgProps {
+  projectImg: string;
+}
+
+// ------------------------------------ used in styles of WorkCard.tsx
+// ------------------------------------ used for passing project image path as prop
+export interface WorkCardImgProps {
   projectImg: string;
 }
 
