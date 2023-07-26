@@ -9,7 +9,7 @@ export const HeaderContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  width: 50%;
+  min-width: 50%;
 `;
 
 export const ProjectCardImage = styled.div<ProjectCardImgProps>`
