@@ -6,7 +6,7 @@ import { useDarkMode } from "./utils/useDarkMode";
 import { ThemeProvider } from "styled-components";
 import Main from "./components/Main/Main";
 import Loader from "./components/Loader/Loader";
-
+import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
   
@@ -14,6 +14,8 @@ function App() {
 
   const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
+
+  const { pathname } = useLocation();
 
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
@@ -26,15 +28,17 @@ function App() {
       document.body.style.overflowX = 'hidden';
       setIsLoading(false)
     }, 4300)
-
   }, [])
 
   return (
     <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
-        {isLoading ? <Loader /> : null}
-        <Main theme={theme} toggleTheme={toggleTheme}/>
+        {isLoading && pathname === '/' ? <Loader /> : null}
+        <Routes>
+          <Route path="/" element={<Main theme={theme} toggleTheme={toggleTheme}/>} />
+          <Route path="/work" element={<div>Work Page</div>} />
+        </Routes>
         <Sidebar theme={theme} toggleTheme={toggleTheme} />
       </>
     </ThemeProvider>
