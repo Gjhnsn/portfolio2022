@@ -6,6 +6,7 @@ import { useDarkMode } from "./utils/useDarkMode";
 import { ThemeProvider } from "styled-components";
 import Main from "./pages/Home/Main/Main";
 import Loader from "./components/Loader/Loader";
+import NotFound from "./pages/NotFound/NotFound";
 import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             element={<Main theme={theme} toggleTheme={toggleTheme} />}
           />
           <Route path="/work" element={<div>Work Page</div>} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <Sidebar theme={theme} toggleTheme={toggleTheme} />
       </>
