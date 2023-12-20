@@ -10,9 +10,9 @@ import {
   BlurOverlay,
   Square1,
   Square2,
-  Square3
+  Square3,
 } from "./styles";
-import { LayoutContainer } from "../../common/Layout/styles";
+import { LayoutContainer } from "../../../components/Layout/styles";
 
 const Hero = () => {
   const [scrollOffset, setScrollOffset] = useState(0);

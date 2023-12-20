@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { fadeInVariant } from "../../utils/animations";
-import Layout from "../../common/Layout/Layout";
-import { techTools } from "../../utils/techTools";
+import { fadeInVariant } from "../../../utils/animations";
+import Layout from "../../../components/Layout/Layout";
+import { techTools } from "../../../utils/techTools";
 import { HeaderContainer } from "../Projects/styles";
 import {
   FlexWrapper,
@@ -15,7 +15,7 @@ import {
   Content,
   ImageRelativeContainer,
 } from "./styles";
-import aboutIMG from "../../assets/about.webp"
+import aboutIMG from "../../../assets/about.webp";
 
 const About: FC = () => {
   const [aboutRef, aboutInView] = useInView({
@@ -40,8 +40,14 @@ const About: FC = () => {
           <Content>
             <TextWrapper>
               <p>
-                <span>Hey! I'm Garrett.</span> 
-                I am a passionate software developer who thrives on crafting efficient, visually captivating, and user-friendly digital experiences. Through my professional experience, I have been fortunate to help develop unique products across a range of industries. I believe beauty is in the details when it comes to creating compelling web and mobile application experiences, and strive for my work to leave a lasting and impactful impression.
+                <span>Hey! I'm Garrett.</span>I am a passionate software
+                developer who thrives on crafting efficient, visually
+                captivating, and user-friendly digital experiences. Through my
+                professional experience, I have been fortunate to help develop
+                unique products across a range of industries. I believe beauty
+                is in the details when it comes to creating compelling web and
+                mobile application experiences, and strive for my work to leave
+                a lasting and impactful impression.
               </p>
             </TextWrapper>
 

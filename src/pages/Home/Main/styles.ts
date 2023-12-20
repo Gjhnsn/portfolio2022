@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { uiSize } from "../../utils/mobileScreens";
+import { uiSize } from "../../../utils/mobileScreens";
 
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -36,5 +36,4 @@ export const Wrapper = styled.div`
     max-width: 100vw;
     padding: 0 20px;
   }
-
 `;

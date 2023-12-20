@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IWorkCardProps } from "../../utils/models";
+import { IWorkCardProps } from "../../../utils/models";
 import {
   Card,
   MutedText,
@@ -21,9 +21,7 @@ const WorkCard: FC<IWorkCardProps> = ({ project }) => {
     <Card>
       <h3>{project.title}</h3>
       <MutedText>{project.company}</MutedText>
-      <LinkBox>
-        {project.liveLink && <MdOpenInNew className="icon" />}
-      </LinkBox>
+      <LinkBox>{project.liveLink && <MdOpenInNew className="icon" />}</LinkBox>
       <FlexContainer>
         <ContentText>{project.description}</ContentText>
       </FlexContainer>

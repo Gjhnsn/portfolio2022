@@ -1,14 +1,14 @@
 import styled, { keyframes } from "styled-components";
-import { IMessageProps } from "../../utils/models";
-import { uiSize } from "../../utils/mobileScreens";
+import { IMessageProps } from "../../../utils/models";
+import { uiSize } from "../../../utils/mobileScreens";
 
 const success = "#66bb6a";
 const error = "#e57373";
 
 export const ContactTitleWrapper = styled.div`
   margin-top: 100px;
-  margin-bottom: 25px; 
-`
+  margin-bottom: 25px;
+`;
 
 export const ContactTitle = styled.h3`
   color: ${(props) => props.theme.accentColor};

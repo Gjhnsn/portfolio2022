@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../../common/Layout/Layout";
-import { workData } from "../../utils/workData";
+import Layout from "../../../components/Layout/Layout";
+import { workData } from "../../../utils/workData";
 import WorkCard from "./WorkCard";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { fadeInVariant } from "../../utils/animations";
+import { fadeInVariant } from "../../../utils/animations";
 
 const Work = () => {
   const renderWork = workData.map((project) => {
@@ -19,17 +19,17 @@ const Work = () => {
   });
 
   return (
-    <motion.section 
+    <motion.section
       id="contact"
       variants={fadeInVariant}
       initial="hidden"
       animate={workInView ? "visible" : "hidden"}
       ref={workRef}
-      >
+    >
       <Layout>
-        <HeaderContainer  style={{marginBottom: '15px'}}>
-            <h2>Work</h2>
-            <Underline />
+        <HeaderContainer style={{ marginBottom: "15px" }}>
+          <h2>Work</h2>
+          <Underline />
         </HeaderContainer>
         {renderWork}
       </Layout>

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { ProjectCardImgProps } from "../../utils/models";
+import { ProjectCardImgProps } from "../../../utils/models";
 import { MdOpenInNew } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
-import { uiSize } from "../../utils/mobileScreens";
+import { uiSize } from "../../../utils/mobileScreens";
 import { motion } from "framer-motion";
 
 export const HeaderContainer = styled(motion.div)`
@@ -50,7 +50,7 @@ export const ProjectCardImage = styled.div<ProjectCardImgProps>`
 
 export const ProjectCardOverlay = styled.div`
   // project overlay here
-  background-image: linear-gradient${(props) => props.theme.projectGradient};
+  background-image: linear-gradient ${(props) => props.theme.projectGradient};
   opacity: 1;
   border-radius: 9px;
   position: absolute;
@@ -113,7 +113,9 @@ export const ProjectCardData = styled.div<ProjectCardImgProps>`
   @media ${uiSize.smallTablet} {
     // small screen background image
     width: auto;
-    background-image: linear-gradient${(props) => props.theme.mobileProjectGradient}, url(${(props) => props.projectImg});
+    background-image: linear-gradient
+        ${(props) => props.theme.mobileProjectGradient},
+      url(${(props) => props.projectImg});
     background-size: cover;
     background-position: 50% 50%;
     border-radius: 10px;

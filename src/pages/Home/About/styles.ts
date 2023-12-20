@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { uiSize } from "../../utils/mobileScreens";
+import { uiSize } from "../../../utils/mobileScreens";
 import { motion } from "framer-motion";
 
 export const FlexWrapper = styled.div`
@@ -74,7 +74,7 @@ export const ImageRelativeContainer = styled.div`
     align-self: center;
     margin-top: 20px;
   }
-`
+`;
 
 export const ImageWrapper = styled.div`
   height: 425px;
@@ -201,8 +201,7 @@ export const AboutImageOverlay = styled.div`
      } */
 
   &:hover {
-    transform: scale(1.45) translate(1.5%, 8.5%) ;
-    
+    transform: scale(1.45) translate(1.5%, 8.5%);
   }
 `;
 
@@ -212,6 +211,3 @@ export const AboutImage = styled.img`
   position: absolute;
   top: 1.5%;
 `;
-
-
-

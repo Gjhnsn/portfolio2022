@@ -1,18 +1,17 @@
 import React from "react";
-import Layout from "../../common/Layout/Layout";
+import Layout from "../../../components/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "./styles";
 import ProjectCard from "./ProjectCard";
-import { projectData } from "../../utils/projectData";
-import { useInView } from 'react-intersection-observer';
-import { fadeInVariant } from "../../utils/animations";
+import { projectData } from "../../../utils/projectData";
+import { useInView } from "react-intersection-observer";
+import { fadeInVariant } from "../../../utils/animations";
 
 const Projects = () => {
-
   const [projectsRef, projectsInView] = useInView({
-    threshold: .25,
+    threshold: 0.25,
     triggerOnce: true,
-  })
+  });
 
   // map through project data to render cards
   const renderProjects = () => {

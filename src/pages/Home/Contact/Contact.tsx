@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Layout from "../../common/Layout/Layout";
+import Layout from "../../../components/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
 import {
@@ -18,7 +18,7 @@ import {
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { fadeInVariant } from "../../utils/animations";
+import { fadeInVariant } from "../../../utils/animations";
 
 const Contact = () => {
   const [successMessage, setSuccessMessage] = useState<boolean>(false);
@@ -80,7 +80,9 @@ const Contact = () => {
   };
 
   // ------------------------------- empty input messages
-  const emptyFieldError = <EmptyNotification>please fill all text fields</EmptyNotification>;
+  const emptyFieldError = (
+    <EmptyNotification>please fill all text fields</EmptyNotification>
+  );
 
   const inputError = () => {
     setEmptyFieldMessage(true);
@@ -119,7 +121,11 @@ const Contact = () => {
         </HeaderContainer>
 
         <ContactTitleWrapper>
-          {emptyFieldMessage ? emptyFieldError : <ContactTitle>lets connect!</ContactTitle>}
+          {emptyFieldMessage ? (
+            emptyFieldError
+          ) : (
+            <ContactTitle>lets connect!</ContactTitle>
+          )}
         </ContactTitleWrapper>
 
         <ContactForm onSubmit={handleContactSubmit}>
