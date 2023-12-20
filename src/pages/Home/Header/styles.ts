@@ -1,9 +1,8 @@
 import styled, { keyframes, css } from "styled-components";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { IHeaderProps } from "../../utils/models";
-import { uiSize } from "../../utils/mobileScreens";
-import { INavProps } from '../../utils/models'
-
+import { ReactComponent as Logo } from "../../../assets/logo.svg";
+import { IHeaderProps } from "../../../utils/models";
+import { uiSize } from "../../../utils/mobileScreens";
+import { INavProps } from "../../../utils/models";
 
 const onStart = keyframes`
 

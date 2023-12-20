@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IThemeProps } from "../../utils/models";
+import { IThemeProps } from "../../../utils/models";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";

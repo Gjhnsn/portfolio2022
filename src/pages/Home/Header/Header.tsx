@@ -10,8 +10,8 @@ import {
   ToggleWrapper,
 } from "./styles";
 import { Twirl as Hamburger } from "hamburger-react";
-import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
-import { IThemeProps } from "../../utils/models";
+import { ThemeToggle } from "../../../components/ThemeToggle/ThemeToggle";
+import { IThemeProps } from "../../../utils/models";
 
 const Header: FC<IThemeProps> = ({ theme, toggleTheme }) => {
   const [showNav, setShowNav] = useState(true);

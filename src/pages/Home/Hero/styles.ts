@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import background from "../../assets/flower.webp";
-import { uiSize } from "../../utils/mobileScreens";
+import background from "../../../assets/flower.webp";
+import { uiSize } from "../../../utils/mobileScreens";
 
 const onStart = keyframes`
 
@@ -26,7 +26,7 @@ const squareFade = keyframes`
 const squareRotate = keyframes`
   from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
-`
+`;
 
 export const TextContainer = styled.div`
   display: flex;
@@ -58,7 +58,6 @@ export const NameHeader = styled.h1`
   animation: ${onStart} 1s 1 ease forwards;
   animation-delay: 3.9s;
   opacity: 0;
-
 
   @media ${uiSize.bigTablet} {
     font-size: 8rem;
@@ -110,7 +109,7 @@ export const SubText = styled.h3`
 `;
 
 export const ImageBackground = styled.div`
-  background-image: linear-gradient${(props) => props.theme.projectGradient},
+  background-image: linear-gradient ${(props) => props.theme.projectGradient},
     url(${background});
   height: 100%;
   width: 40%;
@@ -136,10 +135,10 @@ export const BlurOverlay = styled.div`
   left: 0;
   height: 105%;
   width: 100vw;
-  background-color: ${props => props.theme.bodyBlur};
+  background-color: ${(props) => props.theme.bodyBlur};
   backdrop-filter: blur(8px);
   z-index: -1;
-` 
+`;
 
 // ---------------- accent square elements
 
@@ -182,8 +181,6 @@ export const Square1 = styled.div`
   opacity: 0;
   z-index: -2;
 
-
-
   @media ${uiSize.smallTablet} {
     height: 240px;
     width: 240px;
@@ -199,7 +196,7 @@ export const Square1 = styled.div`
 
   @media ${uiSize.xlScreen4k} {
     height: 600px;
-    width: 600px
+    width: 600px;
   }
 `;
 
@@ -217,15 +214,16 @@ export const Square2 = styled.div`
   box-shadow: ${(props) => props.theme.secondaryBoxShadow};
   color: ${(props) => props.theme.headerText};
   transition: font-size 0.2s ease;
-  animation: ${squareFade} 1.7s 1 ease-in forwards,  ${squareRotate} 60s linear infinite;
+  animation: ${squareFade} 1.7s 1 ease-in forwards,
+    ${squareRotate} 60s linear infinite;
   animation-delay: 4.1s;
   opacity: 0;
   z-index: -2;
 
   @media ${uiSize.laptop13in} {
-   height: 325px;
-   width: 325px;
-   right: 30%;
+    height: 325px;
+    width: 325px;
+    right: 30%;
   }
 
   @media ${uiSize.bigTablet} {
@@ -270,4 +268,4 @@ export const Square3 = styled.div`
   animation-delay: 4.3s;
   opacity: 0;
   z-index: -2;
-`
+`;
