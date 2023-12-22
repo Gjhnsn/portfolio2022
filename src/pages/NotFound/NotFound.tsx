@@ -1,17 +1,24 @@
 import { useNavigate } from "react-router";
-import { Button, Divider, Wrapper } from "./styles";
+import { Divider, Wrapper, Section } from "./styles";
+import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 
 const NotFound = () => {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate()
+  const handleNavigation = () => {
+    console.log('clicked');
+    navigate("/");
+}
 
   return (
-    <Wrapper>
-      <h3>404</h3>
-      <Divider></Divider>
-      <p>Oops, this page does not exist.</p>
-      <Button onClick={() => navigate('/')}>Go Home</Button>
-    </Wrapper>
+    <Section>
+      <Wrapper>
+        <h3>404</h3>
+        <Divider></Divider>
+        <p>Oops, this page does not exist.</p>
+      </Wrapper>
+      <PrimaryButton onClick={handleNavigation}>Go Home</PrimaryButton>
+    </Section>
   );
 };
 
