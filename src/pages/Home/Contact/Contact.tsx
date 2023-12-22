@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Layout from "../../../components/Layout/Layout";
 import { Underline } from "../About/styles";
 import { HeaderContainer } from "../Projects/styles";
+import PrimaryButton from "../../../components/PrimaryButton/PrimaryButton";
 import {
   InputColumn,
   InputField,
   InputWrapper,
   MessageBox,
-  SubmitButton,
   ContactTitle,
   ContactForm,
   ResultMessage,
@@ -161,9 +161,9 @@ const Contact = () => {
               />
             </InputColumn>
           </InputWrapper>
-          <SubmitButton type="submit" value="Send Message">
+          <PrimaryButton type="submit" value="Send Message">
             Send Message
-          </SubmitButton>
+          </PrimaryButton>
           {successMessage && renderSuccessMessage()}
           {errorMessage && renderErrorMessage()}
         </ContactForm>
